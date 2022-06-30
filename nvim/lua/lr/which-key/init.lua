@@ -7,7 +7,7 @@ wk.setup{
 }
 
 local mappings = {
-  q = {":lua require('telescope.builtin').file_browser({ cwd = '~/quasset/projects'})<cr>", "Quasset Projects"},
+  pj = {":lua require('telescope.builtin').file_browser({ cwd = '~/Projects'})<cr>", "Projects"},
   we = {":lua require('telescope.builtin').file_browser({ cwd = '~/projects/go'})<cr>", "Golang Projects"},
   wr = {":lua require('telescope.builtin').file_browser({ cwd = '~/projects/javascript'})<cr>", "Javascript Projects"},
   d = {":lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim' })<cr>", "Neovim Config"},
