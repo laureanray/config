@@ -12,7 +12,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"html", "javascript", "lua", "go"},
+  ensure_installed = {"html", "javascript", "java", "typescript", "lua", "go"},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true
@@ -48,7 +48,7 @@ require'nvim-treesitter.configs'.setup {
     },
     move = {
       enable = true,
-      set_jumps = true, 
+      set_jumps = true,
       goto_next_start = {
           [']m'] = '@function.outer',
           [']]'] = '@class.outer'

@@ -21,4 +21,9 @@ font:
     style: Bold Italic
 
   size: 15
-
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
