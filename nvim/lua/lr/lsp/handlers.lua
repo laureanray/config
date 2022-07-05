@@ -17,6 +17,7 @@ M.setup = function()
 	  local hl = "DiagnosticSign" .. type
 	  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 	end
+
   local config = {
     -- disable virtual text
     virtual_text = false,

@@ -10,16 +10,13 @@ local servers = {
   "html",
   "jdtls",
   "jsonls",
-  "solc",
   "sumneko_lua",
   "tflint",
   "tsserver",
-  "pyright",
   "yamlls",
   "bashls",
   "clangd",
   "rust_analyzer",
-  "taplo",
 }
 
 local settings = {
