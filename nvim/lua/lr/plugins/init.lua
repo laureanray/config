@@ -43,6 +43,10 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lukas-reineke/lsp-format.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use "mfussenegger/nvim-jdtls"
+  use "RRethy/vim-illuminate"
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
   -- Statusline
   use {
     'folke/twilight.nvim'
