@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -273,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-rhubarb"] = {
     loaded = true,
