@@ -35,6 +35,9 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
 )
 
+require('nvim-ts-autotag').setup({
+  filetypes = { "html" , "xml" },
+})
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {"html", "javascript", "java", "typescript", "lua", "go"},
@@ -43,7 +46,8 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true
   },
   autotag = {
-    enable = true
+    enable = true,
+    filetypes = { "typescriptreact" }
   },
   rainbow = {
     enable = true,

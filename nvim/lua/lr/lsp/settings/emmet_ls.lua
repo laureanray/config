@@ -1,9 +1,11 @@
 -- https://github.com/pedro757/emmet
 -- npm i -g ls_emmet
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 return {
-  cmd = { "ls_emmet", "--stdio" },
+  capabilities = capabilities,
   filetypes = {
-    "html",
+    "htm",
     "css",
     "scss",
     "javascript",

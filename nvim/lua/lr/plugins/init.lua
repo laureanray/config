@@ -16,6 +16,9 @@ return require('packer').startup(function()
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
   }
+  use {
+    'tpope/vim-surround'
+  }
   use 'terrortylor/nvim-comment'
   use 'maxmellon/vim-jsx-pretty'
   use {
