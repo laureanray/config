@@ -17,6 +17,7 @@ local servers = {
   "bashls",
   "clangd",
   "rust_analyzer",
+  "gopls",
 }
 
 local settings = {
