@@ -35,7 +35,10 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/playground'
   use 'windwp/nvim-ts-autotag'
-  use 'windwp/nvim-autopairs'
+  use {
+  	"windwp/nvim-autopairs",
+     config = function() require("nvim-autopairs").setup {} end
+  }
   use 'p00f/nvim-ts-rainbow'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
