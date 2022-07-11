@@ -10,3 +10,6 @@ require('lr.lsp')
 require('lr.color-scheme')
 require('lr.telescope')
 require('lr.treesitter')
+require('lr.twilight')
+require('lr.better-lsp')
+

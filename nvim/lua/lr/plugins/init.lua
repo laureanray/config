@@ -1,17 +1,9 @@
 return require('packer').startup(function()
   -- Package manager
   use 'wbthomason/packer.nvim'
-  -- Colorscheme
-  --  use 'shaunsingh/nord.nvim'
-  --  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
-  --  use 'shaunsingh/nord.nvim'
   use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
---  use({
---  	"catppuccin/nvim",
---  	as = "catppuccin"
---  })
-  -- Programming
+  use "EdenEast/nightfox.nvim"
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
@@ -19,22 +11,11 @@ return require('packer').startup(function()
   use {
     'tpope/vim-surround'
   }
-  use 'terrortylor/nvim-comment'
   use 'maxmellon/vim-jsx-pretty'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate"
   }
-  -- use {
-  --   'mattn/emmet-vim',
-  --   config = function ()
-  --     vim.g.user_emmet_leader_key = '~'
-
-  --     vim.g.user_emmet_settings = {
-  --       indent_blockelement = 1
-  --     }
-  --   end
-  -- }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/playground'
   use 'windwp/nvim-ts-autotag'
@@ -57,11 +38,14 @@ return require('packer').startup(function()
   use "mfussenegger/nvim-jdtls"
   use "RRethy/vim-illuminate"
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-
-  -- Statusline
+  use 'RishabhRD/popfix'
+  use 'RishabhRD/nvim-lsputils' 
+  -- Development (zen mode ish)
   use {
     'folke/twilight.nvim'
   }
+
+  -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
@@ -69,15 +53,13 @@ return require('packer').startup(function()
       opt = true
     }
   }
-  use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
   -- File explorer
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+
+  -- Searching stuffs
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -93,10 +75,8 @@ return require('packer').startup(function()
   use 'voldikss/vim-floaterm'
   -- Git
   use 'tpope/vim-fugitive'
-  -- use 'mhinz/vim-signify'
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
-  -- use 'kdheepak/lazygit.nvim'
 
 end)
