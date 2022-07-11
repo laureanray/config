@@ -35,7 +35,8 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.o.ignorecase = true
-
+vim.o.spelllang = en,cjk
+vim.o.spellsuggest=best,9
 vim.cmd[[
 set mmp=5000
 ]]

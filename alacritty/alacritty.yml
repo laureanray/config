@@ -27,30 +27,30 @@ shell:
     - -c
     - "tmux attach || tmux"
 colors:
-  name: astromouse
-  author: ""
+  # Default colors
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
-  cursor:
-    text: "#000000"
-    cursor: "#ffffff"
+    background: '#27292c'
+    foreground: '#d0d2d1'
+
+  # Normal colors
   normal:
-    black: "#1c1c1c"
-    red: "#d770af"
-    green: "#9acc79"
-    yellow: "#d0d26b"
-    blue: "#77b6c5"
-    magenta: "#a488d9"
-    cyan: "#7fcab3"
-    white: "#8d8d8d"
+    black: '#35383b'
+    red: '#b05655'
+    green: '#769972'
+    yellow: '#e1a574'
+    blue: '#7693ac'
+    magenta: '#977ba0'
+    cyan: '#749e99'
+    white: '#848b92'
+
+  # Bright colors
   bright:
-    black: "#3d3a3a"
-    red: "#d28abf"
-    green: "#8fb676"
-    yellow: "#c8bc45"
-    blue: "#8fa7b9"
-    magenta: "#bd89de"
-    cyan: "#6ec2a8"
-    white: "#dad3d3"
-theme: Astromouse
+    black: '#484c52'
+    red: '#d27c7b'
+    green: '#dffebe'
+    yellow: '#f0d189'
+    blue: '#96b1c9'
+    magenta: '#bfa5c7'
+    cyan: '#9fc9c3'
+    white: '#fcf7e2'
+theme: Hybrid

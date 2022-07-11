@@ -20,7 +20,7 @@ local mappings = {
   ca = {":Telescope lsp_code_actions<cr>", "Telescope Code Actions"},
   cd = {":Telescope lsp_document_diagnostics<cr>", "Telescope Document Diagnostics"},
   cw = {":Telescope lsp_workspace_diagnostics<cr>", "Telescope Global Diagnostics"},
-  gg = {":G<cr>", "Git status"},
+  gg = {":LazyGit<cr>", "Git status"},
   ga = {":G add .<cr>", "Git add"},
   gc = {":G commit<cr>", "Git commit"},
   gp = {":G push<cr>", "Git push"},
@@ -28,6 +28,7 @@ local mappings = {
   gP = {":G pull<cr>", "Git pull"},
   gj = {":diffget //2<cr>", "Get left side"},
   gk = {":diffget //3<cr>", "Get right side"}
+
 }
 
 local opts = {

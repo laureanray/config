@@ -78,5 +78,6 @@ return require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
+  use 'kdheepak/lazygit.nvim'
 
 end)
