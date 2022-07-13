@@ -4,6 +4,7 @@ return require('packer').startup(function()
   use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
   use "EdenEast/nightfox.nvim"
+  use 'luisiacc/gruvbox-baby'
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'

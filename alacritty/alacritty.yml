@@ -4,19 +4,19 @@ window:
     y: 4
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: NotoSansMono Nerd Font
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: NotoSansMono Nerd Font
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: NotoSansMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: NotoSansMono Nerd Font
     style: Bold Italic
 
   size: 15
@@ -29,28 +29,30 @@ shell:
 colors:
   # Default colors
   primary:
-    background: '#27292c'
-    foreground: '#d0d2d1'
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
 
   # Normal colors
   normal:
-    black: '#35383b'
-    red: '#b05655'
-    green: '#769972'
-    yellow: '#e1a574'
-    blue: '#7693ac'
-    magenta: '#977ba0'
-    cyan: '#749e99'
-    white: '#848b92'
+    black: '#282828'
+    red: '#cc241d'
+    green: '#98971a'
+    yellow: '#d79921'
+    blue: '#458588'
+    magenta: '#b16286'
+    cyan: '#689d6a'
+    white: '#a89984'
 
   # Bright colors
   bright:
-    black: '#484c52'
-    red: '#d27c7b'
-    green: '#dffebe'
-    yellow: '#f0d189'
-    blue: '#96b1c9'
-    magenta: '#bfa5c7'
-    cyan: '#9fc9c3'
-    white: '#fcf7e2'
-theme: Hybrid
+    black: '#928374'
+    red: '#fb4934'
+    green: '#b8bb26'
+    yellow: '#fabd2f'
+    blue: '#83a598'
+    magenta: '#d3869b'
+    cyan: '#8ec07c'
+    white: '#ebdbb2'
+theme: Gruvbox-Dark

@@ -1,4 +1,3 @@
-:q
 #!/usr/bin/env bash
 
 branch_name=$(basename $1)
