@@ -12,4 +12,6 @@ require('lr.telescope')
 require('lr.treesitter')
 require('lr.twilight')
 require('lr.better-lsp')
+require('lr.spellsitter')
+require('lr.barbar')
 

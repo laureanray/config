@@ -13,6 +13,7 @@ return require('packer').startup(function()
     'tpope/vim-surround'
   }
   use 'maxmellon/vim-jsx-pretty'
+--  use 'lewis6991/spellsitter.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate"
@@ -35,17 +36,29 @@ return require('packer').startup(function()
   use 'jbgutierrez/vim-better-comments'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lukas-reineke/lsp-format.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
+  -- use 'jose-elias-alvarez/null-ls.nvim'
   use "mfussenegger/nvim-jdtls"
   use "RRethy/vim-illuminate"
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use 'RishabhRD/popfix'
-  use 'RishabhRD/nvim-lsputils' 
+  use({
+    'ray-x/navigator.lua',
+     requires = {
+        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+        { 'neovim/nvim-lspconfig' },
+    },
+  })
+  -- use 'RishabhRD/nvim-lsputils' 
   -- Development (zen mode ish)
   use {
     'folke/twilight.nvim'
   }
+  use 'wakatime/vim-wakatime'
 
+use {
+  'romgrk/barbar.nvim',
+  requires = {'kyazdani42/nvim-web-devicons'}
+}
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
@@ -80,5 +93,6 @@ return require('packer').startup(function()
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
   use 'kdheepak/lazygit.nvim'
+  
 
 end)

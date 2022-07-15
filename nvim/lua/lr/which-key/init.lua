@@ -27,8 +27,8 @@ local mappings = {
   gC = {":G checkout -b ", "Git checkout from current branch"},
   gP = {":G pull<cr>", "Git pull"},
   gj = {":diffget //2<cr>", "Get left side"},
-  gk = {":diffget //3<cr>", "Get right side"}
-
+  gk = {":diffget //3<cr>", "Get right side"},
+  t = {":FloatermNew --height=0.6 --width=0.4 --wintype=float --name=term --position=topleft --autoclose=2 <cr>", "Floating Term"}
 }
 
 local opts = {

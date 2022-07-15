@@ -52,7 +52,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {"html", "javascript", "java", "typescript", "lua", "go", "tsx"},
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = true
+--    additional_vim_regex_highlighting = true
   },
   autotag = {
     enable = true,
