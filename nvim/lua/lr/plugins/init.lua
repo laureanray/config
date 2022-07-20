@@ -1,14 +1,27 @@
 return require('packer').startup(function()
   -- Package manager
   use 'wbthomason/packer.nvim'
-  use 'rose-pine/neovim'
+  --use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
   use "EdenEast/nightfox.nvim"
   use 'luisiacc/gruvbox-baby'
+  use 'Shatur/neovim-ayu'
+ -- use 'cormacrelf/dark-notify'
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
   }
+  use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+          local saga = require("lspsaga")
+  
+          saga.init_lsp_saga({
+              -- your configuration
+          })
+      end,
+  })
   use {
     'tpope/vim-surround'
   }
@@ -41,13 +54,13 @@ return require('packer').startup(function()
   use "RRethy/vim-illuminate"
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use 'RishabhRD/popfix'
-  use({
-    'ray-x/navigator.lua',
-     requires = {
-        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-        { 'neovim/nvim-lspconfig' },
-    },
-  })
+  --use({
+  --  'ray-x/navigator.lua',
+  --   requires = {
+  --      { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+  --      { 'neovim/nvim-lspconfig' },
+  --  },
+  --})
   -- use 'RishabhRD/nvim-lsputils' 
   -- Development (zen mode ish)
   use {
@@ -93,6 +106,5 @@ use {
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
   use 'kdheepak/lazygit.nvim'
-  
 
 end)

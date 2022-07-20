@@ -40,3 +40,6 @@ vim.o.spellsuggest=best,9
 vim.cmd[[
 set mmp=5000
 ]]
+
+vim.cmd('highlight Normal guibg=none')
+vim.cmd('highlight NonText guibg=none')

@@ -2,7 +2,8 @@ local wk = require('which-key')
 
 wk.setup{
   presets = {
-    operators = false
+    operators = false,
+    motions = false
   }
 }
 
