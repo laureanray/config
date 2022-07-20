@@ -41,5 +41,9 @@ vim.cmd[[
 set mmp=5000
 ]]
 
-vim.cmd('highlight Normal guibg=none')
-vim.cmd('highlight NonText guibg=none')
+vim.cmd[[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]]

@@ -1,17 +1,18 @@
 return require('packer').startup(function()
   -- Package manager
   use 'wbthomason/packer.nvim'
-  --use 'rose-pine/neovim'
+  use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
   use "EdenEast/nightfox.nvim"
-  use 'luisiacc/gruvbox-baby'
+  use("sbdchd/neoformat")
+  --use 'luisiacc/gruvbox-baby'
   use 'Shatur/neovim-ayu'
  -- use 'cormacrelf/dark-notify'
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
   }
-  use({
+    use({
       "glepnir/lspsaga.nvim",
       branch = "main",
       config = function()
