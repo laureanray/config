@@ -1,4 +1,29 @@
-require'nvim-tree'.setup {
+local nvim_tree = require('nvim-tree')
+local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+nvim_tree.setup({
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+    icons = {
+      webdev_colors = false,
+      git_placement = "after",
+      glyphs = {
+        folder = {
+          arrow_closed = "",
+          arrow_open = ""
+        },
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          deleted = "",
+          ignored = "",
+        },
+      } 
+    },
+  },
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
@@ -12,7 +37,7 @@ require'nvim-tree'.setup {
   --   auto_open = true,
   -- },
   diagnostics = {
-    enable = false,
+    enable = true,
     icons = {
       hint = "",
       info = "",
@@ -44,5 +69,6 @@ require'nvim-tree'.setup {
       list = {}
     }
   }
-}
+})
+
 

@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["boo-colorscheme-nvim"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/boo-colorscheme-nvim",
+    url = "https://github.com/rockerBOO/boo-colorscheme-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -99,10 +104,21 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["dark-notify"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/dark-notify",
+    url = "https://github.com/cormacrelf/dark-notify"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["goto-preview"] = {
+    config = { "\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0" },
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/goto-preview",
+    url = "https://github.com/rmagatti/goto-preview"
   },
   ["gruvbox-baby"] = {
     loaded = true,
@@ -144,6 +160,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["material.vim"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/material.vim",
+    url = "https://github.com/kaicataldo/material.vim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
+  neovim = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["neovim-ayu"] = {
     loaded = true,
@@ -200,16 +236,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
-  },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -281,11 +307,6 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
   },
-  ["vim-jsx-pretty"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
-    url = "https://github.com/maxmellon/vim-jsx-pretty"
-  },
   ["vim-moonfly-colors"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
@@ -295,11 +316,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -319,6 +335,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: goto-preview
+time([[Config for goto-preview]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17goto-preview\frequire\0", "config", "goto-preview")
+time([[Config for goto-preview]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")

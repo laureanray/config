@@ -5,9 +5,12 @@ return require('packer').startup(function()
   use 'bluz71/vim-moonfly-colors'
   use "EdenEast/nightfox.nvim"
   use("sbdchd/neoformat")
-  --use 'luisiacc/gruvbox-baby'
+  use 'luisiacc/gruvbox-baby'
   use 'Shatur/neovim-ayu'
- -- use 'cormacrelf/dark-notify'
+  use 'rockerBOO/boo-colorscheme-nvim'
+  use 'rktjmp/lush.nvim'
+  use 'cormacrelf/dark-notify'
+  use({ 'kaicataldo/material.vim', branch = "main" })
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
@@ -23,10 +26,17 @@ return require('packer').startup(function()
           })
       end,
   })
+
   use {
-    'tpope/vim-surround'
-  }
-  use 'maxmellon/vim-jsx-pretty'
+  'rmagatti/goto-preview',
+  config = function()
+    require('goto-preview').setup {}
+  end
+}
+  --use {
+  --  'tpope/vim-surround'
+  --}
+  --use 'maxmellon/vim-jsx-pretty'
 --  use 'lewis6991/spellsitter.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -34,12 +44,12 @@ return require('packer').startup(function()
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/playground'
-  use 'windwp/nvim-ts-autotag'
+  --use 'windwp/nvim-ts-autotag'
   use {
   	"windwp/nvim-autopairs",
      config = function() require("nvim-autopairs").setup {} end
   }
-  use 'p00f/nvim-ts-rainbow'
+--  use 'p00f/nvim-ts-rainbow'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'

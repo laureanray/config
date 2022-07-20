@@ -3,7 +3,8 @@ local wk = require('which-key')
 wk.setup{
   presets = {
     operators = false,
-    motions = false
+    motions = false,
+    text_objects = false
   }
 }
 
@@ -19,6 +20,7 @@ local mappings = {
   b = {":Telescope git_branches<cr>", "Telescope Git Branches"},
   cc = {":Telescope git_commits<cr>", "Telescope Git Commits"},
   ca = {":Lspsaga code_action<cr>", "Code Actions"},
+  cpd = {":lua require('goto-preview').goto_preview_definition()<cr>", "Goto Definition"},
   cd = {":Telescope lsp_document_diagnostics<cr>", "Telescope Document Diagnostics"},
   cw = {":Telescope lsp_workspace_diagnostics<cr>", "Telescope Global Diagnostics"},
   gg = {":LazyGit<cr>", "Git status"},

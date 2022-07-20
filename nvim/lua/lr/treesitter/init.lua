@@ -35,9 +35,9 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
 )
 
-require('nvim-ts-autotag').setup({
-  filetypes = { "html" , "xml" },
-})
+--require('nvim-ts-autotag').setup({
+--  filetypes = { "html" , "xml" },
+--})
 
 require'nvim-treesitter.configs'.setup {
   incremental_selection = {
@@ -49,10 +49,9 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "grm",
     }
   },
-  ensure_installed = {"html", "javascript", "java", "typescript", "lua", "go", "tsx"},
+  ensure_installed = {"html", "javascript", "java", "typescript", "lua", "go"},
   highlight = {
     enable = true,
---    additional_vim_regex_highlighting = true
   },
   autotag = {
     enable = true,
@@ -69,7 +68,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   indent = {
-    enable = false
+    enable = true
   },
   textobjects = {
     select = {
