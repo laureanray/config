@@ -18,6 +18,7 @@ local servers = {
   "clangd",
   "rust_analyzer",
   "gopls",
+  "eslint",
 }
 
 local settings = {

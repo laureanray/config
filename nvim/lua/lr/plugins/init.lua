@@ -51,6 +51,7 @@ return require('packer').startup(function()
      config = function() require("nvim-autopairs").setup {} end
   }
 --  use 'p00f/nvim-ts-rainbow'
+  --use 'MunifTanjim/eslint.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'

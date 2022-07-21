@@ -40,7 +40,7 @@ vim.o.spellsuggest=best,9
 vim.cmd[[
 set mmp=5000
 ]]
-
+vim.g.neoformat_enabled_typescript = {"eslint_d"}
 vim.cmd[[
 augroup fmt
   autocmd!
