@@ -3,10 +3,10 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 nvim_tree.setup({
   renderer = {
     indent_markers = {
-      enable = true,
+      enable = false,
     },
     icons = {
-      webdev_colors = false,
+      webdev_colors = true,
       git_placement = "after",
       glyphs = {
         folder = {
@@ -18,6 +18,7 @@ nvim_tree.setup({
           staged = "",
           unmerged = "",
           renamed = "",
+          untracked = "",
           deleted = "",
           ignored = "",
         },

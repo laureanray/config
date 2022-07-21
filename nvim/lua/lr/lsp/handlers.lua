@@ -52,6 +52,8 @@ M.setup = function()
     width = 60,
     -- height = 30,
   })
+
+  vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 end
 
 local function lsp_highlight_document(client)
