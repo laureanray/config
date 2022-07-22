@@ -37,15 +37,12 @@ return require('packer').startup(function()
   --use {
   --  'tpope/vim-surround'
   --}
-  --use 'maxmellon/vim-jsx-pretty'
---  use 'lewis6991/spellsitter.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate"
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/playground'
-  --use 'windwp/nvim-ts-autotag'
   use {
   	"windwp/nvim-autopairs",
      config = function() require("nvim-autopairs").setup {} end
@@ -67,13 +64,6 @@ return require('packer').startup(function()
   use "RRethy/vim-illuminate"
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use 'RishabhRD/popfix'
-  --use({
-  --  'ray-x/navigator.lua',
-  --   requires = {
-  --      { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-  --      { 'neovim/nvim-lspconfig' },
-  --  },
-  --})
   -- use 'RishabhRD/nvim-lsputils' 
   -- Development (zen mode ish)
   use {
