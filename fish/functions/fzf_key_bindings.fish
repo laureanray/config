@@ -1,1 +1,0 @@
-/Users/laureanray.bahala/.fzf/shell/key-bindings.fish

@@ -1,1 +1,0 @@
-/Users/laureanray.bahala/.local/share/omf/themes/boxfish/fish_prompt.fish
