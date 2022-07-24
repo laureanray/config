@@ -9,9 +9,16 @@ elseif vim.fn.has('win32') == 1 then
 else
   print("Unsupported system for sumneko")
 end
-local sumneko_root_path = '/Users/laureanray.bahala/tools/lua-language-server'
-local sumneko_binary = sumneko_root_path.."/bin/lua-language-server"
 
+
+local sumneko_root_path
+
+if vim.loop.os_uname().sysname == 'Darwin' then
+  sumneko_root_path = '/Users/laureanray.bahala/tools/lua-language-server'
+else
+  sumneko_root_path = '/usr/local/lua'
+end 
+local sumneko_binary = sumneko_root_path.."/bin/lua-language-server"
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
