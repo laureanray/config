@@ -4,19 +4,23 @@ window:
     y: 4
 font:
   normal:
-    family: NotoSansMono Nerd Font
+    # family: NotoSansMono Nerd Font
+    family: JetbrainsMono Nerd Font
     style: Regular
 
   bold:
-    family: NotoSansMono Nerd Font
+    # family: NotoSansMono Nerd Font
+    family: JetbrainsMono Nerd Font
     style: Bold
 
   italic:
-    family: NotoSansMono Nerd Font
+    # family: NotoSansMono Nerd Font
+    family: JetbrainsMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: NotoSansMono Nerd Font
+    # family: NotoSansMono Nerd Font
+    family: JetbrainsMono Nerd Font
     style: Bold Italic
 
   size: 16
@@ -27,30 +31,30 @@ shell:
     - -c
     - "tmux attach || tmux"
 colors:
-  name: Lost Woods
-  author: Baskerville
+  name: Ashes (light)
+  author: Chris Kempson
   primary:
-    background: "#000000"
-    foreground: "#919191"
+    background: "#f3f4f5"
+    foreground: "#565e65"
   cursor:
-    text: "#000000"
-    cursor: "#919191"
+    text: "#f3f4f5"
+    cursor: "#565e65"
   normal:
-    black: "#303030"
-    red: "#a13a38"
-    green: "#00715d"
-    yellow: "#006f32"
-    blue: "#a43261"
-    magenta: "#913e88"
-    cyan: "#007086"
-    white: "#c6c6c6"
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: "#5e5e5e"
-    red: "#ffa59a"
-    green: "#24dfc4"
-    yellow: "#73db95"
-    blue: "#ff9fc9"
-    magenta: "#ffa7f6"
-    cyan: "#00ddf4"
-    white: "#ffffff"
-theme: Baskerville - lost woods
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
+theme: Ashes.light
