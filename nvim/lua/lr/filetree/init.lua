@@ -7,7 +7,7 @@ nvim_tree.setup({
     },
     icons = {
       webdev_colors = true,
-      git_placement = "after",
+      git_placement = "before",
       glyphs = {
         folder = {
           arrow_closed = "",
