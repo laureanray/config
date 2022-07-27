@@ -12,6 +12,7 @@ return require('packer').startup(function()
   use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
   use 'github/copilot.vim'
+  use 'xiyaowong/nvim-transparent'
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
