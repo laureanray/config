@@ -8,7 +8,6 @@ local servers = {
   "cssmodules_ls",
   "emmet_ls",
   "html",
-  "jdtls",
   "jsonls",
   "sumneko_lua",
   "tflint",
