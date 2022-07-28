@@ -10,11 +10,11 @@ wk.setup{
 
 local mappings = {
   pj = {":lua require('telescope.builtin').file_browser({ cwd = '~/Projects'})<cr>", "Projects"},
-  d = {":lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>", "Neovim Config"},
+  d = {":lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", "Neovim Config"},
   x = {":bdelete<cr>", "Delete Current Buffer"},
   f = {":NvimTreeToggle<cr>", "File Tree"},
   F = {":NvimTreeFocus<cr>", "Focus File Tree"},
-  o = {":lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', --hidden', '-g', '!.git'}})", "Telescope Find Files"},
+  o = {":lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>", "Telescope Find Files"},
   p = {":Telescope git_files<cr>", "Telescope Git Files"},
   l = {":Telescope live_grep<cr>", "Telescope Live Grep"},
   b = {":Telescope git_branches<cr>", "Telescope Git Branches"},
