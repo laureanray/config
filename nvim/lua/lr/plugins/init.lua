@@ -100,7 +100,7 @@ use {
       {'nvim-telescope/telescope-symbols.nvim'}
     }
   }
-  use 'rcarriga/nvim-notify'
+ -- use 'rcarriga/nvim-notify'
   -- Key bindings
   use 'folke/which-key.nvim'
   use 'voldikss/vim-floaterm'

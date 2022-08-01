@@ -41,6 +41,7 @@ vim.cmd[[
 set mmp=5000
 ]]
 vim.g.neoformat_enabled_typescript = {"eslint_d"}
+vim.g.neoformat_enabled_typescriptreact = {"eslint_d"}
 vim.cmd[[
 augroup fmt
   autocmd!
