@@ -25,6 +25,13 @@ nvim_tree.setup({
       } 
     },
   },
+  actions = {
+    change_dir = {
+      enable = false,
+      global = false,
+      restrict_above_cwd = true
+    }
+  },
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,

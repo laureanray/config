@@ -1,2 +1,2 @@
-vim.cmd [[colorscheme boo]]
+vim.cmd [[colorscheme gruvbox-baby]]
 
