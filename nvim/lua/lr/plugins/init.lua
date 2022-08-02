@@ -11,22 +11,16 @@ return require('packer').startup(function()
   use 'rktjmp/lush.nvim'
   use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
-  use 'github/copilot.vim'
+--  use 'github/copilot.vim'
   use 'xiyaowong/nvim-transparent'
   use {
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
   }
-    use({
-      "glepnir/lspsaga.nvim",
-      branch = "main",
-      config = function()
-          local saga = require("lspsaga")
-  
-          saga.init_lsp_saga({
-              -- your configuration
-          })
-      end,
+ 
+  use({
+      "kkharji/lspsaga.nvim",
+      branch = "main"
   })
 
   use {
@@ -40,6 +34,7 @@ return require('packer').startup(function()
   --}
   use {
     'nvim-treesitter/nvim-treesitter',
+    commit = '8ada8faf2fd5a74cc73090ec856fa88f34cd364b',
     run = ":TSUpdate"
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'

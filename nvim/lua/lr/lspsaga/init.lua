@@ -24,5 +24,4 @@ vim.keymap.set("v", "<leader>ca", function()
     action.range_code_action()
 end, { silent = true,noremap =true })
 -- or use command
-vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true,noremap = true })
-vim.keymap.set("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true,noremap = true })
+vim.keymap.set("n", "<leader>cr", "<cmd>Lspsaga rename<CR>", { silent = true,noremap = true })
