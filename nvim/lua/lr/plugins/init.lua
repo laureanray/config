@@ -1,5 +1,6 @@
 return require('packer').startup(function()
   -- Package manager
+  use '~/Projects/neochtsh.nvim'
   use 'wbthomason/packer.nvim'
   use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
@@ -9,7 +10,7 @@ return require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'rockerBOO/boo-colorscheme-nvim'
   use 'rktjmp/lush.nvim'
-  use 'cormacrelf/dark-notify'
+--  use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
 --  use 'github/copilot.vim'
   use 'xiyaowong/nvim-transparent'
