@@ -22,7 +22,5 @@ color="${styles[$(( $RANDOM % 10 ))]}"
 # comment these lines to disable random style
 # themes=($(ls -p --hide="launcher.sh" --hide="styles" $dir))
 # theme="${themes[$(( $RANDOM % 7 ))]}"
-rofi -no-lazy-grab -show drun \
--modi run,drun,window \
--theme $dir/"$theme"
+rofi -no-lazy-grab -show combi --combi-modes "window,drun" -theme $dir/"$theme"
 

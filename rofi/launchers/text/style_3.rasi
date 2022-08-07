@@ -8,17 +8,17 @@
  */
 
 configuration {
-    font: 							"NotoSansMono Nerd Font 10";
+    font: 							"Iosevka Nerd Font 12";
     fixed-num-lines: 				true;
     show-icons: 					false;
     sidebar-mode: 					false;
     scroll-method: 					0;
-    window-format: 					"[{w}] ··· {c} ···   {t}";
+    window-format: 					"[{w}] {c} {t}";
     click-to-exit: 					true;
     combi-hide-mode-prefix: 		false;
-    display-window: 				"";
+    display-window: 				" ";
     display-windowcd: 				"";
-    display-run: 					"";
+    display-run: 					" ";
     display-ssh: 					"";
     display-drun: 					"";
     display-combi: 					"";
@@ -33,8 +33,8 @@ window {
     border: 						0px;
     border-color: 					@ac;
     border-radius: 					6px;
-    width: 							40%;
-    background-color: @bg;
+    width: 							50%;
+    background-color: transparent;
 }
 
 prompt {
@@ -114,7 +114,7 @@ element normal.active {
     background-color: transparent;
 }
 element selected.normal {
-    text-color:       				@fg;
+    text-color:       				#ffffff;
     background-color: transparent;
 }
 element selected.urgent {
