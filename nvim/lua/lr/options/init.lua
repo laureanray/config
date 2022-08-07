@@ -55,4 +55,4 @@ vim.cmd[[
 ]]
 
 vim.o.inccommand = nosplit
-vim.notify = require("notify")
+--vim.notify = require("notify")
