@@ -53,10 +53,6 @@ vim.cmd[[
         imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
         let g:copilot_no_tab_map = v:true
 ]]
-<<<<<<< HEAD
 
-
-=======
 vim.o.inccommand = nosplit
 vim.notify = require("notify")
->>>>>>> af3ba33 (lets break my config)
