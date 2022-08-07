@@ -10,6 +10,8 @@ return require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'rockerBOO/boo-colorscheme-nvim'
   use 'rktjmp/lush.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'ThePrimeagen/harpoon'
 --  use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
 --  use 'github/copilot.vim'
