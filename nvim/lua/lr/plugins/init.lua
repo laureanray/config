@@ -1,6 +1,6 @@
 return require('packer').startup(function()
   -- Package manager
-  use '~/Projects/neochtsh.nvim'
+  --use '~/Projects/neochtsh.nvim'
   use 'wbthomason/packer.nvim'
   use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
@@ -9,9 +9,14 @@ return require('packer').startup(function()
   use 'luisiacc/gruvbox-baby'
   use 'Shatur/neovim-ayu'
   use 'rockerBOO/boo-colorscheme-nvim'
+  use 'fxn/vim-monochrome'
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'ThePrimeagen/harpoon'
+  use 'folke/tokyonight.nvim'
+  use 'rmehri01/onenord.nvim'
+  use 'jaredgorski/spacecamp'
+  use 'AlessandroYorba/Sierra'
 --  use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
 --  use 'github/copilot.vim'
@@ -20,11 +25,13 @@ return require('packer').startup(function()
     'neovim/nvim-lspconfig',
     requires = 'onsails/lspkind-nvim'
   }
- 
+  use 'fenetikm/falcon' 
   use({
       "kkharji/lspsaga.nvim",
       branch = "main"
   })
+
+  use 'f-person/git-blame.nvim'
 
   use {
   'rmagatti/goto-preview',
@@ -58,6 +65,8 @@ return require('packer').startup(function()
   use 'jbgutierrez/vim-better-comments'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lukas-reineke/lsp-format.nvim'
+
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   -- use 'jose-elias-alvarez/null-ls.nvim'
   use "mfussenegger/nvim-jdtls"
   use "RRethy/vim-illuminate"
