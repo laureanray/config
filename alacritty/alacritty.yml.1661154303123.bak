@@ -1,5 +1,3 @@
-env:
-  TERM: xterm-256color
 window:
   padding:
     x: 4
@@ -35,34 +33,34 @@ shell:
 # falcon colorscheme for alacritty
 # by fenetikm, https://github.com/fenetikm/falcon
 colors:
-  name: Gnometerm
-  author: ""
+  name: 3024 (dark)
+  author: Chris Kempson
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
+    background: "#090300"
+    foreground: "#a5a2a2"
   cursor:
-    text: "#000000"
-    cursor: "#ffffff"
+    text: "#090300"
+    cursor: "#a5a2a2"
   normal:
-    black: "#000000"
-    red: "#cc0000"
-    green: "#4e9a06"
-    yellow: "#c4a000"
-    blue: "#3465a4"
-    magenta: "#75507b"
-    cyan: "#06989a"
-    white: "#d3d7cf"
+    black: "#090300"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#a5a2a2"
   bright:
-    black: "#555753"
-    red: "#ef2929"
-    green: "#8ae234"
-    yellow: "#fce94f"
-    blue: "#729fcf"
-    magenta: "#ad7fa8"
-    cyan: "#34e2e2"
-    white: "#eeeeec"
+    black: "#5c5855"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#f7f7f7"
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
-theme: Gnometerm
+theme: 3024.dark
