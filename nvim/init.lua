@@ -1,3 +1,4 @@
+require('lr.impatient')
 require('lr.plugins')
 require('lr.completion')
 require('lr.options')
