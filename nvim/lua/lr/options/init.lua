@@ -35,6 +35,9 @@ vim.bo.expandtab = true
 vim.o.ignorecase = true
 vim.o.spelllang = en,cjk
 vim.o.spellsuggest=best,9
+vim.o.updatetime = 300
+vim.o.incsearch = false
+vim.wo.signcolumn = 'yes'
 vim.cmd[[
 set mmp=5000
 ]]

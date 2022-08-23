@@ -131,6 +131,11 @@ use {
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
-  use 'kdheepak/lazygit.nvim'
-
+--  use 'kdheepak/lazygit.nvim'
+  use {
+    'tanvirtin/vgit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 end)
