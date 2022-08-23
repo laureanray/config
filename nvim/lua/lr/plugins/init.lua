@@ -12,10 +12,22 @@ return require('packer').startup(function()
   use 'fxn/vim-monochrome'
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
+  use { 
+    'olivercederborg/poimandres.nvim',
+    config = function()
+      require('poimandres').setup {
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+      }
+    end
+  }
+  use 'arcticicestudio/nord-vim'
   use 'ThePrimeagen/harpoon'
   use 'folke/tokyonight.nvim'
   use 'rmehri01/onenord.nvim'
   use 'jaredgorski/spacecamp'
+  use 'romainl/Apprentice'
   use 'AlessandroYorba/Sierra'
 --  use 'cormacrelf/dark-notify'
   use({ 'kaicataldo/material.vim', branch = "main" })
@@ -31,8 +43,8 @@ return require('packer').startup(function()
       branch = "main"
   })
 
-  use 'f-person/git-blame.nvim'
-
+--  use 'f-person/git-blame.nvim'
+  use 'APZelos/blamer.nvim'
   use {
   'rmagatti/goto-preview',
   config = function()
