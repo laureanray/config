@@ -13,7 +13,7 @@ return require('packer').startup(function()
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
   use { 
-    'olivercederborg/poimandres.nvim',
+    'laureanray/poimandres.nvim',
     config = function()
       require('poimandres').setup {
         -- leave this setup function empty for default config

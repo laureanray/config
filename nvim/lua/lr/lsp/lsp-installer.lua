@@ -8,6 +8,7 @@ local servers = {
   "cssmodules_ls",
   --"emmet_ls", // temporary disable cause annoying
   "html",
+  "tailwindcss",
   "jsonls",
   "sumneko_lua",
   "tflint",
