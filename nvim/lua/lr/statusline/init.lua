@@ -1,6 +1,6 @@
 require('lualine').setup({
   options = {
-    theme = 'poimandres',
+    theme = 'onenord',
     section_separators = '',
     component_separators = ''
   }

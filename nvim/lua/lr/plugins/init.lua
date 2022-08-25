@@ -46,6 +46,7 @@ return require('packer').startup(function()
   -- PERFORMANCE!
   use 'lewis6991/impatient.nvim'
 
+  use 'towolf/vim-helm'
 --  use 'f-person/git-blame.nvim'
   use 'APZelos/blamer.nvim'
   use {
