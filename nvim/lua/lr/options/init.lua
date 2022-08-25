@@ -41,6 +41,7 @@ vim.wo.signcolumn = 'yes'
 vim.cmd[[
 set mmp=5000
 ]]
+-- Auto format
 vim.g.neoformat_enabled_typescript = {"eslint_d"}
 vim.g.neoformat_enabled_typescriptreact = {"eslint_d"}
 vim.g.neoformat_enabled_go = {"gofmt"}
@@ -51,13 +52,9 @@ vim.cmd[[
 ]]
 
 vim.o.inccommand = nosplit
---vim.notify = require("notify")
 local opt = vim.opt
 
 opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
-vim.cmd [[
-  autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})
-]]

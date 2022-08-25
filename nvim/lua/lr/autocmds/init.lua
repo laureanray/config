@@ -10,5 +10,12 @@ if vim.fn.has "nvim-0.7" then
     }
   )
 
+  api.nvim_create_autocmd(
+    { "CursorHold", "CursorHoldI" },
+    { 
+      cmd = 'lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"}'
+    }
+  )
+
 
 end
