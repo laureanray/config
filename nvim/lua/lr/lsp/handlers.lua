@@ -96,6 +96,13 @@ M.on_attach = function(client, bufnr)
     M.capabilities.textDocument.completion.completionItem.snippetSupport = false
     vim.lsp.codelens.refresh()
   end
+  
+  if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+    vim.diagnostic.disable(bufnr)
+    vim.defer_fn(function()
+      vim.diagnostic.reset(nil, bufnr)
+    end, 1000)
+  end
 
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)

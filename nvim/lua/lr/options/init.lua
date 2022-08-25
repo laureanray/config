@@ -43,12 +43,7 @@ set mmp=5000
 ]]
 vim.g.neoformat_enabled_typescript = {"eslint_d"}
 vim.g.neoformat_enabled_typescriptreact = {"eslint_d"}
-vim.cmd[[
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]]
+vim.g.neoformat_enabled_go = {"gofmt"}
 
 vim.cmd[[
         imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
@@ -63,7 +58,6 @@ opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
-vim.diagnostic.config({
-  virtual_text = false
-})
+vim.cmd [[
+  autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})
+]]
