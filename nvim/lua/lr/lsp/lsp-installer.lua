@@ -6,7 +6,7 @@ end
 local servers = {
   "cssls",
   "cssmodules_ls",
-  --"emmet_ls", // temporary disable cause annoying
+  "emmet_ls", 
   "html",
   "tailwindcss",
   "jsonls",

@@ -11,6 +11,14 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
+local cmp = require("cmp")
+local types = require("cmp.types")
+
+local function deprioritize_snippet(entry1, entry2)
+  if entry1:get_kind() == types.lsp.CompletionItemKind.Snippet then return false end
+  if entry2:get_kind() == types.lsp.CompletionItemKind.Snippet then return true end
+end
+
 vim.g.completeopt="menu,menuone,noselect,noinsert"
 
 require('lspkind').init({
@@ -56,6 +64,23 @@ require('lspkind').init({
 })
 
 cmp.setup({
+  sorting = {
+    priority_weight = 2,
+    comparators = {
+      deprioritize_snippet,
+      -- the rest of the comparators are pretty much the defaults
+      cmp.config.compare.offset,
+      cmp.config.compare.exact,
+      cmp.config.compare.scopes,
+      cmp.config.compare.score,
+      cmp.config.compare.recently_used,
+      cmp.config.compare.locality,
+      cmp.config.compare.kind,
+      cmp.config.compare.sort_text,
+      cmp.config.compare.length,
+      cmp.config.compare.order,
+    },
+  },
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
