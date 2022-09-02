@@ -54,8 +54,9 @@ return require('packer').startup(function()
   config = function()
     require('goto-preview').setup {}
   end
-}
-  --use {
+  }
+
+    --use {
   --  'tpope/vim-surround'
   --}
   use {

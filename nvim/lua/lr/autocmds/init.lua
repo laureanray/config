@@ -16,4 +16,9 @@ if vim.fn.has "nvim-0.7" then
   )
 
 
+  api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    {  command = "Jenkinsfile setf groovy" }
+  )
+
 end
