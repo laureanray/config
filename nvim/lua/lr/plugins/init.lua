@@ -12,6 +12,7 @@ return require('packer').startup(function()
   use 'fxn/vim-monochrome'
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'wadackel/vim-dogrun'
   use { 
     'laureanray/poimandres.nvim',
     config = function()
