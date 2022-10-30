@@ -4,6 +4,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'rose-pine/neovim'
   use 'bluz71/vim-moonfly-colors'
+  use 'neg-serg/neg.nvim'
   use "EdenEast/nightfox.nvim"
   use("sbdchd/neoformat")
   use 'luisiacc/gruvbox-baby'
@@ -13,6 +14,7 @@ return require('packer').startup(function()
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'wadackel/vim-dogrun'
+  use 'cormacrelf/vim-colors-github' 
   use { 
     'laureanray/poimandres.nvim',
     config = function()
@@ -56,14 +58,9 @@ return require('packer').startup(function()
     require('goto-preview').setup {}
   end
   }
-
-    --use {
-  --  'tpope/vim-surround'
-  --}
   use {
     'nvim-treesitter/nvim-treesitter',
-    commit = '8ada8faf2fd5a74cc73090ec856fa88f34cd364b',
-    run = ":TSUpdate"
+    run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'nvim-treesitter/playground'

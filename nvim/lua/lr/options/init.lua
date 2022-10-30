@@ -45,7 +45,7 @@ set mmp=5000
 vim.g.neoformat_enabled_typescript = {"eslint_d"}
 vim.g.neoformat_enabled_typescriptreact = {"eslint_d"}
 vim.g.neoformat_enabled_go = {"gofmt"}
-
+--vim.g.neoformat_enabled_prisma = {"prisma format"}
 vim.cmd[[
         imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
         let g:copilot_no_tab_map = v:true
@@ -58,3 +58,8 @@ opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
+
+
+vim.cmd[[
+  call github_colors#togglebg_map('<f5>')
+]]

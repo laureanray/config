@@ -36,7 +36,7 @@ nvim_tree.setup({
   hijack_netrw        = true,
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
-  -- auto_close          = false,
+  --auto_close          = true,
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = true,
@@ -68,8 +68,6 @@ nvim_tree.setup({
   },
   view = {
     adaptive_size = true,
-    width = 40,
-    height = 30,
     hide_root_folder = false,
     side = 'left',
     mappings = {
