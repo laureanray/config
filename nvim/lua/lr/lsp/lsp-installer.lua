@@ -47,12 +47,6 @@ if not lspconfig_status_ok then
   return
 end
 
-local jdtls_ok, jdtls = pcall(require, "jdtls")
-if not jdtls_ok then
-  vim.notify "JDTLS not found, install with `:LspInstall jdtls`"
---  return
-end
-
 local opts = {}
 
 for _, server in pairs(servers) do
@@ -60,11 +54,6 @@ for _, server in pairs(servers) do
     on_attach = require("lr.lsp.handlers").on_attach,
     capabilities = require("lr.lsp.handlers").capabilities,
   }
-
---  if server == "jsonls" then
---    local jsonls_opts = require "lr.lsp.settings.jsonls"
---    opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
---  end
 
   if server == "sumneko_lua" then
     local sumneko_opts = require "lr.lsp.settings.sumneko_lua"
