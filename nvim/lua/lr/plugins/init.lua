@@ -77,13 +77,12 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  use 'jbgutierrez/vim-better-comments'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'lukas-reineke/lsp-format.nvim'
 
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   -- use 'jose-elias-alvarez/null-ls.nvim'
-  use "mfussenegger/nvim-jdtls"
+  use "mfussenegger/nvim-jdtls" 
   use "RRethy/vim-illuminate"
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use 'RishabhRD/popfix'

@@ -9,7 +9,7 @@ vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 -- Load the colorscheme
 
 if vim.fn.has("mac") == 1 then
-  vim.cmd[[colorscheme ayu]]
+  vim.cmd[[colorscheme nightfox]]
 elseif vim.fn.has("unix") == 1 then
   vim.cmd[[colorscheme boo]]
 else

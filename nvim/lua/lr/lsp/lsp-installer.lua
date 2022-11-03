@@ -4,9 +4,10 @@ if not status_ok then
 end
 
 local servers = {
+  "jdtls",
   "cssls",
   "cssmodules_ls",
-  "emmet_ls", 
+  "emmet_ls",
   "html",
   "tailwindcss",
   "jsonls",
@@ -46,6 +47,12 @@ if not lspconfig_status_ok then
   return
 end
 
+local jdtls_ok, jdtls = pcall(require, "jdtls")
+if not jdtls_ok then
+  vim.notify "JDTLS not found, install with `:LspInstall jdtls`"
+--  return
+end
+
 local opts = {}
 
 for _, server in pairs(servers) do
@@ -69,22 +76,5 @@ for _, server in pairs(servers) do
    opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
   end
 
-  if server == "jdtls" then
-    goto continue
-  end
-
---  if server == "rust_analyzer" then
---    local rust_opts = require "lr.lsp.settings.rust"
---
---    local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
---    if not rust_tools_status_ok then
---      return
---    end
---
---    rust_tools.setup(rust_opts)
---    goto continue
---  end
-
   lspconfig[server].setup(opts)
-  ::continue::
 end
