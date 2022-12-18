@@ -14,6 +14,7 @@ return require('packer').startup(function()
   use 'rktjmp/lush.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'wadackel/vim-dogrun'
+  use 'ramojus/mellifluous.nvim'
   use 'cormacrelf/vim-colors-github' 
   use { 
     'laureanray/poimandres.nvim',
@@ -26,7 +27,6 @@ return require('packer').startup(function()
     end
   }
   use 'arcticicestudio/nord-vim'
-  use 'ThePrimeagen/harpoon'
   use 'folke/tokyonight.nvim'
   use 'rmehri01/onenord.nvim'
   use 'jaredgorski/spacecamp'
@@ -110,6 +110,8 @@ use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+
+  use 'theprimeagen/harpoon'
 
   -- Searching stuffs
   use {

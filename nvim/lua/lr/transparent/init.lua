@@ -3,7 +3,7 @@ local enable
 if vim.fn.has("mac") == 1 then
   enable = false 
 elseif vim.fn.has("unix") == 1 then
-  enable = true 
+  enable = false 
 elseif vim.fn.has('win32') == 1 then
   enable = true 
 elseif vim.fn.has('win32') == 1 then

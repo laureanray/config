@@ -1,5 +1,7 @@
 require('lr.impatient')
+require('lr.remap')
 require('lr.plugins')
+require('lr.harpoon')
 require('lr.completion')
 require('lr.options')
 require('lr.filetree')
