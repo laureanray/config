@@ -12,10 +12,8 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 vim.o.backup = false
 vim.o.writebackup = false
-vim.o.updatetime = 300
 vim.o.timeoutlen = 100
 vim.o.clipboard = "unnamedplus"
-vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.scrolloff = 3
 vim.o.sidescrolloff = 5
@@ -36,7 +34,6 @@ vim.o.ignorecase = true
 vim.o.spelllang = en,cjk
 vim.o.spellsuggest=best,9
 vim.o.updatetime = 300
-vim.o.incsearch = false
 vim.wo.signcolumn = 'yes'
 
 -- undo tree
@@ -70,3 +67,14 @@ opt.foldenable = true
 vim.cmd[[
   call github_colors#togglebg_map('<f5>')
 ]]
+  
+-- general
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+vim.opt.updatetime = 50
+vim.opt.colorcolumn = "80"
+
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
