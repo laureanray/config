@@ -38,6 +38,13 @@ vim.o.spellsuggest=best,9
 vim.o.updatetime = 300
 vim.o.incsearch = false
 vim.wo.signcolumn = 'yes'
+
+-- undo tree
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true 
+
 vim.cmd[[
 set mmp=5000
 ]]

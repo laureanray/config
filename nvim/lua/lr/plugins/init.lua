@@ -45,6 +45,8 @@ return require('packer').startup(function()
       "kkharji/lspsaga.nvim",
       branch = "main"
   })
+  -- Undo
+  use 'mbbill/undotree'
 
   -- PERFORMANCE!
   use 'lewis6991/impatient.nvim'
