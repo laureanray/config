@@ -18,7 +18,7 @@ vim.o.ignorecase = true
 vim.o.scrolloff = 3
 vim.o.sidescrolloff = 5
 vim.o.mouse = "a"
-vim.wo.wrap = false
+-- vim.wo.wrap = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.cursorline = true
@@ -80,3 +80,5 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.o.inccommand = "nosplit"
+
+vim.g.gruvbox_constrast_dark = "hard"

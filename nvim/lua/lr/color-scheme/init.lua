@@ -9,9 +9,9 @@ vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 -- Load the colorscheme
 
 if vim.fn.has("mac") == 1 then
-  vim.cmd[[colorscheme nightfox]]
+	vim.cmd([[colorscheme mellifluous]])
 elseif vim.fn.has("unix") == 1 then
-  vim.cmd[[colorscheme mellifluous]]
+	vim.cmd([[colorscheme mellifluous]])
 else
-  print("Unsupported system for sumneko")
+	print("Unsupported system for sumneko")
 end
