@@ -2,22 +2,23 @@ return require("packer").startup(function()
 	-- Package manager
 	--use '~/Projects/neochtsh.nvim'
 	use("wbthomason/packer.nvim")
+  use('nyoom-engineering/oxocarbon.nvim')
 	use("rose-pine/neovim")
-	use("bluz71/vim-moonfly-colors")
-	use("neg-serg/neg.nvim")
-	use("EdenEast/nightfox.nvim")
+	-- use("bluz71/vim-moonfly-colors")
+	-- use("neg-serg/neg.nvim")
+	-- use("EdenEast/nightfox.nvim")
 	use("sbdchd/neoformat")
-	use("luisiacc/gruvbox-baby")
-	use("morhetz/gruvbox")
-	use("Shatur/neovim-ayu")
-	use("rockerBOO/boo-colorscheme-nvim")
-	use("fxn/vim-monochrome")
+	-- use("luisiacc/gruvbox-baby")
+	-- use("morhetz/gruvbox")
+	-- use("Shatur/neovim-ayu")
+	-- use("rockerBOO/boo-colorscheme-nvim")
+	-- use("fxn/vim-monochrome")
 	use("rktjmp/lush.nvim")
-	use("nvim-lua/plenary.nvim")
-	use("wadackel/vim-dogrun")
+	-- use("nvim-lua/plenary.nvim")
+	-- use("wadackel/vim-dogrun")
 	use("ramojus/mellifluous.nvim")
-	use("cormacrelf/vim-colors-github")
-	use("nyoom-engineering/nyoom.nvim")
+	-- use("cormacrelf/vim-colors-github")
+	-- use("nyoom-engineering/nyoom.nvim")
 	use({
 		"laureanray/poimandres.nvim",
 		config = function()
@@ -28,34 +29,35 @@ return require("packer").startup(function()
 			})
 		end,
 	})
-	use("arcticicestudio/nord-vim")
-	use("folke/tokyonight.nvim")
-	use("rmehri01/onenord.nvim")
-	use("jaredgorski/spacecamp")
-	use("romainl/Apprentice")
-	use("AlessandroYorba/Sierra")
-	--  use 'cormacrelf/dark-notify'
-	use({ "kaicataldo/material.vim", branch = "main" })
+	-- use("arcticicestudio/nord-vim")
+	-- use("folke/tokyonight.nvim")
+	-- use("rmehri01/onenord.nvim")
+	-- use("jaredgorski/spacecamp")
+	-- use("romainl/Apprentice")
+	-- use("AlessandroYorba/Sierra")
+	-- use 'cormacrelf/dark-notify'
+	-- use({ "kaicataldo/material.vim", branch = "main" })
 	--  use 'github/copilot.vim'
-	use("xiyaowong/nvim-transparent")
+	-- use("xiyaowong/nvim-transparent")
 	use({
 		"neovim/nvim-lspconfig",
 		requires = "onsails/lspkind-nvim",
 	})
-	use("fenetikm/falcon")
+	-- use("fenetikm/falcon")
 	use({
 		"kkharji/lspsaga.nvim",
 		branch = "main",
 	})
 	-- Undo
-	use("mbbill/undotree")
+	-- use("mbbill/undotree")
 
 	-- PERFORMANCE!
-	use("lewis6991/impatient.nvim")
+	-- use("lewis6991/impatient.nvim")
 
-	use("towolf/vim-helm")
+	-- use("towolf/vim-helm")
+  
 	--  use 'f-person/git-blame.nvim'
-	use("APZelos/blamer.nvim")
+	-- use("APZelos/blamer.nvim")
 	use({
 		"rmagatti/goto-preview",
 		config = function()
@@ -94,10 +96,8 @@ return require("packer").startup(function()
 	use("RishabhRD/popfix")
 	-- use 'RishabhRD/nvim-lsputils'
 	-- Development (zen mode ish)
-	use({
-		"folke/twilight.nvim",
-	})
-	use("wakatime/vim-wakatime")
+
+	-- use("wakatime/vim-wakatime")
 
 	use({
 		"romgrk/barbar.nvim",
@@ -132,7 +132,7 @@ return require("packer").startup(function()
 	-- use 'rcarriga/nvim-notify'
 	-- Key bindings
 	use("folke/which-key.nvim")
-	use("voldikss/vim-floaterm")
+	-- use("voldikss/vim-floaterm")
 	-- Git
 	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")

@@ -1,6 +1,6 @@
 require('lualine').setup({
   options = {
-    theme = 'onenord',
+    theme = 'ayu_light',
     section_separators = '',
     component_separators = ''
   }

@@ -5,8 +5,8 @@ end
 
 local servers = {
   "jdtls",
-  "cssls",
-  "cssmodules_ls",
+  -- "cssls",
+  --"cssmodules_ls",
   "emmet_ls",
   "html",
   "tailwindcss",

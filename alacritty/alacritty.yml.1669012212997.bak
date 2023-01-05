@@ -28,6 +28,10 @@ font:
   size: 16
 shell:
   program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 # falcon colorscheme for alacritty
 # by fenetikm, https://github.com/fenetikm/falcon
 colors:

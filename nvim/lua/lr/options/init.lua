@@ -14,8 +14,6 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.timeoutlen = 100
 vim.o.clipboard = "unnamedplus"
-vim.o.ignorecase = true
-vim.o.scrolloff = 3
 vim.o.sidescrolloff = 5
 vim.o.mouse = "a"
 -- vim.wo.wrap = false
@@ -32,17 +30,15 @@ vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
-vim.o.ignorecase = true
-vim.o.spelllang = en, cjk
+-- vim.o.spelllang = en, cjk
 vim.o.spellsuggest = best, 9
-vim.o.updatetime = 300
 vim.wo.signcolumn = "yes"
 
 -- undo tree
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+vim.opt.undofile = false
 
 vim.cmd([[
 set inccommand=nosplit
@@ -53,10 +49,10 @@ vim.g.neoformat_enabled_typescript = { "eslint_d" }
 vim.g.neoformat_enabled_typescriptreact = { "eslint_d" }
 vim.g.neoformat_enabled_go = { "gofmt" }
 --vim.g.neoformat_enabled_prisma = {"prisma format"}
-vim.cmd([[
-        imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-        let g:copilot_no_tab_map = v:true
-]])
+-- vim.cmd([[
+--         imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+--         let g:copilot_no_tab_map = v:true
+-- ]])
 
 local opt = vim.opt
 
@@ -64,10 +60,6 @@ opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
-
-vim.cmd([[
-  call github_colors#togglebg_map('<f5>')
-]])
 
 -- general
 vim.opt.scrolloff = 8
