@@ -5,7 +5,7 @@ if vim.fn.has("nvim-0.7") then
 	local wrap = api.nvim_create_augroup("wrap", { clear = true })
 
 	api.nvim_create_autocmd("BufWritePre", {
-		pattern = "*(.mdx|.md)@<!",
+--		pattern = "*(.mdx|.md)@<!", // THIS IS BROKEN, fix before enabling again
 		command = "undojoin | Neoformat",
 		group = fmt,
 	})
