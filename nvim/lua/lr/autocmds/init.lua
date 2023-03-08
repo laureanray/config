@@ -5,7 +5,7 @@ if vim.fn.has("nvim-0.7") then
 	local wrap = api.nvim_create_augroup("wrap", { clear = true })
 
 	api.nvim_create_autocmd("BufWritePre", {
---		pattern = "*(.mdx|.md)@<!", // THIS IS BROKEN, fix before enabling again
+		--		pattern = "*(.mdx|.md)@<!", // THIS IS BROKEN, fix before enabling again
 		command = "undojoin | Neoformat",
 		group = fmt,
 	})
@@ -16,10 +16,20 @@ if vim.fn.has("nvim-0.7") then
 		group = wrap,
 	})
 
-	api.nvim_create_autocmd(
-		{ "CursorHold", "CursorHoldI" },
-		{ command = 'lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})' }
-	)
+	api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+		pattern = "*",
+		callback = function()
+			if vim.bo.filetype == "helm" then
+				return
+			end
+			vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+		end,
+	})
+
+	api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+		pattern = "*Jenkinsfile*",
+		command = "set filetype=groovy",
+	})
 
 	--  api.nvim_create_autocmd(
 	--    { "BufRead", "BufNewFile" },
