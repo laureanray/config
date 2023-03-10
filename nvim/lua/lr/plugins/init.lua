@@ -20,6 +20,16 @@ return require("packer").startup(function()
 	-- use("nvim-lua/plenary.nvim")
 	-- use("wadackel/vim-dogrun")
 	use("ramojus/mellifluous.nvim")
+	use({
+		"projekt0n/github-nvim-theme",
+		tag = "v0.0.7",
+		-- or                            branch = '0.0.x'
+		config = function()
+			require("github-theme").setup({
+				-- ...
+			})
+		end,
+	})
 	-- packer
 	-- use({
 	-- 	"askfiy/visual_studio_code",
@@ -151,6 +161,15 @@ return require("packer").startup(function()
 	use("lewis6991/gitsigns.nvim")
 	use("tpope/vim-rhubarb")
 	use("junegunn/gv.vim")
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
+
+	-- optional
+	use({
+		"junegunn/fzf",
+		run = function()
+			vim.fn["fzf#install"]()
+		end,
+	})
 
 	--  use 'kdheepak/lazygit.nvim'
 	use({

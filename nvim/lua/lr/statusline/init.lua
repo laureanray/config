@@ -1,6 +1,6 @@
 require("lualine").setup({
 	options = {
-		theme = "nightfly",
+		theme = "auto",
 		section_separators = "",
 		component_separators = "",
 	},
