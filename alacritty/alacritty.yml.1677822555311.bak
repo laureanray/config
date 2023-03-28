@@ -7,62 +7,58 @@ window:
 font:
   normal:
     # family: NotoSansMono Nerd Font
-    family: JetbrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Regular
 
   bold:
     # family: NotoSansMono Nerd Font
-    family: JetbrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold
 
   italic:
     # family: NotoSansMono Nerd Font
-    family: JetbrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Italic
 
   bold_italic:
     # family: NotoSansMono Nerd Font
-    family: JetbrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold Italic
 
   size: 16
 shell:
   program: /usr/local/bin/fish
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
 # falcon colorscheme for alacritty
 # by fenetikm, https://github.com/fenetikm/falcon
 colors:
-  name: 3024 (light)
-  author: Chris Kempson
+  name: Gnometerm
+  author: ""
   primary:
-    background: "#f7f7f7"
-    foreground: "#4a4543"
+    background: "#000000"
+    foreground: "#ffffff"
   cursor:
-    text: "#f7f7f7"
-    cursor: "#4a4543"
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    black: "#090300"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#a5a2a2"
+    black: "#000000"
+    red: "#cc0000"
+    green: "#4e9a06"
+    yellow: "#c4a000"
+    blue: "#3465a4"
+    magenta: "#75507b"
+    cyan: "#06989a"
+    white: "#d3d7cf"
   bright:
-    black: "#5c5855"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#f7f7f7"
+    black: "#555753"
+    red: "#ef2929"
+    green: "#8ae234"
+    yellow: "#fce94f"
+    blue: "#729fcf"
+    magenta: "#ad7fa8"
+    cyan: "#34e2e2"
+    white: "#eeeeec"
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
-theme: 3024.light
+theme: Gnometerm

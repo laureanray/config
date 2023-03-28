@@ -10,6 +10,9 @@ return require("packer").startup(function()
 	use("sbdchd/neoformat")
 	-- use("luisiacc/gruvbox-baby")
 	-- use("morhetz/gruvbox")
+	--
+	-- use({ "ellisonleao/gruvbox.nvim" })
+	use({ "sainnhe/gruvbox-material" })
 	-- use("Shatur/neovim-ayu")
 	-- use("rockerBOO/boo-colorscheme-nvim")
 	-- use("fxn/vim-monochrome")
@@ -20,16 +23,16 @@ return require("packer").startup(function()
 	-- use("nvim-lua/plenary.nvim")
 	-- use("wadackel/vim-dogrun")
 	use("ramojus/mellifluous.nvim")
-	use({
-		"projekt0n/github-nvim-theme",
-		tag = "v0.0.7",
-		-- or                            branch = '0.0.x'
-		config = function()
-			require("github-theme").setup({
-				-- ...
-			})
-		end,
-	})
+	-- use({
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	tag = "v0.0.7",
+	-- 	-- or                            branch = '0.0.x'
+	-- 	config = function()
+	-- 		require("github-theme").setup({
+	-- 			-- ...
+	-- 		})
+	-- 	end,
+	-- })
 	-- packer
 	-- use({
 	-- 	"askfiy/visual_studio_code",
