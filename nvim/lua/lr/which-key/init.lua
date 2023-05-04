@@ -9,7 +9,7 @@ wk.setup({
 })
 
 local mappings = {
-	pj = { ":lua require('telescope.builtin').file_browser({ cwd = '~/Projects'})<cr>", "Projects" },
+	-- pj = { ":lua require('telescope.builtin').file_browser({ cwd = '~/Projects'})<cr>", "Projects" },
 	d = { ":lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", "Neovim Config" },
 	x = { ":bdelete<cr>", "Delete Current Buffer" },
 	f = { ":NvimTreeToggle<cr>", "File Tree" },

@@ -13,6 +13,7 @@ return require("packer").startup(function()
 	--
 	-- use({ "ellisonleao/gruvbox.nvim" })
 	use({ "sainnhe/gruvbox-material" })
+	use({ "mhartington/oceanic-next" })
 	-- use("Shatur/neovim-ayu")
 	-- use("rockerBOO/boo-colorscheme-nvim")
 	-- use("fxn/vim-monochrome")
@@ -23,6 +24,7 @@ return require("packer").startup(function()
 	-- use("nvim-lua/plenary.nvim")
 	-- use("wadackel/vim-dogrun")
 	use("ramojus/mellifluous.nvim")
+	use("arzg/vim-colors-xcode")
 	-- use({
 	-- 	"projekt0n/github-nvim-theme",
 	-- 	tag = "v0.0.7",

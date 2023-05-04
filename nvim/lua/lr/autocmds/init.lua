@@ -6,7 +6,7 @@ if vim.fn.has("nvim-0.7") then
 
 	api.nvim_create_autocmd("BufWritePre", {
 		--		pattern = "*(.mdx|.md)@<!", // THIS IS BROKEN, fix before enabling again
-		command = "undojoin | Neoformat",
+		command = "Neoformat",
 		group = fmt,
 	})
 
@@ -27,7 +27,7 @@ if vim.fn.has("nvim-0.7") then
 	})
 
 	api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-		pattern = "*Jenkinsfile*",
+		pattern = "Jenkinsfile,*.groovy",
 		command = "set filetype=groovy",
 	})
 
