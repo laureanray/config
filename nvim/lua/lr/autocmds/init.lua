@@ -31,6 +31,11 @@ if vim.fn.has("nvim-0.7") then
 		command = "set filetype=groovy",
 	})
 
+	api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+		command = "if mode() != 'c' | checktime | endif",
+		pattern = { "*" },
+	})
+
 	--  api.nvim_create_autocmd(
 	--    { "BufRead", "BufNewFile" },
 	--    {  command = "Jenkinsfile setf groovy" }
