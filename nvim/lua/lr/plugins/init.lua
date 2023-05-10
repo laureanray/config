@@ -128,11 +128,6 @@ return require("packer").startup(function()
 	-- Development (zen mode ish)
 
 	-- use("wakatime/vim-wakatime")
-
-	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
 	-- Statusline
 	use({
 		"nvim-lualine/lualine.nvim",
