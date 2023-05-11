@@ -68,6 +68,7 @@ return require("packer").startup(function()
 	-- use 'RishabhRD/nvim-lsputils'
 	-- Development (zen mode ish)
 
+  use('kyazdani42/nvim-web-devicons')
 	-- use("wakatime/vim-wakatime")
 	-- Statusline
 	use({
