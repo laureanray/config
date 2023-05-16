@@ -22,7 +22,7 @@ if vim.fn.has("nvim-0.7") then
 	api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 		pattern = "*",
 		callback = function()
-			if vim.bo.filetype == "helm" then
+			if vim.bo.filetype == "yaml" then
 				return
 			end
 			vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
@@ -39,5 +39,11 @@ if vim.fn.has("nvim-0.7") then
 	api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
 		command = "if mode() != 'c' | checktime | endif",
 		pattern = { "*" },
+	})
+  
+  -- gotmpl
+	api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+		pattern = "Jenkinsfile,*.groovy",
+		command = "if search('{{.\\+}}', 'nw') | setlocal filetype=gotmpl | endif",
 	})
 end

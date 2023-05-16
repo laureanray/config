@@ -28,6 +28,9 @@ map("n", "<C-j>", "<cmd>cprev<CR>zz", opts)
 map("n", "<leader>k", "<cmd>lnext<CR>zz", opts)
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 map("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
+
+vim.g.copilot_no_tab_map = true
+map("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)

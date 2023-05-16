@@ -75,3 +75,5 @@ vim.opt.incsearch = true
 vim.o.inccommand = "nosplit"
 
 vim.g.gruvbox_constrast_dark = "hard"
+
+vim.g.copilot_no_tab_map = true
