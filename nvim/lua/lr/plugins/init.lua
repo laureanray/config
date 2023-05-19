@@ -1,5 +1,48 @@
 return require("packer").startup(function()
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
+  use("github/copilot.vim")
 	use("wbthomason/packer.nvim")
+  use({
+    "kkharji/lspsaga.nvim",
+    branch = "main",
+  })
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "onsails/lspkind-nvim",
+  }
+
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+  use "folke/neodev.nvim"
 	use("nyoom-engineering/oxocarbon.nvim")
 	use("rose-pine/neovim")
 	use("bluz71/vim-moonfly-colors")
@@ -20,14 +63,10 @@ return require("packer").startup(function()
 			})
 		end,
 	})
-	use({
-		"neovim/nvim-lspconfig",
-		requires = "onsails/lspkind-nvim",
-	})
-	use({
-		"kkharji/lspsaga.nvim",
-		branch = "main",
-	})
+	-- use({
+	-- 	"neovim/nvim-lspconfig",
+	-- 	requires = "onsails/lspkind-nvim",
+	-- })
 	use({
 		"rmagatti/goto-preview",
 		config = function()
@@ -63,7 +102,7 @@ return require("packer").startup(function()
 	-- use 'jose-elias-alvarez/null-ls.nvim'
 	use("mfussenegger/nvim-jdtls")
 	use("RRethy/vim-illuminate")
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+--	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("RishabhRD/popfix")
 	-- use 'RishabhRD/nvim-lsputils'
 	-- Development (zen mode ish)
@@ -120,10 +159,14 @@ return require("packer").startup(function()
 		end,
 	})
 
+
+  -- use { "zbirenbaum/copilot.lua" }
+
 	use({
 		"tanvirtin/vgit.nvim",
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
 	})
+
 end)

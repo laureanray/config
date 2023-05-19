@@ -4,42 +4,42 @@ if not status_ok then
 end
 
 local servers = {
-	"jdtls",
+	-- "jdtls",
 	-- "cssls",
 	--"cssmodules_ls",
-	"emmet_ls",
-	"html",
-	"tailwindcss",
-	"jsonls",
-	"lua_ls",
-	"tflint",
-	"tsserver",
-	"yamlls",
-	"bashls",
-	"clangd",
-	"rust_analyzer",
-	"gopls",
-	"eslint",
-	"groovyls",
+--	"emmet_ls",
+--	"html",
+--	"tailwindcss",
+--	"jsonls",
+"lua_ls",
+--	"tflint",
+--	"tsserver",
+--	"yamlls",
+--	"bashls",
+--	"clangd",
+--	"rust_analyzer",
+--	"gopls",
+--	"eslint",
+--	"groovyls"
 }
 
-local settings = {
-	ensure_installed = servers,
-	ui = {
-		icons = {},
-		keymaps = {
-			toggle_server_expand = "<CR>",
-			install_server = "i",
-			update_server = "u",
-			check_server_version = "c",
-			update_all_servers = "U",
-			check_outdated_servers = "C",
-			uninstall_server = "X",
-		},
-	},
-
-	log_level = vim.log.levels.INFO,
-}
+-- local settings = {
+-- 	ensure_installed = servers,
+-- 	ui = {
+-- 		icons = {},
+-- 		keymaps = {
+-- 			toggle_server_expand = "<CR>",
+-- 			install_server = "i",
+-- 			update_server = "u",
+-- 			check_server_version = "c",
+-- 			update_all_servers = "U",
+-- 			check_outdated_servers = "C",
+-- 			uninstall_server = "X",
+-- 		},
+-- 	},
+-- 
+-- 	log_level = vim.log.levels.INFO,
+-- }
 
 local default_on_attach = function(client, bufnr)
 	-- use lsp omnicompletion if it's available
@@ -51,7 +51,7 @@ local default_on_attach = function(client, bufnr)
 	end
 end
 
-lsp_installer.setup(settings)
+--lsp_installer.setup(settings)
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
