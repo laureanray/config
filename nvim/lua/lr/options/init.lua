@@ -19,7 +19,8 @@ vim.o.mouse = "a"
 -- vim.wo.wrap = false
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.o.cursorline = true
+-- vim.o.cursorline = true
+--vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.wo.signcolumn = "yes"
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
@@ -41,14 +42,14 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = false
 
-vim.cmd([[
-set inccommand=nosplit
-set mmp=5000
-]])
+-- vim.cmd([[
+-- set inccommand=nosplit
+-- set mmp=5000
+-- ]])
 -- Auto format
-vim.g.neoformat_enabled_typescript = { "eslint_d" }
-vim.g.neoformat_enabled_typescriptreact = { "eslint_d" }
-vim.g.neoformat_enabled_go = { "gofmt" }
+-- vim.g.neoformat_enabled_typescript = { "eslint_d" }
+-- vim.g.neoformat_enabled_typescriptreact = { "eslint_d" }
+-- vim.g.neoformat_enabled_go = { "gofmt" }
 --vim.g.neoformat_enabled_prisma = {"prisma format"}
 -- vim.cmd([[
 --         imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
@@ -68,12 +69,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
-
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-
 vim.o.inccommand = "nosplit"
-
 vim.g.gruvbox_constrast_dark = "hard"
-
-vim.g.copilot_no_tab_map = true

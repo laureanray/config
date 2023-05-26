@@ -67,7 +67,7 @@ vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
 
 cmp.setup({
   experimental = {
-    ghost_text = false -- this feature conflict with copilot.vim's preview.
+    ghost_text = true -- this feature conflict with copilot.vim's preview.
   },
   view = {
     entries = "custom",

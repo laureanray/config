@@ -18,6 +18,15 @@ if vim.fn.has("nvim-0.7") then
 		group = wrap,
 	})
 
+  -- Set 4 Spaces indent for Shell Scripts
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = "sh",
+    callback = function()
+      vim.opt_local.shiftwidth = 4
+      vim.opt_local.tabstop = 4
+    end
+  })
+
 	-- Floating Diagnostics
 	api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 		pattern = "*",

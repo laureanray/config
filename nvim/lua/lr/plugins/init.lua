@@ -23,6 +23,7 @@ return require("packer").startup(function()
     "kkharji/lspsaga.nvim",
     branch = "main",
   })
+  use "ChristianChiarulli/onedark.nvim"
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -168,5 +169,13 @@ return require("packer").startup(function()
 			"nvim-lua/plenary.nvim",
 		},
 	})
+
+
+  use({
+    'cranberry-clockworks/coal.nvim',
+    config = function()
+      require('coal').setup()
+    end
+  })
 
 end)
