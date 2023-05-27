@@ -2,14 +2,14 @@
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new -s init txs
+    tmux new -s init
 else  
     selected=$(tmux list-session | fzf | awk '{print $1}' | tr -d ':')
-    tmux attach -t $selected
-
     if [[ -z $selected ]]; then
-        txs
+        # Attach to any client before trying switching
+        /usr/local/bin/txs
         # exit 0
+    else
+        tmux attach -t $selected
     fi
 fi
-

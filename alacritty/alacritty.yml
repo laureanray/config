@@ -23,14 +23,13 @@ font:
     # family: NotoSansMono Nerd Font
     family: Liga SFMono Nerd Font
     style: Bold Italic
-
-  size: 16
+  size: 15
 shell:
-  program: /usr/local/bin/fish
-  args:
-    - -l
-    - -c
-    - "/usr/local/bin/tmuxiniter"
+  #   program: /usr/local/bin/fish
+  #   args:
+  #     - -l
+  #     - -c
+  #     - "/usr/local/bin/tmuxiniter"
 colors:
   name: astromouse
   author: ""
