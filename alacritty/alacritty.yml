@@ -1,26 +1,27 @@
 window:
+  startup_mode: Maximized
   padding:
     x: 4
     y: 4
 font:
   normal:
     # family: NotoSansMono Nerd Font
-    family: Iosevka Nerd Font
+    family: Liga SFMono Nerd Font
     style: Regular
 
   bold:
     # family: NotoSansMono Nerd Font
-    family: Iosevka Nerd Font
+    family: Liga SFMono Nerd Font
     style: Bold
 
   italic:
     # family: NotoSansMono Nerd Font
-    family: Iosevka Nerd Font
+    family: Liga SFMono Nerd Font
     style: Italic
 
   bold_italic:
     # family: NotoSansMono Nerd Font
-    family: Iosevka Nerd Font
+    family: Liga SFMono Nerd Font
     style: Bold Italic
 
   size: 16
