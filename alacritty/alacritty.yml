@@ -26,31 +26,35 @@ font:
   size: 16
 shell:
   program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "/usr/local/bin/tmuxiniter"
 colors:
-  name: 3024 (light)
-  author: Chris Kempson
+  name: astromouse
+  author: ""
   primary:
-    background: "#f7f7f7"
-    foreground: "#4a4543"
+    background: "#000000"
+    foreground: "#ffffff"
   cursor:
-    text: "#f7f7f7"
-    cursor: "#4a4543"
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    black: "#090300"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#a5a2a2"
+    black: "#1c1c1c"
+    red: "#d770af"
+    green: "#9acc79"
+    yellow: "#d0d26b"
+    blue: "#77b6c5"
+    magenta: "#a488d9"
+    cyan: "#7fcab3"
+    white: "#8d8d8d"
   bright:
-    black: "#5c5855"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#f7f7f7"
-theme: 3024.light
+    black: "#3d3a3a"
+    red: "#d28abf"
+    green: "#8fb676"
+    yellow: "#c8bc45"
+    blue: "#8fa7b9"
+    magenta: "#bd89de"
+    cyan: "#6ec2a8"
+    white: "#dad3d3"
+theme: Astromouse

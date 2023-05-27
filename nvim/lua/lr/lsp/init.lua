@@ -50,7 +50,7 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {},
@@ -62,7 +62,6 @@ local servers = {
     },
   },
 }
-
 
 -- require("lspconfig").tsserver.setup({
 -- 	capabilities = capabilities,
@@ -86,6 +85,10 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
+-- 
+-- PROBLEM FOR FUTURE LR
+--
+-- SETUP clangd capabilities
 mason_lspconfig.setup_handlers {
   function(server_name)
     require('lspconfig')[server_name].setup {

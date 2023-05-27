@@ -126,6 +126,8 @@ return require("packer").startup(function()
 
 	use("theprimeagen/harpoon")
 
+  use("lewis6991/gitsigns.nvim")
+
   use {'romgrk/barbar.nvim', requires = {
   'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
   'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
@@ -147,7 +149,6 @@ return require("packer").startup(function()
 	-- use("voldikss/vim-floaterm")
 	-- Git
 	use("tpope/vim-fugitive")
-	use("lewis6991/gitsigns.nvim")
 	use("tpope/vim-rhubarb")
 	use("junegunn/gv.vim")
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })

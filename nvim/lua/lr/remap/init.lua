@@ -30,7 +30,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], op
 map("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
 
 vim.g.copilot_no_tab_map = true
-map("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+map("i", "<C-J>", '<Cmd>require("copilot.panel").accept()<CR>', { silent = true, expr = true })
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
@@ -83,8 +83,8 @@ map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", { desc = "Telescope Git
 map("n", "<leader>cc", "<Cmd>Telescope git_commits<cr>", { desc = "Telescope Git Commits"})
 map("n", "<leader>ca", "<Cmd>Lspsaga code_action<cr>", { desc = "Code Actions"})
 map("n", "<leader>cpd", "<Cmd>lua require('goto-preview').goto_preview_definition()<cr>", { desc = "Goto Definition"})
-map("n", "<leader>cd", "<Cmd>Telescope lsp_document_diagnostics<cr>", { desc = "Telescope Document Diagnostics"})
-map("n", "<leader>cw", "<Cmd>Telescope lsp_workspace_diagnostics<cr>", { desc = "Telescope Global Diagnostics"})
+-- map("n", "<leader>cd", "<Cmd>Telescope lsp_document_diagnostics<cr>", { desc = "Telescope Document Diagnostics"})
+map("n", "<leader>cd", "<Cmd>Telescope diagnostics<cr>", { desc = "Telescope Diagnostics"})
 map("n", "<leader>gg", "<Cmd>LazyGit<cr>", { desc = "Git status"})
 map("n", "<leader>ga", "<Cmd>G add .<cr>", { desc = "Git add"})
 map("n", "<leader>gc", "<Cmd>G commit<cr>", { desc = "Git commit"})

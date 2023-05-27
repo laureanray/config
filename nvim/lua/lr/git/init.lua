@@ -1,2 +1,2 @@
 require('gitsigns').setup()
-require('vgit').setup()
+-- require('vgit').setup()
