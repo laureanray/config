@@ -5,10 +5,11 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new -s init txs
 else  
     selected=$(tmux list-session | fzf | awk '{print $1}' | tr -d ':')
+    tmux attach -t $selected
 
     if [[ -z $selected ]]; then
-        exit 0
+        txs
+        # exit 0
     fi
-    tmux attach -t $selected
 fi
 
