@@ -1,5 +1,6 @@
 window:
   startup_mode: Maximized
+  option_as_alt: Both
   padding:
     x: 4
     y: 4
@@ -25,11 +26,11 @@ font:
     style: Bold Italic
   size: 15
 shell:
-  #   program: /usr/local/bin/fish
-  #   args:
-  #     - -l
-  #     - -c
-  #     - "/usr/local/bin/tmuxiniter"
+     program: /usr/local/bin/fish
+     args:
+       - -l
+       - -c
+       - "/usr/local/bin/tmuxiniter"
 colors:
   name: astromouse
   author: ""

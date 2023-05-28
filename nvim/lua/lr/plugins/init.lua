@@ -172,11 +172,11 @@ return require("packer").startup(function()
 	})
 
 
-  use({
-    'cranberry-clockworks/coal.nvim',
-    config = function()
-      require('coal').setup()
-    end
-  })
+  -- use({
+  --   'cranberry-clockworks/coal.nvim',
+  --   config = function()
+  --     -- require('coal').setup()
+  --   end
+  -- })
 
 end)

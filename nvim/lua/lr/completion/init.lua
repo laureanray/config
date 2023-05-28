@@ -67,7 +67,7 @@ vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
 
 cmp.setup({
   experimental = {
-    ghost_text = true -- this feature conflict with copilot.vim's preview.
+    ghost_text = false -- this feature conflict with copilot.vim's preview.
   },
   view = {
     entries = "custom",
@@ -76,7 +76,7 @@ cmp.setup({
 		priority_weight = 2,
 		comparators = {
 			-- require("copilot_cmp.comparators").prioritize,
-			-- deprioritize_snippet,
+			deprioritize_snippet,
 			-- the rest of the comparators are pretty much the defaults
 			cmp.config.compare.offset,
 			cmp.config.compare.exact,
@@ -135,12 +135,9 @@ cmp.setup({
 		end, { "i", "s" }),
 	},
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "copilot", group_index = 2 },
-		{ name = "vsnip" }, -- For vsnip users.
-		-- { name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
+		{ name = "nvim_lsp", priority = 50 },
+		{ name = "copilot", priority = 30 },
+		{ name = "vsnip", priority = 1 },
 	}, {
 		{ name = "buffer" },
 	}),
