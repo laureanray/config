@@ -32,10 +32,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 	virtual_text = false,
 })
 
---require('nvim-ts-autotag').setup({
---  filetypes = { "html" , "xml" },
---})
-
 require("nvim-treesitter.configs").setup({
 	incremental_selection = {
 		enable = true,
@@ -52,7 +48,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	autotag = {
 		enable = true,
-		filetypes = { "typescriptreact" },
+		-- filetypes = { "typescriptreact", "tsx" },
 	},
 	rainbow = {
 		enable = true,

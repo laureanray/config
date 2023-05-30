@@ -100,4 +100,15 @@ mason_lspconfig.setup_handlers {
 }
 
 
+require('lspconfig').emmet_ls.setup {
+  init_options = {
+    jsx = {
+      options = {
+        ["markup.attributes"] = { className = "class" },
+      },
+    },
+  }
+}
+
+
 -- require("copilot").setup({})

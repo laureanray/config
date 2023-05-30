@@ -1,49 +1,49 @@
 return require("packer").startup(function()
-  use {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
-    end,
-  }
-  use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function ()
-      require("copilot_cmp").setup()
-    end
-  }
-  use("github/copilot.vim")
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("copilot").setup({})
+	-- 	end,
+	-- })
+	--
+	use({ "windwp/nvim-ts-autotag" })
+	use({ "zbirenbaum/copilot.lua" })
+	-- use({
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	after = { "copilot.lua" },
+	-- 	config = function()
+	--     require("copilot_cmp").setup()
+	-- 	end,
+	-- })
+	use("github/copilot.vim")
 	use("wbthomason/packer.nvim")
-  use({
-    "kkharji/lspsaga.nvim",
-    branch = "main",
-  })
-  use "ChristianChiarulli/onedark.nvim"
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    "onsails/lspkind-nvim",
-  }
+	use({
+		"kkharji/lspsaga.nvim",
+		branch = "main",
+	})
+	use("ChristianChiarulli/onedark.nvim")
+	use({
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+		"onsails/lspkind-nvim",
+	})
 
-  use {
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  }
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
-  use "folke/neodev.nvim"
+	use("folke/neodev.nvim")
 	use("nyoom-engineering/oxocarbon.nvim")
 	use("rose-pine/neovim")
 	use("bluz71/vim-moonfly-colors")
@@ -60,8 +60,7 @@ return require("packer").startup(function()
 	use({
 		"laureanray/poimandres.nvim",
 		config = function()
-			require("poimandres").setup({
-			})
+			require("poimandres").setup({})
 		end,
 	})
 	-- use({
@@ -103,12 +102,12 @@ return require("packer").startup(function()
 	-- use 'jose-elias-alvarez/null-ls.nvim'
 	use("mfussenegger/nvim-jdtls")
 	use("RRethy/vim-illuminate")
---	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+	--	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("RishabhRD/popfix")
 	-- use 'RishabhRD/nvim-lsputils'
 	-- Development (zen mode ish)
 
-  use('kyazdani42/nvim-web-devicons')
+	use("kyazdani42/nvim-web-devicons")
 	-- use("wakatime/vim-wakatime")
 	-- Statusline
 	use({
@@ -126,12 +125,15 @@ return require("packer").startup(function()
 
 	use("theprimeagen/harpoon")
 
-  use("lewis6991/gitsigns.nvim")
+	use("lewis6991/gitsigns.nvim")
 
-  use {'romgrk/barbar.nvim', requires = {
-  'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-  'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-}}
+	use({
+		"romgrk/barbar.nvim",
+		requires = {
+			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		},
+	})
 
 	-- Searching stuffs
 	use({
@@ -161,8 +163,7 @@ return require("packer").startup(function()
 		end,
 	})
 
-
-  -- use { "zbirenbaum/copilot.lua" }
+	-- use { "zbirenbaum/copilot.lua" }
 
 	use({
 		"tanvirtin/vgit.nvim",
@@ -171,12 +172,10 @@ return require("packer").startup(function()
 		},
 	})
 
-
-  -- use({
-  --   'cranberry-clockworks/coal.nvim',
-  --   config = function()
-  --     -- require('coal').setup()
-  --   end
-  -- })
-
+	-- use({
+	--   'cranberry-clockworks/coal.nvim',
+	--   config = function()
+	--     -- require('coal').setup()
+	--   end
+	-- })
 end)
