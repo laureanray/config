@@ -47,6 +47,7 @@ return require("packer").startup(function()
 	use("nyoom-engineering/oxocarbon.nvim")
 	use("rose-pine/neovim")
 	use("bluz71/vim-moonfly-colors")
+  use("Shatur/neovim-ayu")
 	use("sbdchd/neoformat")
 	use("rebelot/kanagawa.nvim")
 	use({ "sainnhe/gruvbox-material" })
@@ -78,6 +79,7 @@ return require("packer").startup(function()
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+  use 'nvim-treesitter/nvim-treesitter-context'
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("nvim-treesitter/playground")
 	use({

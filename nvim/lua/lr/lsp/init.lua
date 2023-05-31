@@ -50,15 +50,23 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  clangd = {},
-  -- gopls = {},
-  -- pyright = {},
   rust_analyzer = {},
   tsserver = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
+    },
+  },
+  grammarly = {
+  },
+  emmet_ls = {
+    init_options = {
+      jsx = {
+        options = {
+          ["markup.attributes"] = { className = "class" },
+        },
+      },
     },
   },
 }
@@ -85,10 +93,6 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
--- 
--- PROBLEM FOR FUTURE LR
---
--- SETUP clangd capabilities
 mason_lspconfig.setup_handlers {
   function(server_name)
     require('lspconfig')[server_name].setup {
@@ -98,17 +102,3 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
-
-
-require('lspconfig').emmet_ls.setup {
-  init_options = {
-    jsx = {
-      options = {
-        ["markup.attributes"] = { className = "class" },
-      },
-    },
-  }
-}
-
-
--- require("copilot").setup({})
