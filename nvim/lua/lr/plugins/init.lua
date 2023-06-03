@@ -173,11 +173,4 @@ return require("packer").startup(function()
 			"nvim-lua/plenary.nvim",
 		},
 	})
-
-	-- use({
-	--   'cranberry-clockworks/coal.nvim',
-	--   config = function()
-	--     -- require('coal').setup()
-	--   end
-	-- })
 end)

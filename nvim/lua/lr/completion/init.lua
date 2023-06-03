@@ -120,7 +120,7 @@ cmp.setup({
 		priority_weight = 2,
 		comparators = {
 			-- require("copilot_cmp.comparators").prioritize,
-			-- deprioritize_snippet,
+      deprioritize_snippet,
 			-- the rest of the comparators are pretty much the defaults
 			cmp.config.compare.offset,
 			cmp.config.compare.exact,
