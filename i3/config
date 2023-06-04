@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # start a terminal
-bindsym $mod+Return exec kitty tmux attach || tmux
+bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -193,5 +193,5 @@ bindsym $mod+Ctrl+Left resize grow width 25 px or 25 ppt
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 exec feh --bg-scale --no-xinerama $HOME/Downloads/gn.jpg
-exec --no-startup-id rescuetime
+# exec --no-startup-id rescuetime
 for_window [class="^.*"] border pixel 0
