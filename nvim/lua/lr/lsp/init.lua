@@ -69,6 +69,9 @@ local servers = {
       },
     },
   },
+  astro_language_server = {},
+  gopls = {},
+  prisma_language_server = {},
 }
 
 -- require("lspconfig").tsserver.setup({
@@ -102,3 +105,4 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
+

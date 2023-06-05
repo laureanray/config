@@ -147,6 +147,11 @@ return require("packer").startup(function()
 			{ "nvim-telescope/telescope-symbols.nvim" },
 		},
 	})
+
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
 	-- use 'rcarriga/nvim-notify'
 	-- Key bindings
 	use("folke/which-key.nvim")
@@ -173,4 +178,6 @@ return require("packer").startup(function()
 			"nvim-lua/plenary.nvim",
 		},
 	})
+
+  use "xiyaowong/transparent.nvim"
 end)

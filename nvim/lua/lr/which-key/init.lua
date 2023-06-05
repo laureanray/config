@@ -7,5 +7,4 @@ wk.setup({
 		text_objects = false,
 	},
 })
-
 -- All of the keymaps are in a file under `remap`
