@@ -7,7 +7,7 @@ else
     selected=$(tmux list-session | fzf | awk '{print $1}' | tr -d ':')
     if [[ -z $selected ]]; then
         # Attach to any client before trying switching
-        /usr/local/bin/txs
+        /usr/local/bin/txn
         # exit 0
     else
         tmux attach -t $selected
