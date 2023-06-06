@@ -69,9 +69,8 @@ local servers = {
       },
     },
   },
-  astro_language_server = {},
   gopls = {},
-  prisma_language_server = {},
+  astro = {},
 }
 
 -- require("lspconfig").tsserver.setup({
