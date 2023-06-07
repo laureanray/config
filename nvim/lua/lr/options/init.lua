@@ -12,7 +12,7 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 vim.o.backup = false
 vim.o.writebackup = false
-vim.o.timeoutlen = 100
+-- vim.o.timeoutlen = 100
 vim.o.clipboard = "unnamedplus"
 vim.o.sidescrolloff = 5
 vim.o.mouse = "a"
@@ -73,3 +73,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.o.inccommand = "nosplit"
 vim.g.gruvbox_constrast_dark = "hard"
+
+vim.o.ttimeout="off"
+vim.o.timeout="off"

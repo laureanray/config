@@ -1,7 +1,7 @@
-vim.g.mapleader = " "
-
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 -- Window nav
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = false }
 local map = vim.api.nvim_set_keymap
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
