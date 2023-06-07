@@ -145,7 +145,6 @@ return require("packer").startup(function()
   }
 	-- use 'rcarriga/nvim-notify'
 	-- Key bindings
-	use("folke/which-key.nvim")
 	-- use("voldikss/vim-floaterm")
 	-- Git
 	use("tpope/vim-fugitive")
