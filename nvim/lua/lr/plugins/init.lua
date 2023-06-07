@@ -183,4 +183,5 @@ return require("packer").startup(function()
   use("terrortylor/nvim-comment")
 
   use "xiyaowong/transparent.nvim"
+  use "airblade/vim-rooter"
 end)
