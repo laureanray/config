@@ -65,16 +65,6 @@ return require("packer").startup(function()
 			require("poimandres").setup({})
 		end,
 	})
-	-- use({
-	-- 	"neovim/nvim-lspconfig",
-	-- 	requires = "onsails/lspkind-nvim",
-	-- })
-	use({
-		"rmagatti/goto-preview",
-		config = function()
-			require("goto-preview").setup({})
-		end,
-	})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",

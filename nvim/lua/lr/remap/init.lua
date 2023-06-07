@@ -93,7 +93,7 @@ map("n", "<leader>gj", "<Cmd>diffget //2<cr>", { desc = "Get left side"})
 map("n", "<leader>gk", "<Cmd>diffget //3<cr>", { desc = "Get right side"})
 map("n", "<leader>q", "<Cmd>copen<cr>", { desc = "Open Quickfix List"})
 map("n", "<leader>Q", "<Cmd>close<cr>", { desc = "Close Quickfix List"})
-map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+-- map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
 map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
 map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
