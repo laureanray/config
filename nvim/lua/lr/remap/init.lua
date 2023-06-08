@@ -1,7 +1,7 @@
-vim.g.mapleader = " "
-
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 -- Window nav
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = false }
 local map = vim.api.nvim_set_keymap
 -- Move to previous/next
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
@@ -49,7 +49,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], op
 map("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
 
 vim.g.copilot_no_tab_map = true
-map("i", "<C-J>", '<Cmd>require("copilot.panel").accept()<CR>', { silent = true, expr = true })
+map("i", "<C-J>", '<Cmd>require("copilot.panel", opts).accept()<CR>', { silent = true, expr = true })
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -68,33 +68,33 @@ map("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
 -- Move whichkey mapping to one place
 -- d = { ":lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", "Neovim Config" },
-map("n", "<leader>d", "<Cmd>lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", {
-  desc =  "Project Files"
-})
+map("n", "<leader>d", "<Cmd>lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", opts)
 
-map("n", "<leader>x", "<Cmd>bdelete<cr>", { desc = "Delete Current Buffer"})
-map("n", "<leader>F", "<Cmd>NvimTreeToggle<cr>", { desc = "File Tree"})
-map("n", "<leader>f", "<Cmd>NvimTreeFocus<cr>", { desc = "Focus File Tree"})
-map("n", "<leader>x", "<Cmd>Neoformat<cr>", { desc = "Format File"})
-map("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>", { desc = "Telescope Find Files" })
-map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", { desc = "Telescope Git Files"})
-map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", { desc = "Telescope Live Grep"})
-map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", { desc = "Telescope Git Branches"})
-map("n", "<leader>cc", "<Cmd>Telescope git_commits<cr>", { desc = "Telescope Git Commits"})
-map("n", "<leader>ca", "<Cmd>Lspsaga code_action<cr>", { desc = "Code Actions"})
-map("n", "<leader>cpd", "<Cmd>lua require('goto-preview').goto_preview_definition()<cr>", { desc = "Goto Definition"})
--- map("n", "<leader>cd", "<Cmd>Telescope lsp_document_diagnostics<cr>", { desc = "Telescope Document Diagnostics"})
-map("n", "<leader>cd", "<Cmd>Telescope diagnostics<cr>", { desc = "Telescope Diagnostics"})
-map("n", "<leader>gg", "<Cmd>LazyGit<cr>", { desc = "Git status"})
-map("n", "<leader>ga", "<Cmd>G add .<cr>", { desc = "Git add"})
-map("n", "<leader>gc", "<Cmd>G commit<cr>", { desc = "Git commit"})
-map("n", "<leader>gp", "<Cmd>G push<cr>", { desc = "Git push"})
-map("n", "<leader>gC", "<Cmd>G checkout -b ", { desc = "Git checkout from current branch"})
-map("n", "<leader>gP", "<Cmd>G pull<cr>", { desc = "Git pull"})
-map("n", "<leader>gj", "<Cmd>diffget //2<cr>", { desc = "Get left side"})
-map("n", "<leader>gk", "<Cmd>diffget //3<cr>", { desc = "Get right side"})
-map("n", "<leader>q", "<Cmd>copen<cr>", { desc = "Open Quickfix List"})
-map("n", "<leader>Q", "<Cmd>close<cr>", { desc = "Close Quickfix List"})
-map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+map("n", "<leader>x", "<Cmd>bdelete<cr>", opts)
+map("n", "<leader>x", ":Format<cr>", opts)
+map("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>", opts)
+map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", opts)
+map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", opts)
+map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", opts)
+map("n", "<leader>cc", "<Cmd>Telescope git_commits<cr>", opts)
+map("n", "<leader>ca", "<Cmd>Lspsaga code_action<cr>", opts)
+map("n", "<leader>cpd", "<Cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)
+-- map("n", "<leader>cd", "<Cmd>Telescope lsp_document_diagnostics<cr>", opts)
+map("n", "<leader>cd", "<Cmd>Telescope diagnostics<cr>", opts)
+map("n", "<leader>gg", "<Cmd>LazyGit<cr>", opts)
+map("n", "<leader>ga", "<Cmd>G add .<cr>", opts)
+map("n", "<leader>gc", "<Cmd>G commit<cr>", opts)
+map("n", "<leader>gp", "<Cmd>G push<cr>", opts)
+map("n", "<leader>gC", "<Cmd>G checkout -b ", opts)
+map("n", "<leader>gP", "<Cmd>G pull<cr>", opts)
+map("n", "<leader>gj", "<Cmd>diffget //2<cr>", opts)
+map("n", "<leader>gk", "<Cmd>diffget //3<cr>", opts)
+map("n", "<leader>q", "<Cmd>copen<cr>", opts)
+map("n", "<leader>Q", "<Cmd>close<cr>", opts)
+-- map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
-map("n", "<leader>fb", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+map("n", "<leader>f", ":Explore<CR>", opts)
+map("n", "/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<CR>", opts)
+-- map("n", "<leader>f", "<Cmd>", opts)

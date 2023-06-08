@@ -40,16 +40,13 @@ if vim.fn.has("mac") == 1 then
     -- Change specific vim highlight groups
     -- https://github.com/rose-pine/neovim/wiki/Recipes
     highlight_groups = {
-      ColorColumn = { bg = 'surface' },
-
-      -- Blend colours against the "base" background
       CursorLine = { bg = 'foam', blend = 10 },
       StatusLine = { fg = 'love', bg = 'love', blend = 10 },
     }
   })
   vim.cmd('colorscheme rose-pine')
 elseif vim.fn.has("unix") == 1 then
-	vim.cmd([[colorscheme mellifluous]])
+	vim.cmd([[colorscheme catppuccin-mocha]])
 else
 	print("Unsupported system for sumneko")
 end

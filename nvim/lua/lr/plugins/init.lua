@@ -1,22 +1,6 @@
 return require("packer").startup(function()
-	-- use({
-	-- 	"zbirenbaum/copilot.lua",
-	-- 	cmd = "Copilot",
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("copilot").setup({})
-	-- 	end,
-	-- })
-	--
 	use({ "windwp/nvim-ts-autotag" })
 	use({ "zbirenbaum/copilot.lua" })
-	-- use({
-	-- 	"zbirenbaum/copilot-cmp",
-	-- 	after = { "copilot.lua" },
-	-- 	config = function()
-	--     require("copilot_cmp").setup()
-	-- 	end,
-	-- })
 	use("github/copilot.vim")
 	use("wbthomason/packer.nvim")
 	use({
@@ -30,7 +14,6 @@ return require("packer").startup(function()
 		"neovim/nvim-lspconfig",
 		"onsails/lspkind-nvim",
 	})
-
 	use({
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons",
@@ -47,6 +30,7 @@ return require("packer").startup(function()
 	use("nyoom-engineering/oxocarbon.nvim")
 	use("rose-pine/neovim")
 	use("bluz71/vim-moonfly-colors")
+  use("catppuccin/nvim")
   use("Shatur/neovim-ayu")
 	use("sbdchd/neoformat")
 	use("rebelot/kanagawa.nvim")
@@ -64,16 +48,6 @@ return require("packer").startup(function()
 			require("poimandres").setup({})
 		end,
 	})
-	-- use({
-	-- 	"neovim/nvim-lspconfig",
-	-- 	requires = "onsails/lspkind-nvim",
-	-- })
-	use({
-		"rmagatti/goto-preview",
-		config = function()
-			require("goto-preview").setup({})
-		end,
-	})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -88,8 +62,6 @@ return require("packer").startup(function()
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	--  use 'p00f/nvim-ts-rainbow'
-	--use 'MunifTanjim/eslint.nvim'
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
@@ -101,17 +73,10 @@ return require("packer").startup(function()
 	use("lukas-reineke/lsp-format.nvim")
 
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
-	-- use 'jose-elias-alvarez/null-ls.nvim'
 	use("mfussenegger/nvim-jdtls")
 	use("RRethy/vim-illuminate")
-	--	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("RishabhRD/popfix")
-	-- use 'RishabhRD/nvim-lsputils'
-	-- Development (zen mode ish)
-
 	use("kyazdani42/nvim-web-devicons")
-	-- use("wakatime/vim-wakatime")
-	-- Statusline
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = {
@@ -119,25 +84,10 @@ return require("packer").startup(function()
 			opt = true,
 		},
 	})
-	-- File explorer
-	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = "kyazdani42/nvim-web-devicons",
-	})
 
 	use("theprimeagen/harpoon")
-
 	use("lewis6991/gitsigns.nvim")
 
-	use({
-		"romgrk/barbar.nvim",
-		requires = {
-			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-		},
-	})
-
-	-- Searching stuffs
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
@@ -152,25 +102,18 @@ return require("packer").startup(function()
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   }
-	-- use 'rcarriga/nvim-notify'
-	-- Key bindings
-	use("folke/which-key.nvim")
-	-- use("voldikss/vim-floaterm")
-	-- Git
+
 	use("tpope/vim-fugitive")
 	use("tpope/vim-rhubarb")
 	use("junegunn/gv.vim")
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 
-	-- optional
 	use({
 		"junegunn/fzf",
 		run = function()
 			vim.fn["fzf#install"]()
 		end,
 	})
-
-	-- use { "zbirenbaum/copilot.lua" }
 
 	use({
 		"tanvirtin/vgit.nvim",
@@ -179,5 +122,7 @@ return require("packer").startup(function()
 		},
 	})
 
+  use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
+  use "airblade/vim-rooter"
 end)
