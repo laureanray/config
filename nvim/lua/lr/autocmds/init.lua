@@ -51,8 +51,8 @@ if vim.fn.has("nvim-0.7") then
 	})
   
   -- gotmpl
-	api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-		pattern = "Jenkinsfile,*.groovy",
-		command = "if search('{{.\\+}}', 'nw') | setlocal filetype=gotmpl | endif",
-	})
+	-- api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	-- 	pattern = "Jenkinsfile,*.groovy",
+	-- 	command = "if search('{{.\\+}}', 'nw') | setlocal filetype=gotmpl | endif",
+	-- })
 end

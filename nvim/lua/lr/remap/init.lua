@@ -96,5 +96,11 @@ map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
 map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 map("n", "<leader>f", ":Explore<CR>", opts)
-map("n", "/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<CR>", opts)
+map("n", "<leader>/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<CR>", opts)
+
+
+map("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+map("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", opts)
+map("n", "<A-h>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+map("n", "<A-l>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
 -- map("n", "<leader>f", "<Cmd>", opts)
