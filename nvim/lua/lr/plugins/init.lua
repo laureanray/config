@@ -124,5 +124,7 @@ return require("packer").startup(function()
 
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
-  use "airblade/vim-rooter"
+
+  -- This messes up my mac setup
+  -- use "airblade/vim-rooter"
 end)
