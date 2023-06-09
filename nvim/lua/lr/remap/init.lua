@@ -4,24 +4,24 @@ vim.g.maplocalleader = ' '
 local opts = { noremap = true, silent = false }
 local map = vim.api.nvim_set_keymap
 -- Move to previous/next
-map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
-map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
-map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
-map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
-map("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
-map("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
-map("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
-map("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
-map("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
-map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
-map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
-map("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
-map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
-map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
--- Pin/unpin buffer
-map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
--- Close buffer
-map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+-- map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
+-- map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
+-- map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
+-- map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
+-- map("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
+-- map("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
+-- map("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
+-- map("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
+-- map("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
+-- map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
+-- map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
+-- map("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
+-- map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
+-- map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
+-- -- Pin/unpin buffer
+-- map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
+-- -- Close buffer
+-- map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
@@ -101,6 +101,9 @@ map("n", "<leader>/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<C
 
 map("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 map("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", opts)
-map("n", "<A-h>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
-map("n", "<A-l>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
--- map("n", "<leader>f", "<Cmd>", opts)
+map("n", "<A-.>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+map("n", "<A-,>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
+map("n", "<A-1>", ":lua require('harpoon.ui').nav_file(1)<CR>", opts)
+map("n", "<A-2>", ":lua require('harpoon.ui').nav_file(2)<CR>", opts)
+map("n", "<A-3>", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
+map("n", "<A-4>", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
