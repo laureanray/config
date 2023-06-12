@@ -36,7 +36,7 @@ map("n", "<C-u>", "<C-u>zz", opts)
 
 -- Greatest REMAP ever, sabi ni Prime
 map("x", "<leader>p", '"_dp', opts)
-map("i", "<C-c>", "<Esc>", opts)
+-- map("i", "<C-c>", "<Esc>", opts)
 
 map("n", "Q", "<nop>", opts)
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", opts)
