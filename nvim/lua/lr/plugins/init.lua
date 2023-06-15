@@ -125,6 +125,9 @@ return require("packer").startup(function()
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
 
+  -- Wakatime
+  use 'wakatime/vim-wakatime'
+
   -- This messes up my mac setup
   -- use "airblade/vim-rooter"
 end)
