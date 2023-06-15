@@ -94,8 +94,9 @@ map("n", "<leader>Q", "<Cmd>close<cr>", opts)
 -- map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
 map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
-map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
-map("n", "<leader>f", ":Explore<CR>", opts)
+-- map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+map("n", "<leader>F", "<Cmd>:NvimTreeFocus<CR>", opts)
+map("n", "<leader>f", "<Cmd>:NvimTreeToggle<CR>", opts)
 map("n", "<leader>/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<CR>", opts)
 
 

@@ -127,6 +127,13 @@ return require("packer").startup(function()
 
   -- Wakatime
   use 'wakatime/vim-wakatime'
+  -- Nvim tree
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
 
   -- This messes up my mac setup
   -- use "airblade/vim-rooter"
