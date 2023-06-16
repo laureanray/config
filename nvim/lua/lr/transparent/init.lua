@@ -33,6 +33,8 @@ require("transparent").setup({
     "GitSignsAdd",
     "GitSignsChangeNr",
     "GitSignsDeleteNr",
+    "GitSignsDeleteLn",
+    "GitSignsDelete",
     "GitSignsUntrackedLn",
     "WinBar",
     "BufferTabpageFill",
