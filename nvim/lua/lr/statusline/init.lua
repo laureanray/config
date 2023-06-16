@@ -61,10 +61,10 @@ require('lualine').setup {
       }
     },
     lualine_b = { 'branch', 'diff' },
-    lualine_c = { '%=', {'filetype', icon_only = true}, 'filename' },
-    lualine_x = {},
-    lualine_y = {},
-    lineline_z = {},
+    lualine_c = { '%=', { 'filetype', icon_only = true }, 'filename', '=%' },
+    lualine_x = { 'searchcount' },
+    lualine_y = { 'location' },
+    lualine_z = { 'progress' },
     -- lualine_x = {'encoding', 'fileformat', 'filetype'},
   },
   inactive_sections = {

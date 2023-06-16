@@ -44,5 +44,6 @@ require("transparent").setup({
     "DiagnosticSignInfo",
     "DiagnosticSignHint",
     "DiagnosticSignOk",
+    "NvimTreeNormal",
   }
 })
