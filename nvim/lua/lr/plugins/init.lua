@@ -135,6 +135,9 @@ return require("packer").startup(function()
     },
   }
 
+
+  use "Alexis12119/nightly.nvim"
+
   -- This messes up my mac setup
   -- use "airblade/vim-rooter"
 end)
