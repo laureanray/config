@@ -1,0 +1,62 @@
+window:
+  decorations: none
+  startup_mode: Maximized
+  option_as_alt: Both
+  padding:
+    x: 4
+    y: 4
+font:
+  normal:
+    family: Liga SFMono Nerd Font
+    # family: Liga SFMono Nerd Font
+    style: Regular
+
+  bold:
+    family: Liga SFMono Nerd Font
+    # family: Liga SFMono Nerd Font
+    style: Bold
+
+  italic:
+    family: Liga SFMono Nerd Font
+    # family: Liga SFMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Liga SFMono Nerd Font
+    #0 family: Liga SFMono Nerd Font
+    style: Bold Italic
+  size: 18
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - -l
+    - -c
+    - "/usr/local/bin/tmuxiniter"
+colors:
+  name: Chalk (light)
+  author: Chris Kempson
+  primary:
+    background: "#f5f5f5"
+    foreground: "#303030"
+  cursor:
+    text: "#f5f5f5"
+    cursor: "#303030"
+  normal:
+    black: "#151515"
+    red: "#fb9fb1"
+    green: "#acc267"
+    yellow: "#ddb26f"
+    blue: "#6fc2ef"
+    magenta: "#e1a3ee"
+    cyan: "#12cfc0"
+    white: "#d0d0d0"
+  bright:
+    black: "#505050"
+    red: "#fb9fb1"
+    green: "#acc267"
+    yellow: "#ddb26f"
+    blue: "#6fc2ef"
+    magenta: "#e1a3ee"
+    cyan: "#12cfc0"
+    white: "#f5f5f5"
+theme: Chalk.light

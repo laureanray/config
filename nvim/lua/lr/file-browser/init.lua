@@ -14,8 +14,13 @@ require("nvim-tree").setup()
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-    width = 30,
-    side = "right",
+    adaptive_size = true,
+		hide_root_folder = false,
+		side = "right",
+		mappings = {
+			custom_only = false,
+			list = {},
+		},
   },
   renderer = {
     group_empty = true,

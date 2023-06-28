@@ -44,7 +44,7 @@ if vim.fn.has("mac") == 1 then
       StatusLine = { fg = 'love', bg = 'love', blend = 10 },
     }
   })
-  vim.cmd('colorscheme rose-pine')
+  vim.cmd('colorscheme catppuccin-latte')
 elseif vim.fn.has("unix") == 1 then
 	vim.cmd('colorscheme moonfly')
 else
