@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font: 							"Iosevka Nerd Font 12";
+    font: 							"VictorMono Nerd Font Bold 13";
     fixed-num-lines: 				true;
     show-icons: 					false;
     sidebar-mode: 					false;
@@ -33,8 +33,8 @@ window {
     border: 						0px;
     border-color: 					@ac;
     border-radius: 					6px;
-    width: 							50%;
-    background-color: transparent;
+    width: 							35%;
+    background-color: #000000a6;
 }
 
 prompt {

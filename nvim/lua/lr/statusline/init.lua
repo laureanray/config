@@ -26,7 +26,7 @@ require('lualine').setup {
       tabline = 1000,
       winbar = 1000,
     },
-    theme = 'catppuccin-latte',
+    theme = 'catppuccin-mocha',
     -- theme = require('lr.statusline.theme').theme(),
     -- section_separators = "",
     -- component_separators = "",

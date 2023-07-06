@@ -12,8 +12,7 @@ if vim.fn.has("mac") == 1 then
     --- @usage string hex value or named color from rosepinetheme.com/palette
     groups = {
       background = 'base',
-      background_nc = '_experimental_nc',
-      panel = 'surface',
+      background_nc = '_experimental_nc', panel = 'surface',
       panel_nc = 'base',
       border = 'highlight_med',
       comment = 'muted',
@@ -46,7 +45,7 @@ if vim.fn.has("mac") == 1 then
   })
   vim.cmd('colorscheme catppuccin-latte')
 elseif vim.fn.has("unix") == 1 then
-	vim.cmd('colorscheme moonfly')
+	vim.cmd('colorscheme catppuccin-mocha')
 else
 	print("Unsupported system for sumneko")
 end

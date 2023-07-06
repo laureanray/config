@@ -193,5 +193,6 @@ bindsym $mod+Ctrl+Left resize grow width 25 px or 25 ppt
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 exec feh --bg-scale --no-xinerama $HOME/Downloads/gn.jpg
+exec xrandr --dpi 220
 # exec --no-startup-id rescuetime
 for_window [class="^.*"] border pixel 0
