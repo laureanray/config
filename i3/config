@@ -194,5 +194,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 exec feh --bg-scale --no-xinerama $HOME/Downloads/gn.jpg
 exec xrandr --dpi 220
+exec xset r rate 200 70                                                                                                                                                                                                                       Saturday, 08 July, 2023 07:38:44 PM
 # exec --no-startup-id rescuetime
 for_window [class="^.*"] border pixel 0
