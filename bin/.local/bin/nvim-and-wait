@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-nvim
-/usr/local/bin/fish
-
-echo "Exiting terminal"
-sleep 2
-
-

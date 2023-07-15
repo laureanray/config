@@ -18,4 +18,4 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     exit 0
 fi
 
-tmux new-session -ds $selected_name -c $selected nvim-and-wait
+tmux new-session -ds $selected_name -c $selected
