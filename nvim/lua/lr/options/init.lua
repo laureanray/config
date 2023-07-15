@@ -72,7 +72,8 @@ vim.opt.colorcolumn = "80"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.o.inccommand = "nosplit"
-vim.g.gruvbox_constrast_dark = "hard"
-
+vim.g.gruvbox_constrast_dark = "soft"
+vim.g.gruvbox_material_foreground = "original"
+vim.g.gruvbox_material_background = "original"
 vim.o.ttimeout="off"
 vim.o.timeout="off"
