@@ -21,6 +21,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.cursorline = true
 --vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+vim.opt["guicursor"] = ""
 vim.wo.signcolumn = "yes"
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
