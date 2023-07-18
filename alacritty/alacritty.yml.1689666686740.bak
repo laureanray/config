@@ -33,30 +33,30 @@ shell:
     - -c
     - "/usr/local/bin/tmuxiniter"
 colors:
-  # Default colors
+  name: Garuda (dr460nized)
+  author: dr460nf1r3
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
+    background: '0x0a1124'
+    foreground: '0xeec49a'
+  cursor:
+    text: '0x0a1124'
+    cursor: '0xeec49a'
   normal:
-    black: '#000000'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#caa9fa'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#bfbfbf'
-
-  # Bright colors
+    black: '0x0a1124'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
   bright:
-    black: '#575b70'
-    red: '#ff6e67'
-    green: '#5af78e'
-    yellow: '#f4f99d'
-    blue: '#caa9fa'
-    magenta: '#ff92d0'
-    cyan: '#9aedfe'
-    white: '#e6e6e6'
-theme: Dracula
+    black: '0xa6896b'
+    red: '0x5F4149'
+    green: '0xEB3247'
+    yellow: '0xBC4349'
+    blue: '0xF35645'
+    magenta: '0xF6A73B'
+    cyan: '0xFAD32F'
+    white: '0xeec49a'
+theme: Garuda.dr460nized

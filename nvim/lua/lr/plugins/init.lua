@@ -7,7 +7,6 @@ return require("packer").startup(function()
 		"kkharji/lspsaga.nvim",
 		branch = "main",
 	})
-	use("ChristianChiarulli/onedark.nvim")
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
@@ -27,16 +26,8 @@ return require("packer").startup(function()
 	})
 
 	use("folke/neodev.nvim")
-	use("nyoom-engineering/oxocarbon.nvim")
-	use("rose-pine/neovim")
 	use("bluz71/vim-moonfly-colors")
-  use("catppuccin/nvim")
-  use("Shatur/neovim-ayu")
-	use("sbdchd/neoformat")
-	use("rebelot/kanagawa.nvim")
-	use({ "sainnhe/gruvbox-material" })
-	use({ "mhartington/oceanic-next" })
-	use("rktjmp/lush.nvim")
+  use 'Mofiqul/dracula.nvim'
 	use("nvim-lua/plenary.nvim")
 	use({ "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "bluz71/vim-nightfly-colors", as = "nightfly" })

@@ -26,9 +26,7 @@ require('lualine').setup {
       tabline = 1000,
       winbar = 1000,
     },
-    theme = require('lr.statusline.theme').theme(),
-    -- section_separators = "",
-    -- component_separators = "",
+    theme = 'dracula',
     path = 1,
   },
   sections = {
