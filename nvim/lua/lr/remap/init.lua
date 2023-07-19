@@ -72,7 +72,9 @@ map("n", "<leader>d", "<Cmd>lua require('telescope.builtin').find_files({ cwd = 
 
 map("n", "<leader>x", "<Cmd>bdelete<cr>", opts)
 map("n", "<leader>x", ":Format<cr>", opts)
-map("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>", opts)
+map("n", "<leader>o",
+  "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>",
+  opts)
 map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", opts)
 map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", opts)
@@ -94,9 +96,10 @@ map("n", "<leader>Q", "<Cmd>close<cr>", opts)
 -- map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
 map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
--- map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
-map("n", "<leader>F", "<Cmd>:NvimTreeFocus<CR>", opts)
-map("n", "<leader>f", "<Cmd>:NvimTreeFindFileToggle<CR>", opts)
+map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
+-- map("n", "<leader>F", "<Cmd>:NvimTreeFocus<CR>", opts)
+-- map("n", "<leader>f", "<Cmd>:NvimTreeFindFileToggle<CR>", opts)
+map("n", "<leader>f", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 map("n", "<leader>/", "<Cmd>Telescope current_buffer_fuzzy_find theme=dropdown<CR>", opts)
 
 
