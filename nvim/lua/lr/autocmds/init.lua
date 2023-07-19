@@ -1,15 +1,7 @@
 if vim.fn.has("nvim-0.7") then
 	local api = vim.api
 
-	local fmt = api.nvim_create_augroup("fmt", { clear = true })
 	local wrap = api.nvim_create_augroup("wrap", { clear = true })
-
-	-- Autoformat, keeping this for now still deciding which file I need autoformat on.
-	-- api.nvim_create_autocmd("BufWritePre", {
-	-- 	--		pattern = "*(.mdx|.md)@<!", // THIS IS BROKEN, fix before enabling again
-	-- 	command = "Neoformat",
-	-- 	group = fmt,
-	-- })
 
 	-- Softwrap Markdown files
 	api.nvim_create_autocmd("FileType", {
@@ -50,9 +42,4 @@ if vim.fn.has("nvim-0.7") then
 		pattern = { "*" },
 	})
   
-  -- gotmpl
-	-- api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	-- 	pattern = "Jenkinsfile,*.groovy",
-	-- 	command = "if search('{{.\\+}}', 'nw') | setlocal filetype=gotmpl | endif",
-	-- })
 end
