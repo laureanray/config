@@ -1,7 +1,9 @@
 require('mason').setup()
+local ih = require("inlay-hints")
+ih.setup();
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(_, bufnr)
+local on_attach = function(c, bufnr)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
   -- to define small helper and utility functions so you don't have to repeat yourself
   -- many times.
@@ -42,6 +44,8 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
+
+  ih.on_attach(c, bufnr)
 end
 
 -- Enable the following language servers
@@ -50,10 +54,15 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  rust_analyzer = {},
+  rust_analyzer = {
+
+  },
   tsserver = {},
   lua_ls = {
     Lua = {
+      hint = {
+        enable = true,
+      },
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
@@ -69,17 +78,19 @@ local servers = {
       },
     },
   },
-  gopls = {},
+  gopls = {
+    hints = {
+      assignVariableTypes = true,
+      compositeLiteralFields = true,
+      compositeLiteralTypes = true,
+      constantValues = true,
+      functionTypeParameters = true,
+      parameterNames = true,
+      rangeVariableTypes = true,
+    },
+  },
   astro = {},
 }
-
--- require("lspconfig").tsserver.setup({
--- 	capabilities = capabilities,
--- 	on_attach = function(client)
--- 		client.resolved_capabilities.document_formatting = false
--- 		vim.lsp.callbacks["textDocument/publishDiagnostics"] = function() end
--- 	end,
--- })
 
 -- Setup neovim lua configuration
 require('neodev').setup()
@@ -87,7 +98,7 @@ require('neodev').setup()
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 -- Set encoding?
-capabilities.offsetEncoding = {'utf-8'}
+capabilities.offsetEncoding = { 'utf-8' }
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
@@ -106,4 +117,3 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
-
