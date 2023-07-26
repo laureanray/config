@@ -20,15 +20,15 @@ if vim.fn.has("nvim-0.7") then
   })
 
 	-- Floating Diagnostics
-	api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-		pattern = "*",
-		callback = function()
-			if vim.bo.filetype == "yaml" then
-				return
-			end
-			vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
-		end,
-	})
+	-- api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+	-- 	pattern = "*",
+	-- 	callback = function()
+	-- 		if vim.bo.filetype == "yaml" then
+	-- 			return
+	-- 		end
+	-- 		vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+	-- 	end,
+	-- })
 
 	-- Detect groovy files and jenkinsfile -> Groovy
 	api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

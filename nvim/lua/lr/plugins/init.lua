@@ -28,6 +28,7 @@ return require("packer").startup(function()
 	use("folke/neodev.nvim")
 	use("bluz71/vim-moonfly-colors")
   use 'Mofiqul/dracula.nvim'
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use("nvim-lua/plenary.nvim")
 	use({ "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } })
 	use({ "bluz71/vim-nightfly-colors", as = "nightfly" })
