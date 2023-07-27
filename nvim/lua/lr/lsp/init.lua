@@ -21,7 +21,7 @@ local on_attach = function(client, buffer)
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-  nmap('<leader>H', vim.lsp.inlay_hint(0, nil), '[I]nlay [H]int')
+  nmap('<leader>wh', vim.lsp.inlay_hint(0, nil), '[I]nlay [H]int')
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
@@ -32,6 +32,7 @@ local on_attach = function(client, buffer)
   end, { desc = 'Format current buffer with LSP' })
 
   if client.server_capabilities.inlayHintProvider then
+    vim.print("Setting up inlay hints for", client.name)
     vim.lsp.buf.inlay_hint(buffer, true)
   end
 end
@@ -115,17 +116,18 @@ local servers = {
       show_parameter_hints = true,
     },
     capabilities = capabilities,
-    settings = {},
     settings = {
-      hints = {
-        assignVariableTypes = true,
-        compositeLiteralFields = true,
-        compositeLiteralTypes = true,
-        constantValues = true,
-        functionTypeParameters = true,
-        parameterNames = true,
-        rangeVariableTypes = true,
-      },
+      gopls = {
+        hints = {
+          assignVariableTypes = true,
+          compositeLiteralFields = true,
+          compositeLiteralTypes = true,
+          constantValues = true,
+          functionTypeParameters = true,
+          parameterNames = true,
+          rangeVariableTypes = true,
+        },
+      }
     }
   },
   -- astro = {},
@@ -138,12 +140,5 @@ mason_lspconfig.setup {
 mason_lspconfig.setup_handlers {
   function(server_name)
     require('lspconfig')[server_name].setup(servers[server_name])
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    --   settings = servers[server_name],
-    --   inlay_hints = {
-    --     enabled = true,
-    --   },
-    -- }
   end,
 }
