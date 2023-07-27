@@ -1,14 +1,5 @@
 require('mason').setup()
--- LSP settings.
---  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(client, buffer)
-  -- NOTE: Remember that lua is a real programming language, and as such it is possible
-  -- to define small helper and utility functions so you don't have to repeat yourself
-  -- many times.
-  --
-  -- In this case, we create a function that lets us more easily define mappings specific
-  -- for LSP related items. It sets the mode, buffer and description for us each time.
-  -- TODO: Move this to a utility file
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
@@ -19,7 +10,6 @@ local on_attach = function(client, buffer)
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', "<cmd>Lspsaga code_action<CR>", '[C]ode [A]ction')
-
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
@@ -27,10 +17,8 @@ local on_attach = function(client, buffer)
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
-  -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-  -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
   nmap('<leader>H', vim.lsp.inlay_hint(0, nil), '[I]nlay [H]int')
@@ -39,13 +27,11 @@ local on_attach = function(client, buffer)
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
 
-  -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(buffer, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 
   if client.server_capabilities.inlayHintProvider then
-    vim.print(client.server_capabilities.inlayHintProvider)
     vim.lsp.buf.inlay_hint(buffer, true)
   end
 end
@@ -71,8 +57,6 @@ local servers = {
   tsserver = {
     inlay_hints = {
       show_parameter_hints = true,
-      parameter_hints_prefix = '📝 ',
-      other_hints_prefix = '📌 ',
     },
     capabilities = capabilities,
     settings = {},
@@ -126,17 +110,24 @@ local servers = {
   --     },
   --   },
   -- },
-  -- gopls = {
-  --   hints = {
-  --     assignVariableTypes = true,
-  --     compositeLiteralFields = true,
-  --     compositeLiteralTypes = true,
-  --     constantValues = true,
-  --     functionTypeParameters = true,
-  --     parameterNames = true,
-  --     rangeVariableTypes = true,
-  --   },
-  -- },
+  gopls = {
+    inlay_hints = {
+      show_parameter_hints = true,
+    },
+    capabilities = capabilities,
+    settings = {},
+    settings = {
+      hints = {
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        constantValues = true,
+        functionTypeParameters = true,
+        parameterNames = true,
+        rangeVariableTypes = true,
+      },
+    }
+  },
   -- astro = {},
 }
 
