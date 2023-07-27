@@ -1,5 +1,5 @@
 require('mason').setup()
-local on_attach = function(client, buffer)
+local on_attach = function(_, buffer)
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
@@ -29,14 +29,8 @@ local on_attach = function(client, buffer)
   vim.api.nvim_buf_create_user_command(buffer, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
-
-  -- if client.server_capabilities.inlayHintProvider then
-  --   vim.print("Setting up inlay hints for", client.name)
-  --   vim.lsp.buf.inlay_hint(buffer, true)
-  -- end
 end
 
--- Setup neovim lua configuration
 require('neodev').setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
@@ -79,6 +73,11 @@ local servers = {
       client.server_capabilities.document_range_formatting = false
       on_attach(client, bufnr)
     end,
+  },
+  eslint = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {},
   },
   lua_ls = {
     on_attach = on_attach,
@@ -131,7 +130,6 @@ local servers = {
       }
     }
   },
-  -- astro = {},
 }
 
 mason_lspconfig.setup {
