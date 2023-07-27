@@ -21,7 +21,6 @@ local on_attach = function(client, buffer)
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-  nmap('<leader>wh', vim.lsp.inlay_hint(0, nil), '[I]nlay [H]int')
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
@@ -31,10 +30,10 @@ local on_attach = function(client, buffer)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 
-  if client.server_capabilities.inlayHintProvider then
-    vim.print("Setting up inlay hints for", client.name)
-    vim.lsp.buf.inlay_hint(buffer, true)
-  end
+  -- if client.server_capabilities.inlayHintProvider then
+  --   vim.print("Setting up inlay hints for", client.name)
+  --   vim.lsp.buf.inlay_hint(buffer, true)
+  -- end
 end
 
 -- Setup neovim lua configuration
@@ -50,11 +49,13 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local mason_lspconfig = require 'mason-lspconfig'
 
 local servers = {
-  -- rust_analyzer = {
-  --   on_attach = on_attach,
-  --   capabilities = capabilities,
-  --   settings = {},
-  -- },
+  rust_analyzer = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+
+    },
+  },
   tsserver = {
     inlay_hints = {
       show_parameter_hints = true,
@@ -78,44 +79,44 @@ local servers = {
       client.server_capabilities.document_range_formatting = false
       on_attach(client, bufnr)
     end,
-    -- includeInlayParameterNameHints = "all",
-    -- includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-    -- includeInlayFunctionParameterTypeHints = true,
-    -- includeInlayVariableTypeHints = true,
-    -- includeInlayPropertyDeclarationTypeHints = true,
-    -- includeInlayFunctionLikeReturnTypeHints = true,
-    -- includeInlayEnumMemberValueHints = true,
-    -- importModuleSpecifierPreference = 'non-relative'
   },
-  -- lua_ls = {
-  --   on_attach = on_attach,
-  --   capabilities = capabilities,
-  --   settings = {
-  --     Lua = {
-  --       hint = {
-  --         enable = true,
-  --       },
-  --       workspace = { checkThirdParty = false },
-  --       telemetry = { enable = false },
-  --     },
-  --   }
-  -- },
-  -- grammarly = {
-  -- },
-  -- emmet_ls = {
-  --   init_options = {
-  --     jsx = {
-  --       options = {
-  --         ["markup.attributes"] = { className = "class" },
-  --       },
-  --     },
-  --   },
-  -- },
+  lua_ls = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+      Lua = {
+        hint = {
+          enable = true,
+        },
+        workspace = { checkThirdParty = false },
+        telemetry = { enable = false },
+      },
+    }
+  },
+  grammarly = {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = {},
+  },
+  emmet_ls = {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = {
+      init_options = {
+        jsx = {
+          options = {
+            ["markup.attributes"] = { className = "class" },
+          },
+        },
+      },
+    }
+  },
   gopls = {
     inlay_hints = {
       show_parameter_hints = true,
     },
     capabilities = capabilities,
+    on_attach = on_attach,
     settings = {
       gopls = {
         hints = {
