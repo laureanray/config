@@ -25,7 +25,6 @@ return require("packer").startup(function()
     end,
   })
 
-  use('simrat39/inlay-hints.nvim')
   use("folke/neodev.nvim")
   use("bluz71/vim-moonfly-colors")
   use 'Mofiqul/dracula.nvim'

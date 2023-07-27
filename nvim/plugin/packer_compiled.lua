@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["inlay-hints.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
-    url = "https://github.com/simrat39/inlay-hints.nvim"
-  },
   ["lsp-format.nvim"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",

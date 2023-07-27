@@ -1,21 +1,20 @@
 require('mason').setup()
-local ih = require("inlay-hints")
-ih.setup();
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(c, bufnr)
+local on_attach = function(client, buffer)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
   -- to define small helper and utility functions so you don't have to repeat yourself
   -- many times.
   --
   -- In this case, we create a function that lets us more easily define mappings specific
   -- for LSP related items. It sets the mode, buffer and description for us each time.
+  -- TODO: Move this to a utility file
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
     end
 
-    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+    vim.keymap.set('n', keys, func, { buffer = buffer, desc = desc })
   end
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -31,66 +30,25 @@ local on_attach = function(c, bufnr)
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
+  nmap('<leader>H', vim.lsp.inlay_hint(0, nil), '[I]nlay [H]int')
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
 
   -- Create a command `:Format` local to the LSP buffer
-  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+  vim.api.nvim_buf_create_user_command(buffer, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 
-  ih.on_attach(c, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.print(client.server_capabilities.inlayHintProvider)
+    vim.lsp.buf.inlay_hint(buffer, true)
+  end
 end
-
--- Enable the following language servers
---  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
---
---  Add any additional override configuration in the following tables. They will be passed to
---  the `settings` field of the server config. You must look up that documentation yourself.
-local servers = {
-  rust_analyzer = {
-
-  },
-  tsserver = {},
-  lua_ls = {
-    Lua = {
-      hint = {
-        enable = true,
-      },
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
-  grammarly = {
-  },
-  emmet_ls = {
-    init_options = {
-      jsx = {
-        options = {
-          ["markup.attributes"] = { className = "class" },
-        },
-      },
-    },
-  },
-  gopls = {
-    hints = {
-      assignVariableTypes = true,
-      compositeLiteralFields = true,
-      compositeLiteralTypes = true,
-      constantValues = true,
-      functionTypeParameters = true,
-      parameterNames = true,
-      rangeVariableTypes = true,
-    },
-  },
-  astro = {},
-}
 
 -- Setup neovim lua configuration
 require('neodev').setup()
@@ -104,16 +62,97 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
 
+local servers = {
+  -- rust_analyzer = {
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   settings = {},
+  -- },
+  tsserver = {
+    inlay_hints = {
+      show_parameter_hints = true,
+      parameter_hints_prefix = '📝 ',
+      other_hints_prefix = '📌 ',
+    },
+    capabilities = capabilities,
+    settings = {},
+    init_options = {
+      preferences = {
+        includeInlayParameterNameHints = "all",
+        includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+        importModuleSpecifierPreference = 'non-relative'
+      },
+    },
+    on_attach = function(client, bufnr)
+      client.server_capabilities.document_formatting = false
+      client.server_capabilities.document_range_formatting = false
+      on_attach(client, bufnr)
+    end,
+    -- includeInlayParameterNameHints = "all",
+    -- includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+    -- includeInlayFunctionParameterTypeHints = true,
+    -- includeInlayVariableTypeHints = true,
+    -- includeInlayPropertyDeclarationTypeHints = true,
+    -- includeInlayFunctionLikeReturnTypeHints = true,
+    -- includeInlayEnumMemberValueHints = true,
+    -- importModuleSpecifierPreference = 'non-relative'
+  },
+  -- lua_ls = {
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   settings = {
+  --     Lua = {
+  --       hint = {
+  --         enable = true,
+  --       },
+  --       workspace = { checkThirdParty = false },
+  --       telemetry = { enable = false },
+  --     },
+  --   }
+  -- },
+  -- grammarly = {
+  -- },
+  -- emmet_ls = {
+  --   init_options = {
+  --     jsx = {
+  --       options = {
+  --         ["markup.attributes"] = { className = "class" },
+  --       },
+  --     },
+  --   },
+  -- },
+  -- gopls = {
+  --   hints = {
+  --     assignVariableTypes = true,
+  --     compositeLiteralFields = true,
+  --     compositeLiteralTypes = true,
+  --     constantValues = true,
+  --     functionTypeParameters = true,
+  --     parameterNames = true,
+  --     rangeVariableTypes = true,
+  --   },
+  -- },
+  -- astro = {},
+}
+
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
 mason_lspconfig.setup_handlers {
   function(server_name)
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-    }
+    require('lspconfig')[server_name].setup(servers[server_name])
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   settings = servers[server_name],
+    --   inlay_hints = {
+    --     enabled = true,
+    --   },
+    -- }
   end,
 }
