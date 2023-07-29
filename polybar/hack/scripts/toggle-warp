@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CMD="warp-cli status"
+CONNECT="warp-cli connect"
+DISCONNECT="warp-cli disconnect"
+$CMD | grep -q "Disconnected" &> /dev/null;
+if [ $? == 0 ]; then
+    $CONNECT
+else
+    $DISCONNECT
+fi
