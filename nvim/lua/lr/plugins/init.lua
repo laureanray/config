@@ -107,16 +107,8 @@ return require("packer").startup(function()
     end,
   })
 
-  use({
-    "tanvirtin/vgit.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim",
-    },
-  })
-
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
-
   -- Wakatime
   use 'wakatime/vim-wakatime'
   -- Nvim tree
@@ -126,10 +118,4 @@ return require("packer").startup(function()
       'nvim-tree/nvim-web-devicons', -- optional
     },
   }
-
-
-  use "Alexis12119/nightly.nvim"
-
-  -- This messes up my mac setup
-  -- use "airblade/vim-rooter"
 end)
