@@ -26,21 +26,8 @@ return require("packer").startup(function()
   })
 
   use("folke/neodev.nvim")
-  use("bluz71/vim-moonfly-colors")
-  use 'Mofiqul/dracula.nvim'
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use("nvim-lua/plenary.nvim")
-  use({ "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } })
-  use({ "bluz71/vim-nightfly-colors", as = "nightfly" })
-  use("ramojus/mellifluous.nvim")
-  use("arzg/vim-colors-xcode")
-  use({
-    "laureanray/poimandres.nvim",
-    config = function()
-      require("poimandres").setup({})
-    end,
-  })
-
   use({
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
@@ -61,14 +48,16 @@ return require("packer").startup(function()
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-vsnip")
   use("hrsh7th/vim-vsnip")
-  use("lukas-reineke/indent-blankline.nvim")
+
+  -- use("lukas-reineke/indent-blankline.nvim")
   use("lukas-reineke/lsp-format.nvim")
 
-  use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+  -- TODO: Learn this?
+  -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
   use("mfussenegger/nvim-jdtls")
-  use("RRethy/vim-illuminate")
-  use("RishabhRD/popfix")
+  --use("RRethy/vim-illuminate")
   use("kyazdani42/nvim-web-devicons")
+
   use({
     "nvim-lualine/lualine.nvim",
     requires = {
@@ -96,8 +85,6 @@ return require("packer").startup(function()
   }
 
   use("tpope/vim-fugitive")
-  use("tpope/vim-rhubarb")
-  use("junegunn/gv.vim")
   use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 
   use({
@@ -107,15 +94,9 @@ return require("packer").startup(function()
     end,
   })
 
+  -- Utils
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
   -- Wakatime
   use 'wakatime/vim-wakatime'
-  -- Nvim tree
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
-    },
-  }
 end)

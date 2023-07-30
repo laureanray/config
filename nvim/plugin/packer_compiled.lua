@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   fzf = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/fzf",
@@ -124,20 +119,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gv.vim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/gv.vim",
-    url = "https://github.com/junegunn/gv.vim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp-format.nvim"] = {
     loaded = true,
@@ -169,20 +154,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["mellifluous.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/mellifluous.nvim",
-    url = "https://github.com/ramojus/mellifluous.nvim"
-  },
   ["neodev.nvim"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
-  },
-  nightfly = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nightfly",
-    url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -212,20 +187,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
     url = "https://github.com/mfussenegger/nvim-jdtls"
   },
-  ["nvim-jenkinsfile-linter"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-jenkinsfile-linter",
-    url = "https://github.com/ckipp01/nvim-jenkinsfile-linter"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -247,11 +212,6 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
-  ["nvim-ufo"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-ufo",
-    url = "https://github.com/kevinhwang91/nvim-ufo"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -272,26 +232,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["poimandres.nvim"] = {
-    config = { "\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15poimandres\frequire\0" },
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
-    url = "https://github.com/laureanray/poimandres.nvim"
-  },
-  popfix = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/popfix",
-    url = "https://github.com/RishabhRD/popfix"
-  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["promise-async"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/promise-async",
-    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["rose-pine"] = {
     loaded = true,
@@ -329,30 +273,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
-  ["vim-colors-xcode"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-colors-xcode",
-    url = "https://github.com/arzg/vim-colors-xcode"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-illuminate"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-illuminate",
-    url = "https://github.com/RRethy/vim-illuminate"
-  },
-  ["vim-moonfly-colors"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
-  },
-  ["vim-rhubarb"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
-    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -375,10 +299,6 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: poimandres.nvim
-time([[Config for poimandres.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15poimandres\frequire\0", "config", "poimandres.nvim")
-time([[Config for poimandres.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
