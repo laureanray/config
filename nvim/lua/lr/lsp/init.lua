@@ -74,11 +74,11 @@ local servers = {
       on_attach(client, bufnr)
     end,
   },
-  eslint = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {},
-  },
+  -- eslint = {
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   settings = {},
+  -- },
   lua_ls = {
     on_attach = on_attach,
     capabilities = capabilities,
