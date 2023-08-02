@@ -26,7 +26,7 @@ require('lualine').setup {
       tabline = 1000,
       winbar = 1000,
     },
-    theme = 'dracula',
+    theme = 'moonfly',
     path = 1,
   },
   sections = {
