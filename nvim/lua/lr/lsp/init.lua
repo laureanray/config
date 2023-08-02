@@ -50,6 +50,13 @@ local servers = {
 
     },
   },
+  tailwindcss = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+
+    },
+  },
   tsserver = {
     inlay_hints = {
       show_parameter_hints = true,
@@ -124,6 +131,11 @@ local servers = {
         },
       }
     }
+  },
+  astro = {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = {},
   },
 }
 

@@ -1,5 +1,5 @@
 return require("packer").startup(function()
-  use({ "windwp/nvim-ts-autotag" })
+  -- use({ "windwp/nvim-ts-autotag" })
   use({ "zbirenbaum/copilot.lua" })
   use("github/copilot.vim")
   use("wbthomason/packer.nvim")
