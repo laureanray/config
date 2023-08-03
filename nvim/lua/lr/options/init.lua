@@ -45,7 +45,8 @@ vim.wo.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = false
+vim.optundofile = false
+vim.opt.statuscolumn= "%@SignCb@%s%=%@NumCb@%r│%T"
 
 local opt = vim.opt
 opt.foldcolumn = "1"
