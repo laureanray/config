@@ -1,5 +1,5 @@
 return require("packer").startup(function()
-  use({ "windwp/nvim-ts-autotag" })
+  -- use({ "windwp/nvim-ts-autotag" })
   use({ "zbirenbaum/copilot.lua" })
   use("github/copilot.vim")
   use("wbthomason/packer.nvim")
@@ -7,12 +7,15 @@ return require("packer").startup(function()
     "kkharji/lspsaga.nvim",
     branch = "main",
   })
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
   use({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "onsails/lspkind-nvim",
   })
+  use("kartikp10/noctis.nvim")
+  use {'nyoom-engineering/oxocarbon.nvim'}
   use({
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
@@ -25,8 +28,9 @@ return require("packer").startup(function()
     end,
   })
 
+  use("rktjmp/lush.nvim")
+  use("bluz71/vim-moonfly-colors")
   use("folke/neodev.nvim")
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
   use("nvim-lua/plenary.nvim")
   use({
     "nvim-treesitter/nvim-treesitter",

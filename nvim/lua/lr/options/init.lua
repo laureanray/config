@@ -4,7 +4,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "200"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.o.inccommand = "nosplit"
@@ -52,3 +52,5 @@ opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
+
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
