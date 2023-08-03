@@ -48,6 +48,16 @@ map("n", "<leader>k", "<cmd>lnext<CR>zz", opts)
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 map("n", "<leader>j", "<cmd>lprev<CR>zz", opts)
 
+-- debugger
+map("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
+map("n", "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", opts)
+map("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
+map("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
+map("n", "<leader>ds", "<cmd>lua require'dap'.step_over()<CR>", opts)
+map("n", "<leader>di", "<cmd>lua require'dap'.step_into()<CR>", opts)
+map("n", "<leader>do", "<cmd>lua require'dap'.step_out()<CR>", opts)
+
+
 vim.g.copilot_no_tab_map = true
 map("i", "<C-J>", '<Cmd>require("copilot.panel", opts).accept()<CR>', { silent = true, expr = true })
 -- Wipeout buffer
@@ -77,7 +87,7 @@ map("n", "<leader>o",
   opts)
 map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", opts)
 map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", opts)
-map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", opts)
+-- map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", opts)
 map("n", "<leader>cc", "<Cmd>Telescope git_commits<cr>", opts)
 map("n", "<leader>ca", "<Cmd>Lspsaga code_action<cr>", opts)
 map("n", "<leader>cpd", "<Cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)

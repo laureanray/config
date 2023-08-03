@@ -21,6 +21,7 @@ return require("packer").startup(function()
   use "leoluz/nvim-dap-go"
   use "rcarriga/nvim-dap-ui"
   use "theHamsta/nvim-dap-virtual-text"
+  use "nvim-telescope/telescope-dap.nvim"
   use({
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
