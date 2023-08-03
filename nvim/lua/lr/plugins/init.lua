@@ -7,7 +7,7 @@ return require("packer").startup(function()
     "kkharji/lspsaga.nvim",
     branch = "main",
   })
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use({ "rose-pine/neovim", as = "rose-pine" })
   use({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -15,7 +15,12 @@ return require("packer").startup(function()
     "onsails/lspkind-nvim",
   })
   use("kartikp10/noctis.nvim")
-  use {'nyoom-engineering/oxocarbon.nvim'}
+  use { "nyoom-engineering/oxocarbon.nvim" }
+  -- Debugging
+  use "mfussenegger/nvim-dap"
+  use "leoluz/nvim-dap-go"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
   use({
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
@@ -36,7 +41,7 @@ return require("packer").startup(function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   })
-  use 'nvim-treesitter/nvim-treesitter-context'
+  use "nvim-treesitter/nvim-treesitter-context"
   use("nvim-treesitter/nvim-treesitter-textobjects")
   use("nvim-treesitter/playground")
   use({
@@ -102,5 +107,5 @@ return require("packer").startup(function()
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
   -- Wakatime
-  use 'wakatime/vim-wakatime'
+  use "wakatime/vim-wakatime"
 end)
