@@ -9,7 +9,7 @@ api.nvim_create_autocmd("FileType", {
 })
 
 -- Set 4 Spaces indent for Shell Scripts
-vim.api.nvim_create_autocmd("FileType", {
+api.nvim_create_autocmd("FileType", {
 	pattern = "sh",
 	callback = function()
 		vim.opt_local.shiftwidth = 4
@@ -38,4 +38,28 @@ api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
 	command = "if mode() != 'c' | checktime | endif",
 	pattern = { "*" },
+})
+
+api.nvim_create_autocmd('User', {
+  pattern = "GoyoEnter",
+  callback = function()
+    vim.fn.system("tmux set status off")
+
+    require('lualine').hide({
+      place = {'statusline', 'tabline', 'winbar'},
+      unhide = false,
+    })
+    vim.cmd([[ 
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999]])
+  end
+})
+
+
+api.nvim_create_autocmd('User', {
+  pattern = "GoyoLeave",
+  callback = function()
+    vim.fn.system("tmux set status on")
+  end
 })

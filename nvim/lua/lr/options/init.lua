@@ -27,8 +27,8 @@ vim.o.clipboard = "unnamedplus"
 vim.o.sidescrolloff = 5
 vim.o.mouse = "a"
 vim.wo.number = true
--- vim.wo.relativenumber = true
--- vim.o.cursorline = true
+vim.wo.relativenumber = true
+vim.o.cursorline = true
 vim.opt["guicursor"] = ""
 vim.wo.signcolumn = "yes"
 vim.o.tabstop = 2
@@ -49,7 +49,7 @@ vim.optundofile = false
 --vim.opt.statuscolumn= "%@SignCb@%s%=%@NumCb@%r│%T"
 -- d
 -- asd
-vim.opt.statuscolumn= " %=%r│ %T"
+-- vim.opt.statuscolumn= " %=%r│ %T"
 local opt = vim.opt
 opt.foldcolumn = "1"
 opt.foldlevel = 99

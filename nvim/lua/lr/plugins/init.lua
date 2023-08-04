@@ -104,6 +104,9 @@ return require("packer").startup(function()
     end,
   })
 
+  -- Focus
+  use("junegunn/goyo.vim")
+
   -- Utils
   use("terrortylor/nvim-comment")
   use "xiyaowong/transparent.nvim"
