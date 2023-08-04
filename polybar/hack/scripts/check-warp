@@ -6,9 +6,9 @@ disconnected=" 󰾆 "
 CMD="warp-cli status"
 $CMD | grep -q "Disconnected" &> /dev/null;
 if [ $? == 0 ]; then
-    echo "   Warp Disconnected "
+    echo "     Warp Disconnected "
 
 else
-    echo "   Warp Connnected"
+    echo "     Warp Connnected"
 fi
 
