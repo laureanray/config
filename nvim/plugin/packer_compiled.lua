@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-format.nvim"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
@@ -146,7 +151,7 @@ _G.packer_plugins = {
   },
   ["lush.nvim"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
   ["mason-lspconfig.nvim"] = {
@@ -166,7 +171,7 @@ _G.packer_plugins = {
   },
   ["noctis.nvim"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/noctis.nvim",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/noctis.nvim",
     url = "https://github.com/kartikp10/noctis.nvim"
   },
   ["nvim-autopairs"] = {
@@ -194,22 +199,22 @@ _G.packer_plugins = {
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-dap-go"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
     url = "https://github.com/leoluz/nvim-dap-go"
   },
   ["nvim-dap-ui"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-dap-virtual-text"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
   ["nvim-jdtls"] = {
@@ -237,11 +242,6 @@ _G.packer_plugins = {
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -249,7 +249,7 @@ _G.packer_plugins = {
   },
   ["oxocarbon.nvim"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
     url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
@@ -279,7 +279,7 @@ _G.packer_plugins = {
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
     url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-file-browser.nvim"] = {
@@ -320,7 +320,7 @@ _G.packer_plugins = {
   },
   ["vim-moonfly-colors"] = {
     loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    path = "/Users/laureanray.bahala/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-vsnip"] = {

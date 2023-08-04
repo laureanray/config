@@ -26,12 +26,12 @@ require('lualine').setup {
       tabline = 1000,
       winbar = 1000,
     },
-    theme = 'moonfly',
+    theme = require('lr.statusline.theme').theme(),
     path = 1,
   },
   sections = {
     lualine_a = {
-      { 'mode' },
+      { 'mode',  fmt = function(str) return str:sub(1,1) end },
       {
         'diagnostics',
 
