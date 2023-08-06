@@ -31,7 +31,7 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {
-      { 'mode',  fmt = function(str) return str:sub(1,1) end },
+      { 'mode',  fmt = function(str) return str:sub(1,3) end },
       {
         'diagnostics',
 
@@ -57,9 +57,9 @@ require('lualine').setup {
         always_visible = false,   -- Show diagnostics even if there are none.
       }
     },
-    lualine_b = { 'branch', 'diff' },
-    lualine_c = { { 'filetype', icon_only = false }, 'filename',  },
-    lualine_x = { 'searchcount' },
+    lualine_b = { 'searchcount' },
+    lualine_c = { { 'filetype', icon_only = true }, 'filename',  },
+    lualine_x = { 'branch', 'diff' },
     lualine_y = { "os.date('%a')", 'data', "require'lsp-status'.status()" },
     lualine_z = {},
     -- lualine_x = {'encoding', 'fileformat', 'filetype'},
