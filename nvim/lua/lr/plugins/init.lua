@@ -84,8 +84,7 @@ return require("packer").startup(function()
     requires = {
       { "nvim-lua/popup.nvim" },
       { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope-fzy-native.nvim", run = "make" },
-      { "nvim-telescope/telescope-symbols.nvim" },
+      { "nvim-telescope/telescope-fzy-native.nvim", run = "make" }, { "nvim-telescope/telescope-symbols.nvim" },
     },
   })
 
@@ -111,4 +110,12 @@ return require("packer").startup(function()
   use "xiyaowong/transparent.nvim"
   -- Wakatime
   use "wakatime/vim-wakatime"
+
+  use({
+    'mvllow/modes.nvim',
+    tag = 'v0.2.0',
+    config = function()
+      require('modes').setup()
+    end
+  })
 end)

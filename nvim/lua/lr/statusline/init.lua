@@ -53,15 +53,15 @@ require('lualine').setup {
         },
         symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
         colored = true,           -- Displays diagnostics status in color if set to true.
-        update_in_insert = false, -- Update diagnostics in insert mode.
+        update_in_insert = true, -- Update diagnostics in insert mode.
         always_visible = false,   -- Show diagnostics even if there are none.
       }
     },
     lualine_b = { 'branch', 'diff' },
-    lualine_c = { '%=', { 'filetype', icon_only = true }, 'filename', '=%' },
+    lualine_c = { { 'filetype', icon_only = false }, 'filename',  },
     lualine_x = { 'searchcount' },
-    lualine_y = { 'location' },
-    lualine_z = { 'progress' },
+    lualine_y = { "os.date('%a')", 'data', "require'lsp-status'.status()" },
+    lualine_z = {},
     -- lualine_x = {'encoding', 'fileformat', 'filetype'},
   },
   inactive_sections = {

@@ -15,3 +15,6 @@ end
 # pnpm end
 #
 direnv hook fish | source
+
+
+load_nvm > /dev/stderr

@@ -63,3 +63,10 @@ api.nvim_create_autocmd('User', {
     vim.fn.system("tmux set status on")
   end
 })
+
+--#region
+--autocmd bufwritepost ~/.config/kitty/kitty.conf :silent !kill -SIGUSR1 $(pgrep kitty)
+api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = "kitty.conf",
+  command = "silent !kill -SIGUSR1 $(pgrep kitty)",
+})
