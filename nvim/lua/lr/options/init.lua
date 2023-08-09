@@ -46,11 +46,11 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.optundofile = false
---vim.opt.statuscolumn= "%@SignCb@%s%=%@NumCb@%r│%T"
+-- vim.opt.statuscolumn= "%@SignCb@%s%=%@NumCb@%r│%T"
 -- d
 -- asd
 -- vim.opt.statuscolumn= " %=%r│ %T"
-vim.opt.statuscolumn = "%=%r│ %T"
+-- vim.opt.statuscolumn = "%=%r│ %T"
 local opt = vim.opt
 opt.foldcolumn = "1"
 opt.foldlevel = 99
