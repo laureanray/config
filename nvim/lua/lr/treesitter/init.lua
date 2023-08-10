@@ -117,3 +117,12 @@ require("treesitter-context").setup({
   zindex = 20,     -- The Z-index of the context window
   on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 })
+
+-- TODO: Move this out. 
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})
+
+vim.treesitter.language.register('markdown', 'mdx')
