@@ -150,3 +150,4 @@ mason_lspconfig.setup_handlers {
     require('lspconfig')[server_name].setup(servers[server_name])
   end,
 }
+
