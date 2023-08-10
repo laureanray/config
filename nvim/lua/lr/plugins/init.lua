@@ -111,6 +111,8 @@ return require("packer").startup(function()
   -- Wakatime
   use "wakatime/vim-wakatime"
 
+  use "~/Projects/tree-setter"
+
   use({
     'mvllow/modes.nvim',
     tag = 'v0.2.0',

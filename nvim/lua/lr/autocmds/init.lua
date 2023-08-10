@@ -26,7 +26,7 @@ api.nvim_create_autocmd("FileType", {
 -- 		end
 -- 		vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
 -- 	end,
--- })
+-- })<
 
 -- Detect groovy files and jenkinsfile -> Groovy
 api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -69,4 +69,17 @@ api.nvim_create_autocmd('User', {
 api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = "kitty.conf",
   command = "silent !kill -SIGUSR1 $(pgrep kitty)",
+})
+
+
+-- TODO: We must find npx dynamically
+-- Little hacky for now but it works
+api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = "*.prisma",
+  -- Execute `npx prisma format` before writing the buffer
+  callback = function(data)
+    vim.cmd([[ silent !/home/lr/.nvm/versions/node/v16.20.0/bin/npx prisma format ]])
+    vim.cmd("silent e " .. data["file"])
+    -- Reload file
+  end,
 })
