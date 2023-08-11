@@ -151,3 +151,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+
+-- TODO: move this
+require("todo-comments").setup();

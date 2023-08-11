@@ -31,7 +31,7 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {
-      { 'mode',  fmt = function(str) return str:sub(1,3) end },
+      { 'mode', fmt = function(str) return str:sub(1, 4) end },
       {
         'diagnostics',
 
@@ -52,16 +52,16 @@ require('lualine').setup {
           hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
         },
         symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-        colored = true,           -- Displays diagnostics status in color if set to true.
+        colored = true,          -- Displays diagnostics status in color if set to true.
         update_in_insert = true, -- Update diagnostics in insert mode.
-        always_visible = false,   -- Show diagnostics even if there are none.
+        always_visible = false,  -- Show diagnostics even if there are none.
       }
     },
     lualine_b = { 'searchcount' },
-    lualine_c = { { 'filetype', icon_only = true }, 'filename',  },
-    lualine_x = { 'branch', 'diff' },
-    lualine_y = { "os.date('%a')", 'data', "require'lsp-status'.status()" },
-    lualine_z = {},
+    lualine_c = { { 'filetype', icon_only = true }, 'filename', '%=', 'branch', '%=', },
+    lualine_x = { 'diff', 'encoding', },
+    lualine_y = { 'progress' },
+    lualine_z = { 'location' }
     -- lualine_x = {'encoding', 'fileformat', 'filetype'},
   },
   inactive_sections = {
