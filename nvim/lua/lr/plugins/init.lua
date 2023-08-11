@@ -67,6 +67,7 @@ return require("packer").startup(function()
   use("mfussenegger/nvim-jdtls")
   --use("RRethy/vim-illuminate")
   use("kyazdani42/nvim-web-devicons")
+  use "olimorris/onedarkpro.nvim"
 
   use({
     "nvim-lualine/lualine.nvim",
@@ -111,6 +112,16 @@ return require("packer").startup(function()
   -- Wakatime
   use "wakatime/vim-wakatime"
 
+  use "~/Projects/tree-setter"
+  use "kvrohit/mellow.nvim"
+  use {
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim"
+  }
+
   use({
     'mvllow/modes.nvim',
     tag = 'v0.2.0',
@@ -118,4 +129,6 @@ return require("packer").startup(function()
       require('modes').setup()
     end
   })
+
+  use "tjdevries/cyclist.vim"
 end)

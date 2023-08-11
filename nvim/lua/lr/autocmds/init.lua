@@ -17,16 +17,37 @@ api.nvim_create_autocmd("FileType", {
 	end
 })
 
+-- vim.g.diagnostics_active = true
+-- function _G.toggle_diagnostics()
+--   if vim.g.diagnostics_active then
+--     vim.g.diagnostics_active = false
+--     vim.lsp.diagnostic.clear(0)
+--     vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+--   else
+--     vim.g.diagnostics_active = true
+--     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--       vim.lsp.diagnostic.on_publish_diagnostics, {
+--         virtual_text = true,
+--         signs = true,
+--         underline = true,
+--         update_in_insert = false,
+--       }
+--     )
+--   end
+-- end
+
 -- Floating Diagnostics
--- api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
--- 	pattern = "*",
--- 	callback = function()
--- 		if vim.bo.filetype == "yaml" then
--- 			return
--- 		end
--- 		vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
--- 	end,
--- })
+api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+	pattern = "*",
+	callback = function()
+		if vim.bo.filetype == "yaml" then
+			return
+		end
+      vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+      -- Hide inline diagnostics
+      -- vim.diagnostic.hide()
+  end,
+})
 
 -- Detect groovy files and jenkinsfile -> Groovy
 api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -69,4 +90,17 @@ api.nvim_create_autocmd('User', {
 api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = "kitty.conf",
   command = "silent !kill -SIGUSR1 $(pgrep kitty)",
+})
+
+
+-- TODO: We must find npx dynamically
+-- Little hacky for now but it works
+api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = "*.prisma",
+  -- Execute `npx prisma format` before writing the buffer
+  callback = function(data)
+    vim.cmd([[ silent !/home/lr/.nvm/versions/node/v16.20.0/bin/npx prisma format ]])
+    vim.cmd("silent e " .. data["file"])
+    -- Reload file
+  end,
 })
