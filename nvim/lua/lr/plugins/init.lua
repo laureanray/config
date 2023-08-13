@@ -60,7 +60,7 @@ return require("packer").startup(function()
   use("lukas-reineke/lsp-format.nvim")
 
   -- TODO: Learn this?
-  -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+  use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
   use("mfussenegger/nvim-jdtls")
   --use("RRethy/vim-illuminate")
   use("kyazdani42/nvim-web-devicons")
