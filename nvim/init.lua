@@ -1,3 +1,4 @@
+require("lr.notify")
 require("lr.remap")
 require("lr.plugins")
 require("lr.lsp")

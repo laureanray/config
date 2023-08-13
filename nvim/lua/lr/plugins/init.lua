@@ -108,8 +108,8 @@ return require("packer").startup(function()
   use "xiyaowong/transparent.nvim"
   -- Wakatime
   use "wakatime/vim-wakatime"
-  use "~/Projects/tree-setter"
-
+  -- use "~/Projects/tree-setter"
+  -- use "filNaj/tree-setter"
   use({
     'mvllow/modes.nvim',
     tag = 'v0.2.0',
@@ -121,4 +121,5 @@ return require("packer").startup(function()
   use "laureanray/kulay"
   use "tjdevries/cyclist.vim"
   use "folke/todo-comments.nvim"
+  use "rcarriga/nvim-notify"
 end)
