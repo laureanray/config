@@ -1,5 +1,5 @@
 require("lr.notify")
-require("lr.remap")
+require("lr.keymaps")
 require("lr.plugins")
 require("lr.lsp")
 require("lr.autocmds")
