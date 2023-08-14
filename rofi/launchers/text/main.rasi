@@ -8,42 +8,39 @@
  */
 
 configuration {
-    font: 							"Iosevka Nerd Font 12";
-    location: 						1;
+    font: 							"BerkeleyMono Nerd Font Regular 16";
     fixed-num-lines: 				true;
     show-icons: 					false;
-    sidebar-mode: 					true;
+    sidebar-mode: 					false;
     scroll-method: 					0;
-    window-format: 					"[{w}] ··· {c} ···   {t}";
+    window-format: 					"[{w}] {c} {t}";
     click-to-exit: 					true;
     combi-hide-mode-prefix: 		false;
-    display-window: 				"";
+    display-window: 				" ";
     display-windowcd: 				"";
-    display-run: 					"";
+    display-run: 					" ";
     display-ssh: 					"";
-    display-drun: 					"";
-    display-combi: 					"";
+    display-drun: 					"";
+    display-combi: 					"";
 }
 
 @import "styles/colors.rasi"
 
 * {
-    background-color:             	@bg;
 }
 
 window {
     border: 						0px;
     border-color: 					@ac;
-    border-radius: 					0px;
-    padding: 						30;
-    width: 							20%;
-    height: 						100%;
+    border-radius: 					6px;
+    width: 							35%;
+    background-color: #000000a6;
 }
 
 prompt {
     spacing: 						0;
-    border: 						0;
-    text-color: 					@fg;
+    background-color: transparent;
+    text-color: 				@fg;
 }
 
 textbox-prompt-colon {
@@ -51,87 +48,94 @@ textbox-prompt-colon {
     str: 							" ";
     margin:							0px 4px 0px 0px;
     text-color: 					inherit;
+    background-color: transparent;
 }
 
 entry {
     spacing:    					0;
     text-color: 					@fg;
+    background-color: transparent;
 }
 
 case-indicator {
     spacing:    					0;
     text-color: 					@fg;
+    background-color: transparent;
 }
 
 inputbar {
     spacing:    					0px;
     text-color: 					@fg;
-    padding:    					1px;
+    padding:    					10px 1px 1px 1px;
+    background-color: transparent;
     children: 						[ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
 mainbox {
     border: 						0px;
     border-color: 					@ac;
-    padding: 						6;
+    padding: 						15px;
+    background-color: transparent;
 }
 
 listview {
-    lines:							15;
+    lines:							6;
     columns:						1;
     fixed-height: 					0;
     border: 						0px;
     border-color: 					@ac;
     spacing: 						4px;
     scrollbar: 						false;
-    padding: 						15px 5px 0px 5px;
+    padding: 						5px 5px 0px 5px;
+    background-color: transparent;
 }
 
 element-text, element-icon {
-    background-color: #00000000;
     text-color:       inherit;
+    background-color: transparent;
 }
 
 element {
     border: 						0px;
     border-radius: 					4px;
     padding: 						5px;
+    background-color: transparent;
 }
 element normal.normal {
-    background-color: 				@bg;
     text-color:       				@fg;
+    background-color: transparent;
 }
 element normal.urgent {
-    background-color: 				@bg;
     text-color:       				@red;
+    background-color: transparent;
 }
 element normal.active {
-    background-color: 				@green;
-    text-color:       				@bg;
+    text-color:       				@fg;
+    background-color: transparent;
 }
 element selected.normal {
-    background-color: 				@ac;
-    text-color:       				@bg;
+    text-color:       				#ffffff;
+    background-color: transparent;
 }
 element selected.urgent {
-    background-color: 				@bg;
-    text-color:       				@red;
+    text-color:       				@fg;
+    background-color: transparent;
 }
 element selected.active {
-    background-color: 				@ac;
-    text-color:       				@bg;
+    text-color:       				@fg;
+    background-color: transparent;
 }
 element alternate.normal {
-    background-color: 				@bg;
     text-color:       				@fg;
+    background-color: transparent;
 }
 element alternate.urgent {
-    background-color: 				@bg;
     text-color:       				@fg;
+    background-color: transparent;
 }
 element alternate.active {
-    background-color: 				@bg;
     text-color:       				@fg;
+    background-color: transparent;
 }
 
 sidebar {
@@ -143,21 +147,17 @@ sidebar {
 button {
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    background-color:             	@red;
     margin: 						5px;
     padding: 						5px;
-    text-color: 					@fg;
-    border: 						0px;
-    border-radius: 					4px;
-    border-color: 					@fg;
+    background-color: transparent;
 }
 
 button selected {
-    background-color:             	@green;
-    text-color: 					@fg;
+    text-color: 					red;
     border: 						0px;
-    border-radius: 					4px;
+    border-radius: 					20px;
     border-color: 					@fg;
+    background-color: transparent;
 }
 
 scrollbar {
@@ -166,14 +166,17 @@ scrollbar {
     handle-color: 					@fg;
     handle-width: 					8px;
     padding:      					0;
+    background-color: transparent;
 }
 
 message {
     border: 						0px;
     border-color: 					@ac;
     padding: 						1px;
+    background-color: transparent;
 }
 
 textbox {
     text-color: 					@fg;
+    background-color: transparent;
 }
