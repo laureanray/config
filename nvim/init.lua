@@ -1,3 +1,5 @@
+-- This should be prioritized
+require("lr.options")
 require("lr.notify")
 require("lr.keymaps")
 require("lr.plugins")
@@ -5,7 +7,6 @@ require("lr.lsp")
 require("lr.autocmds")
 require("lr.dap")
 require("lr.completion")
-require("lr.options")
 require("lr.statusline")
 require("lr.git")
 require("lr.lspsaga")

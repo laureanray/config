@@ -6,6 +6,7 @@ return require("packer").startup(function()
     "kkharji/lspsaga.nvim",
     branch = "main",
   })
+  use { "catppuccin/nvim", as = "catppuccin" }
   use({ "rose-pine/neovim", as = "rose-pine" })
   use({
     "williamboman/mason.nvim",
@@ -108,7 +109,7 @@ return require("packer").startup(function()
   use "xiyaowong/transparent.nvim"
   -- Wakatime
   use "wakatime/vim-wakatime"
-  -- use "~/Projects/tree-setter"
+  use "~/Projects/tree-setter"
   -- use "filNaj/tree-setter"
   use({
     'mvllow/modes.nvim',
@@ -117,7 +118,7 @@ return require("packer").startup(function()
       require('modes').setup()
     end
   })
-  
+
   use "laureanray/kulay"
   use "tjdevries/cyclist.vim"
   use "folke/todo-comments.nvim"

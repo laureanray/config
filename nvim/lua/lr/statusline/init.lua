@@ -58,7 +58,7 @@ require('lualine').setup {
       }
     },
     lualine_b = { 'searchcount' },
-    lualine_c = { { 'filetype', icon_only = true }, 'filename', '%=', 'branch', '%=', },
+    lualine_c = { { 'filetype', icon_only = true }, 'filename', 'branch', },
     lualine_x = { 'diff', 'encoding', },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }

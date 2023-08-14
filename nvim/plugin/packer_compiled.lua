@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  catppuccin = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -268,6 +273,11 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -302,6 +312,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["rose-pine"] = {
     loaded = true,
@@ -346,7 +361,7 @@ _G.packer_plugins = {
   ["tree-setter"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/tree-setter",
-    url = "https://github.com/filNaj/tree-setter"
+    url = "/home/lr/Projects/tree-setter"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
@@ -377,10 +392,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
@@ -389,6 +400,10 @@ time([[Config for trouble.nvim]], false)
 time([[Config for modes.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmodes\frequire\0", "config", "modes.nvim")
 time([[Config for modes.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
