@@ -125,4 +125,5 @@ vim.filetype.add({
   }
 })
 
+-- TODO: Fix this later!
 vim.treesitter.language.register('markdown', 'mdx')

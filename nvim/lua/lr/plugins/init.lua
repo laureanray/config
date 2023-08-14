@@ -1,5 +1,4 @@
 return require("packer").startup(function()
-  -- use({ "windwp/nvim-ts-autotag" })
   use({ "zbirenbaum/copilot.lua" })
   use("github/copilot.vim")
   use("wbthomason/packer.nvim")
@@ -16,6 +15,7 @@ return require("packer").startup(function()
   })
   use("kartikp10/noctis.nvim")
   use { "nyoom-engineering/oxocarbon.nvim" }
+
   -- Debugging
   use "mfussenegger/nvim-dap"
   use "leoluz/nvim-dap-go"
@@ -27,9 +27,6 @@ return require("packer").startup(function()
     requires = "nvim-tree/nvim-web-devicons",
     config = function()
       require("trouble").setup({
-        -- your configuration comes here
-        --  or leave it empty to use the default settings
-        -- refer to the configuration section below
       })
     end,
   })
@@ -63,7 +60,7 @@ return require("packer").startup(function()
   use("lukas-reineke/lsp-format.nvim")
 
   -- TODO: Learn this?
-  -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+  use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
   use("mfussenegger/nvim-jdtls")
   --use("RRethy/vim-illuminate")
   use("kyazdani42/nvim-web-devicons")
@@ -111,17 +108,8 @@ return require("packer").startup(function()
   use "xiyaowong/transparent.nvim"
   -- Wakatime
   use "wakatime/vim-wakatime"
-
-  use "~/Projects/tree-setter"
-  use "kvrohit/mellow.nvim"
-  use {
-    "mcchrish/zenbones.nvim",
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    requires = "rktjmp/lush.nvim"
-  }
-
+  -- use "~/Projects/tree-setter"
+  -- use "filNaj/tree-setter"
   use({
     'mvllow/modes.nvim',
     tag = 'v0.2.0',
@@ -129,6 +117,9 @@ return require("packer").startup(function()
       require('modes').setup()
     end
   })
-
+  
+  use "laureanray/kulay"
   use "tjdevries/cyclist.vim"
+  use "folke/todo-comments.nvim"
+  use "rcarriga/nvim-notify"
 end)

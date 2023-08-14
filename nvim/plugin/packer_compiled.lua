@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["cyclist.vim"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/cyclist.vim",
+    url = "https://github.com/tjdevries/cyclist.vim"
+  },
   fzf = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/fzf",
@@ -133,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  kulay = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/kulay",
+    url = "https://github.com/laureanray/kulay"
   },
   ["lsp-format.nvim"] = {
     loaded = true,
@@ -238,6 +248,11 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -257,6 +272,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["oxocarbon.nvim"] = {
     loaded = true,
@@ -313,6 +333,11 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["transparent.nvim"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/transparent.nvim",
@@ -321,7 +346,7 @@ _G.packer_plugins = {
   ["tree-setter"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/tree-setter",
-    url = "/home/lr/Projects/tree-setter"
+    url = "https://github.com/filNaj/tree-setter"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
@@ -356,14 +381,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: modes.nvim
-time([[Config for modes.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmodes\frequire\0", "config", "modes.nvim")
-time([[Config for modes.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: modes.nvim
+time([[Config for modes.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmodes\frequire\0", "config", "modes.nvim")
+time([[Config for modes.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

@@ -94,12 +94,14 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
 
 
 -- TODO: We must find npx dynamically
+-- FIX: If unable to format should probably call `vim.notify`
 -- Little hacky for now but it works
 api.nvim_create_autocmd({ "BufWritePost" }, {
   pattern = "*.prisma",
   -- Execute `npx prisma format` before writing the buffer
   callback = function(data)
     vim.cmd([[ silent !/home/lr/.nvm/versions/node/v16.20.0/bin/npx prisma format ]])
+    -- vim.system({  '!/home/lr/.nvm/versions/node/v16.20.0/bin/npx', 'prisma', 'format'})
     vim.cmd("silent e " .. data["file"])
     -- Reload file
   end,

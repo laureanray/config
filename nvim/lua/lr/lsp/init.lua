@@ -37,6 +37,10 @@ require('neodev').setup({
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
 -- Set encoding?
 capabilities.offsetEncoding = { 'utf-8' }
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -151,3 +155,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+
+-- TODO: move this
+require("todo-comments").setup();

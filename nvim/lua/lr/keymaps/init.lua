@@ -121,3 +121,5 @@ map("n", "<A-1>", ":lua require('harpoon.ui').nav_file(1)<CR>", opts)
 map("n", "<A-2>", ":lua require('harpoon.ui').nav_file(2)<CR>", opts)
 map("n", "<A-3>", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
 map("n", "<A-4>", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
+
+map("n", "<leader>ee", "oif err != nil {<CR>}<Esc>O return err", opts)
