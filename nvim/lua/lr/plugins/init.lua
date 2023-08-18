@@ -6,34 +6,35 @@ return require("packer").startup(function()
     "kkharji/lspsaga.nvim",
     branch = "main",
   })
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use({ "rose-pine/neovim", as = "rose-pine" })
+  -- use { "catppuccin/nvim", as = "catppuccin" }
+  -- use({ "rose-pine/neovim", as = "rose-pine" })
   use({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "onsails/lspkind-nvim",
   })
-  use("kartikp10/noctis.nvim")
-  use { "nyoom-engineering/oxocarbon.nvim" }
+  -- use("kartikp10/noctis.nvim")
+  -- use { "nyoom-engineering/oxocarbon.nvim" }
 
   -- Debugging
-  use "mfussenegger/nvim-dap"
-  use "leoluz/nvim-dap-go"
-  use "rcarriga/nvim-dap-ui"
-  use "theHamsta/nvim-dap-virtual-text"
-  use "nvim-telescope/telescope-dap.nvim"
-  use({
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("trouble").setup({
-      })
-    end,
-  })
+  -- use "mfussenegger/nvim-dap"
+  -- use "leoluz/nvim-dap-go"
+  -- use "rcarriga/nvim-dap-ui"
+  -- use "theHamsta/nvim-dap-virtual-text"
+  -- use "nvim-telescope/telescope-dap.nvim"
+  --
+  -- use({
+  --   "folke/trouble.nvim",
+  --   requires = "nvim-tree/nvim-web-devicons",
+  --   config = function()
+  --     require("trouble").setup({
+  --     })
+  --   end,
+  -- })
 
-  use("rktjmp/lush.nvim")
-  use("bluz71/vim-moonfly-colors")
+  -- use("rktjmp/lush.nvim")
+  -- use("bluz71/vim-moonfly-colors")
   use("folke/neodev.nvim")
   use("nvim-lua/plenary.nvim")
   use({
@@ -119,7 +120,7 @@ return require("packer").startup(function()
     end
   })
 
-  use "laureanray/kulay"
+  use "olivercederborg/poimandres.nvim"
   use "tjdevries/cyclist.vim"
   use "folke/todo-comments.nvim"
   use "rcarriga/nvim-notify"
