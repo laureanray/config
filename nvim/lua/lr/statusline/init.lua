@@ -1,4 +1,4 @@
-require('lualine').setup {
+  require('lualine').setup {
     options = {
         icons_enabled = true,
         component_separators = { left = '', right = '' },
@@ -49,20 +49,21 @@ require('lualine').setup {
             }
         },
         lualine_b = { 'searchcount', { 'filetype', icon_only = true }, 'filename', 'branch', },
-        lualine_c = { {
+        lualine_c = {},
+        lualine_x = { {
             [[
 require("lsp-progress").progress({
     format = function(messages)
         local active_clients = vim.lsp.get_active_clients()
         local client_count = #active_clients
         if #messages > 0 then
-            return " LSP:"
+            return " LSP:"
                 .. client_count
                 .. " "
                 .. table.concat(messages, " ")
         end
         if #active_clients <= 0 then
-            return " LSP:" .. client_count
+            return " LSP:" .. client_count
         else
             local client_names = {}
             for i, client in ipairs(active_clients) do
@@ -70,7 +71,7 @@ require("lsp-progress").progress({
                     table.insert(client_names, "[" .. client.name .. "]")
                 end
             end
-            return " LSP:"
+            return " LSP:"
                 .. client_count
                 .. " "
                 .. table.concat(client_names, " ")
@@ -80,11 +81,9 @@ require("lsp-progress").progress({
 
         ]],
             colored = true,
-            color = { fg = '#ffaa88',  gui = 'bold' },
-        }
-        },
-        lualine_x = { 'diff', 'encoding', },
-        lualine_y = { 'progress' },
+            color = { fg = '#cf87e8',},
+        }},
+        lualine_y = { 'diff', 'encoding', 'progress' },
         lualine_z = { 'location' }
         -- lualine_x = {'encoding', 'fileformat', 'filetype'},
     },
