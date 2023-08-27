@@ -77,7 +77,7 @@ return require("packer").startup(function()
 
     use {
         'linrongbin16/lsp-progress.nvim',
-        requires = {'nvim-tree/nvim-web-devicons'},
+        requires = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('lsp-progress').setup()
         end
@@ -110,6 +110,8 @@ return require("packer").startup(function()
         end,
     })
 
+    use "mfussenegger/nvim-dap"
+
     -- Focus
     use("junegunn/goyo.vim")
     -- Utils
@@ -131,4 +133,6 @@ return require("packer").startup(function()
     use "tjdevries/cyclist.vim"
     use "folke/todo-comments.nvim"
     use "rcarriga/nvim-notify"
+    use "bluz71/vim-nightfly-colors"
+    use 'andweeb/presence.nvim'
 end)

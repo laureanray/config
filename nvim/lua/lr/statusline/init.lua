@@ -22,7 +22,7 @@
     },
     sections = {
         lualine_a = {
-            { 'mode', fmt = function(str) return str:sub(1, 4) end },
+            { 'mode', fmt = function(str) return str:sub(1, 1) end },
             {
                 'diagnostics',
 
@@ -54,7 +54,7 @@
             [[
 require("lsp-progress").progress({
     format = function(messages)
-        local active_clients = vim.lsp.get_active_clients()
+        local active_clients = vim.lsp.get_active_clients({buffer=0})
         local client_count = #active_clients
         if #messages > 0 then
             return " LSP:"
