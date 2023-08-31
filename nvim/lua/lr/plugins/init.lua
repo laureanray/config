@@ -135,4 +135,5 @@ return require("packer").startup(function()
     use "rcarriga/nvim-notify"
     use "bluz71/vim-nightfly-colors"
     use 'andweeb/presence.nvim'
+    use 'Mofiqul/dracula.nvim'
 end)

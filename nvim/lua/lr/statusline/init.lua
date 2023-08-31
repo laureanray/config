@@ -17,12 +17,13 @@
             tabline = 1000,
             winbar = 1000,
         },
-        theme = require('lr.statusline.theme').theme(),
+        -- theme = require('lr.statusline.theme').theme(),
+        theme = 'moonfly',
         path = 1,
     },
     sections = {
         lualine_a = {
-            { 'mode', fmt = function(str) return str:sub(1, 1) end },
+            { 'mode', fmt = function(str) return str:sub(1, 4) end },
             {
                 'diagnostics',
 
