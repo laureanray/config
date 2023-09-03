@@ -136,4 +136,5 @@ return require("packer").startup(function()
     use "bluz71/vim-nightfly-colors"
     use 'andweeb/presence.nvim'
     use 'Mofiqul/dracula.nvim'
+    use "rose-pine/neovim"
 end)
