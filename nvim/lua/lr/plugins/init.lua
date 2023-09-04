@@ -130,7 +130,7 @@ return require("packer").startup(function()
     })
 
     -- use "olivercederborg/poimandres.nvim"
-    use "tjdevries/cyclist.vim"
+    -- use "tjdevries/cyclist.vim"
     use "folke/todo-comments.nvim"
     use "rcarriga/nvim-notify"
     use "bluz71/vim-nightfly-colors"
