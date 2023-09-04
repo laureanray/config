@@ -34,9 +34,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 require("nvim-treesitter.configs").setup({
-  tree_setter = {
-    enable = true
-  },
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -119,11 +116,11 @@ require("treesitter-context").setup({
 })
 
 -- TODO: Move this out. 
-vim.filetype.add({
-  extension = {
-    mdx = 'mdx'
-  }
-})
+-- vim.filetype.add({
+--   extension = {
+--     mdx = 'mdx'
+--   }
+-- })
 
 -- TODO: Fix this later!
-vim.treesitter.language.register('markdown', 'mdx')
+-- vim.treesitter.language.register('markdown', 'mdx')

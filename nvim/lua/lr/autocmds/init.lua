@@ -2,11 +2,11 @@ local api = vim.api
 local wrap = api.nvim_create_augroup("wrap", { clear = true })
 
 -- Softwrap Markdown files
-api.nvim_create_autocmd("FileType", {
-	pattern = "md",
-	command = "setlocal wrap",
-	group = wrap,
-})
+-- api.nvim_create_autocmd("FileType", {
+-- 	pattern = "md",
+-- 	command = "setlocal wrap",
+-- 	group = wrap,
+-- })
 
 -- Set 4 Spaces indent for Shell Scripts
 api.nvim_create_autocmd("FileType", {
@@ -96,13 +96,13 @@ api.nvim_create_autocmd({ "BufWritePost" }, {
 -- TODO: We must find npx dynamically
 -- FIX: If unable to format should probably call `vim.notify`
 -- Little hacky for now but it works
-api.nvim_create_autocmd({ "BufWritePost" }, {
-  pattern = "*.prisma",
-  -- Execute `npx prisma format` before writing the buffer
-  callback = function(data)
-    vim.cmd([[ silent !/home/lr/.nvm/versions/node/v16.20.0/bin/npx prisma format ]])
-    -- vim.system({  '!/home/lr/.nvm/versions/node/v16.20.0/bin/npx', 'prisma', 'format'})
-    vim.cmd("silent e " .. data["file"])
-    -- Reload file
-  end,
-})
+-- api.nvim_create_autocmd({ "BufWritePost" }, {
+--   pattern = "*.prisma",
+--   -- Execute `npx prisma format` before writing the buffer
+--   callback = function(data)
+--     vim.cmd([[ silent !/home/lr/.nvm/versions/node/v16.20.0/bin/npx prisma format ]])
+--     -- vim.system({  '!/home/lr/.nvm/versions/node/v16.20.0/bin/npx', 'prisma', 'format'})
+--     vim.cmd("silent e " .. data["file"])
+--     -- Reload file
+--   end,
+-- })

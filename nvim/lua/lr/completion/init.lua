@@ -21,6 +21,7 @@ end
 
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 
+-- TODO: Make this toggle-able
 require('copilot').setup({
   panel = {
     enabled = false,
