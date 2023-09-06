@@ -1,6 +1,6 @@
 -- This should be prioritized
 require("lr.options")
-require("lr.notify")
+-- require("lr.notify")
 require("lr.keymaps")
 require("lr.plugins")
 require("lr.lsp")
