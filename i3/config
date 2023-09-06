@@ -15,9 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # font JetBrainsMono Nerd Font:monospace 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+# This font is widely installed, provides lots of unicode glyphs, right-to-left text rendering and scalability on retina/hidpi displays (thanks to pango). font pango:DejaVu Sans Mono 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -122,6 +120,23 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $Lmon "DisplayPort-0"
+set $Rmon "DisplayPort-1"
+
+# Assign Google Chrome to workspace 1
+assign [class="Google-chrome"] $ws1
+assign [class="Firefox"] $ws1
+
+workspace $ws1 output $Lmon
+workspace $ws3 output $Lmon
+workspace $ws5 output $Lmon
+workspace $ws7 output $Lmon
+workspace $ws9 output $Lmon
+workspace $ws2 output $Rmon
+workspace $ws4 output $Rmon
+workspace $ws6 output $Rmon
+workspace $ws8 output $Rmon
+workspace $ws10 output $Rmon
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -134,6 +149,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+bindsym $mod+p move workspace to output right
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -193,7 +209,8 @@ bindsym $mod+Ctrl+Left resize grow width 10px
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 exec feh --bg-scale --no-xinerama $HOME/Downloads/pinkeu.jpg
-exec xrandr --dpi 220
-exec xset r rate 200 70                                                                                                                                                                                                                       Saturday, 08 July, 2023 07:38:44 PM
+exec xset r rate 200 70                                                                                                                                                                                                                       Saturday, 08 July, 2023 07
 # exec --no-startup-id rescuetime
 for_window [class="^.*"] border pixel 0
+
+exec --no-startup-id /home/lr/.screenlayout

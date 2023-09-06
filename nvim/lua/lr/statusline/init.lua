@@ -17,8 +17,8 @@
             tabline = 1000,
             winbar = 1000,
         },
-        -- theme = require('lr.statusline.theme').theme(),
-        theme = 'rose-pine',
+        theme = require('lr.statusline.theme').theme(),
+        -- theme = 'rose-pine',
         path = 1,
     },
     sections = {
