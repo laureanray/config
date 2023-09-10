@@ -5,8 +5,8 @@ window:
   decorations: none
   opacity: 1
   padding:
-    x: 4
-    y: 4
+    x: 10
+    y: 10
 font:
   normal:
     # family: JetBrainsMonoo Nerd Font
@@ -24,7 +24,7 @@ font:
     # family: JetBrainsMonoo Nerd Font
     family: BerkeleyMono Nerd Font
     style: Bold Italic
-  size: 24
+  size: 21
 shell:
   program: /usr/bin/zsh
   args:
