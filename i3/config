@@ -121,8 +121,8 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $Lmon "DisplayPort-0"
-set $Rmon "DisplayPort-1"
+set $Lmon "HDMI-A-0"
+set $Rmon "DisplayPort-0"
 
 # Assign Google Chrome to workspace 1
 assign [class="Alacritty"] $ws1
@@ -202,18 +202,13 @@ bindsym $mod+Ctrl+Right resize shrink width 10px
 bindsym $mod+Ctrl+Up resize grow height 10px 
 bindsym $mod+Ctrl+Down resize shrink height 10px 
 bindsym $mod+Ctrl+Left resize grow width 10px 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#        status_command i3status
-# }
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
-exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
-exec xset r rate 200 70                                                                                                                                                                                                                       Saturday, 08 July, 2023 07
-# exec --no-startup-id rescuetime
 for_window [class="^.*"] border pixel 1
 
-exec --no-startup-id /home/lr/.screenlayout
+# exec_always --no-startup-id /home/lr/.screenlayout/screen.sh
+exec_always /usr/local/bin/autorandr --load main
+exec_always feh --bg-fill --no-xinerama $HOME/Pictures/pexels-marek-piwnicki-18182289.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
+exec_always xset r rate 200 70
 
-exec feh --bg-scale --no-xinerama $HOME/Downloads/gn.jpg
