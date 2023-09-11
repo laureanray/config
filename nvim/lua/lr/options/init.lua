@@ -54,7 +54,7 @@ vim.optundofile = false
 local opt = vim.opt
 opt.foldcolumn = "1"
 opt.foldlevel = 99
-opt.foldlevelstart = -1
+opt.foldlevelstart = 99
 opt.foldenable = true
 
 vim.opt.guicursor =
