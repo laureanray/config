@@ -26,7 +26,6 @@ require('lualine').setup {
             { 'mode', fmt = function(str) return str:sub(1, 4) end },
             {
                 'diagnostics',
-
                 -- Table of diagnostic sources, available sources are:
                 --   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
                 -- or a function that returns a table as such:
