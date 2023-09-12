@@ -51,11 +51,10 @@ vim.optundofile = false
 -- asd
 -- vim.opt.statuscolumn= " %=%r│ %T"
 -- vim.opt.statuscolumn = "%=%r│ %T"
-local opt = vim.opt
-opt.foldcolumn = "1"
-opt.foldlevel = 99
-opt.foldlevelstart = 99
-opt.foldenable = true
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 vim.opt.guicursor =
 "n-v-c:block-Question,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
