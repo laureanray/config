@@ -57,7 +57,7 @@ return require("packer").startup(function()
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/vim-vsnip")
-    -- use("lukas-reineke/indent-blankline.nvim")
+    use("lukas-reineke/indent-blankline.nvim")
     use("lukas-reineke/lsp-format.nvim")
 
     -- TODO: Learn this?
@@ -137,6 +137,7 @@ return require("packer").startup(function()
     use 'andweeb/presence.nvim'
     use 'Mofiqul/dracula.nvim'
     use "rose-pine/neovim"
+    use "projekt0n/github-nvim-theme"
     -- Lua
     -- use {
     --     "folke/which-key.nvim",

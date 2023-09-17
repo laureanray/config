@@ -17,8 +17,9 @@ require('lualine').setup {
             tabline = 1000,
             winbar = 1000,
         },
-        theme = require('lr.statusline.theme').theme(),
-        -- theme = 'rose-pine',
+        theme = 'moonfly',
+        -- theme = require('lr.statusline.theme').theme(),
+        -- theme = 'github_light_tritanopia',
         path = 1,
     },
     sections = {

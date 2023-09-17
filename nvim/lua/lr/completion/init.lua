@@ -67,6 +67,7 @@ require('copilot').setup({
   server_opts_overrides = {},
 })
 
+
 require("lspkind").init({
 	-- enables text annotations
 	--
