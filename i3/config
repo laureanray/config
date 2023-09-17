@@ -131,14 +131,14 @@ assign [class="Spotify"] $ws3
 
 workspace $ws1 output $Lmon
 workspace $ws3 output $Lmon
+workspace $ws4 output $Lmon
 workspace $ws5 output $Lmon
+workspace $ws6 output $Lmon
 workspace $ws7 output $Lmon
+workspace $ws8 output $Lmon
 workspace $ws9 output $Lmon
+workspace $ws10 output $Lmon
 workspace $ws2 output $Rmon
-workspace $ws4 output $Rmon
-workspace $ws6 output $Rmon
-workspace $ws8 output $Rmon
-workspace $ws10 output $Rmon
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -205,7 +205,7 @@ bindsym $mod+Ctrl+Left resize grow width 10px
 
 for_window [class="^.*"] border pixel 1
 exec_always /usr/local/bin/autorandr --load main
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
+exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 
 # exec_always --no-startup-id /home/lr/.screenlayout/screen.sh
 exec_always feh --bg-fill $HOME/Pictures/pexels-marek-piwnicki-18182289.jpg --bg-fill $HOME/Pictures/sun.jpg
