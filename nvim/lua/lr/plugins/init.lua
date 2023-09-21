@@ -151,4 +151,5 @@ return require("packer").startup(function()
     --         }
     --     end
     -- }
+    use "shaunsingh/nord.nvim"
 end)
