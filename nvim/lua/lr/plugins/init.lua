@@ -15,7 +15,7 @@ return require("packer").startup(function()
         "onsails/lspkind-nvim",
     })
     -- use("kartikp10/noctis.nvim")
-    -- use { "nyoom-engineering/oxocarbon.nvim" }
+    use { "nyoom-engineering/oxocarbon.nvim" }
 
     -- Debugging
     -- use "mfussenegger/nvim-dap"

@@ -17,7 +17,7 @@ require('lualine').setup {
             tabline = 1000,
             winbar = 1000,
         },
-        theme = 'nightfly',
+        theme = 'oxocarbon',
         -- theme = require('lr.statusline.theme').theme(),
         -- theme = 'github_light_tritanopia',
         path = 1,
