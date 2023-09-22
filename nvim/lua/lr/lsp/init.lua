@@ -105,18 +105,10 @@ local servers = {
         on_attach = on_attach,
         settings = {},
     },
-    emmet_ls = {
+    emmet_language_server= {
         capabilities = capabilities,
         on_attach = on_attach,
-        settings = {
-            init_options = {
-                jsx = {
-                    options = {
-                        ["markup.attributes"] = { className = "class" },
-                    },
-                },
-            },
-        }
+        settings = {},
     },
     gopls = {
         inlay_hints = {
