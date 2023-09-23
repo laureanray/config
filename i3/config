@@ -203,7 +203,7 @@ bindsym $mod+Ctrl+Up resize grow height 10px
 bindsym $mod+Ctrl+Down resize shrink height 10px 
 bindsym $mod+Ctrl+Left resize grow width 10px 
 
-for_window [class="^.*"] border pixel 1
+# for_window [class="^.*"] border pixel 1
 exec_always /usr/local/bin/autorandr --load main
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends --backend glx -b
 

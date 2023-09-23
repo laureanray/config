@@ -18,19 +18,19 @@ return require("packer").startup(function()
     use { "nyoom-engineering/oxocarbon.nvim" }
 
     -- Debugging
-    -- use "mfussenegger/nvim-dap"
-    -- use "leoluz/nvim-dap-go"
-    -- use "rcarriga/nvim-dap-ui"
-    -- use "theHamsta/nvim-dap-virtual-text"
-    -- use "nvim-telescope/telescope-dap.nvim"
+    use "mfussenegger/nvim-dap"
+    use "leoluz/nvim-dap-go"
+    use "rcarriga/nvim-dap-ui"
+    use "theHamsta/nvim-dap-virtual-text"
+    use "nvim-telescope/telescope-dap.nvim"
     --
     -- use({
-    --   "folke/trouble.nvim",
-    --   requires = "nvim-tree/nvim-web-devicons",
-    --   config = function()
-    --     require("trouble").setup({
-    --     })
-    --   end,
+    --     "folke/trouble.nvim",
+    --     requires = "nvim-tree/nvim-web-devicons",
+    --     config = function()
+    --         require("trouble").setup({
+    --         })
+    --     end,
     -- })
 
     -- use("rktjmp/lush.nvim")
@@ -109,8 +109,6 @@ return require("packer").startup(function()
             vim.fn["fzf#install"]()
         end,
     })
-
-    use "mfussenegger/nvim-dap"
 
     -- Focus
     use("junegunn/goyo.vim")

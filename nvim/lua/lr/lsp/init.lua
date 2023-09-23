@@ -8,7 +8,7 @@ local on_attach = function(_, buffer)
         vim.keymap.set('n', keys, func, { buffer = buffer, desc = desc })
     end
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-    nmap('<leader>ca', "<cmd>Lspsaga code_action<CR>", '[C]ode [A]ction')
+    -- nmap('<leader>ca', "<cmd>Lspsaga code_action<CR>", '[C]ode [A]ction')
     nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
     nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
