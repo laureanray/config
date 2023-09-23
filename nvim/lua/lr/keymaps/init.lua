@@ -81,10 +81,10 @@ map("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 map("n", "<leader>d", "<Cmd>lua require('telescope.builtin').find_files({ cwd = '~/Projects/config' })<cr>", opts)
 
 map("n", "<leader>x", "<Cmd>bdelete<cr>", opts)
-map("n", "<leader>x", ":Format<cr>", opts)
+map("n", "<leader>x", "<Cmd>lua vim.lsp.buf.format()<cr>", opts)
 map("n", "<leader>o",
-  "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>",
-  opts)
+    "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>",
+    opts)
 map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", opts)
 map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", opts)
 -- map("n", "<leader>b", "<Cmd>Telescope git_branches<cr>", opts)
@@ -123,3 +123,6 @@ map("n", "<A-3>", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
 map("n", "<A-4>", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 map("n", "<leader>ee", "oif err != nil {<CR>}<Esc>O return err", opts)
+
+-- vim.api.nvim_buf_create_user_command(0, 'Format', function(_)
+-- end, { desc = 'Format current buffer with LSP' })
