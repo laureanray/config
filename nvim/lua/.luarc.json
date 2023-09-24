@@ -1,5 +1,6 @@
 {
     "diagnostics.globals": [
-        "use"
+        "use",
+        "vim"
     ]
 }

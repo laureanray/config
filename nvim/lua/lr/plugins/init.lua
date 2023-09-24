@@ -11,8 +11,6 @@ return require("packer").startup(function()
     use({
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-        "onsails/lspkind-nvim",
     })
     -- use("kartikp10/noctis.nvim")
     use { "nyoom-engineering/oxocarbon.nvim" }
@@ -50,7 +48,7 @@ return require("packer").startup(function()
             require("nvim-autopairs").setup({})
         end,
     })
-    use("hrsh7th/cmp-nvim-lsp")
+    -- use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-cmdline")
@@ -59,7 +57,7 @@ return require("packer").startup(function()
     use("hrsh7th/vim-vsnip")
     use("L3MON4D3/LuaSnip")
     use("lukas-reineke/indent-blankline.nvim")
-    use("lukas-reineke/lsp-format.nvim")
+    -- use("lukas-reineke/lsp-format.nvim")
 
     -- TODO: Learn this?
     use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
@@ -76,13 +74,13 @@ return require("packer").startup(function()
         },
     })
 
-    use {
-        'linrongbin16/lsp-progress.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require('lsp-progress').setup()
-        end
-    }
+    -- use {
+    --     'linrongbin16/lsp-progress.nvim',
+    --     requires = { 'nvim-tree/nvim-web-devicons' },
+    --     config = function()
+    --         require('lsp-progress').setup()
+    --     end
+    -- }
 
     use("theprimeagen/harpoon")
     use("lewis6991/gitsigns.nvim")
@@ -151,4 +149,22 @@ return require("packer").startup(function()
     --     end
     -- }
     use "shaunsingh/nord.nvim"
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            --- Uncomment these if you want to manage LSP servers from neovim
+            -- {'williamboman/mason.nvim'},
+            -- {'williamboman/mason-lspconfig.nvim'},
+
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
+        }
+    }
+
+    use "onsails/lspkind.nvim"
 end)
