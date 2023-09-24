@@ -13,8 +13,6 @@ require("lr.transparent")
 require("lr.comment")
 require("lr.ufo")
 require("lr.listchars")
---  
--- require("lr.lsp-zero")
 require("lr.lsp")
 require("lr.completion")
 require("lr.lspsaga")
