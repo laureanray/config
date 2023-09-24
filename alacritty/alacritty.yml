@@ -11,22 +11,22 @@ window:
     y: 10
 font:
   normal:
-    # family: JetBrainsMonoo Nerd Font
-    family: JetBrainsMono Nerd Font
+    # family: BerkeleyMonoo Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Regular
   bold:
-    # family: JetBrainsMonoo Nerd Font
-    family: JetBrainsMono Nerd Font
+    # family: BerkeleyMonoo Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Bold
   italic:
-    # family: JetBrainsMonoo Nerd Font
-    family: JetBrainsMono Nerd Font
+    # family: BerkeleyMonoo Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Italic
   bold_italic:
-    # family: JetBrainsMonoo Nerd Font
-    family: JetBrainsMono Nerd Font
+    # family: BerkeleyMonoo Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Bold Italic
-  size: 28
+  size: 23
 shell:
   program: /usr/bin/zsh
   args:
