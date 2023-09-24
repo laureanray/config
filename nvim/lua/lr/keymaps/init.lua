@@ -60,6 +60,9 @@ map("n", "<leader>do", "<cmd>lua require'dap'.step_out()<CR>", opts)
 
 vim.g.copilot_no_tab_map = true
 map("i", "<C-J>", '<Cmd>require("copilot.panel", opts).accept()<CR>', { silent = true, expr = true })
+
+-- Toggle Copilot Auto Trigger
+map("n", "<leader>cp", "<cmd>lua require'copilot.suggestion'.toggle_auto_trigger()<CR>", opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
