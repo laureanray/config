@@ -57,6 +57,7 @@ return require("packer").startup(function()
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/vim-vsnip")
+    use("L3MON4D3/LuaSnip")
     use("lukas-reineke/indent-blankline.nvim")
     use("lukas-reineke/lsp-format.nvim")
 

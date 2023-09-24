@@ -73,3 +73,9 @@ vim.g.goyo_width = 105
 -- vim.fn.sign_define('DapBreakpointRejected',  { text='•', texthl='orange', linehl='DapBreakpoint', numhl='DapBreakpoint' })
 -- vim.fn.sign_define('DapStopped',             { text='•', texthl='green',  linehl='DapBreakpoint', numhl='DapBreakpoint' })
 -- vim.fn.sign_define('DapLogPoint',            { text='•', texthl='yellow', linehl='DapBreakpoint', numhl='DapBreakpoint' })
+--
+--
+-- Completion
+
+
+vim.g.completeopt = "menu,menuone,noselect,noinsert"

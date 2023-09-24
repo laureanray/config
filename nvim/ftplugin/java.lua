@@ -12,6 +12,8 @@ local config = {
     root_dir = require('jdtls.setup').find_root({ '.git', 'mvnw', 'gradlew' }),
     settings = {
         java = {
+            signatureHelp = { enabled = true },
+            contentProvider = { preferred = 'fernflower' },
         }
     },
     init_options = {

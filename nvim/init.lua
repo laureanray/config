@@ -1,6 +1,5 @@
 -- This should be prioritized
 require("lr.options")
--- require("lr.notify")
 require("lr.keymaps")
 require("lr.plugins")
 require("lr.lsp")
@@ -16,5 +15,7 @@ require("lr.treesitter")
 require("lr.transparent")
 require("lr.comment")
 require("lr.ufo")
--- require("lr.presence")
 require("lr.listchars")
+-- require("lr.copilot")
+--
+--

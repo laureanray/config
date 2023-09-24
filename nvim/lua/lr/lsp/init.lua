@@ -64,7 +64,18 @@ local servers = {
             show_parameter_hints = true,
         },
         capabilities = capabilities,
-        settings = {},
+        settings = {
+            configuration = {
+                suggest = {
+                    completeFunctionCalls = true
+                },
+            },
+            javascript = {
+                suggest = {
+                    completeFunctionCalls = true
+                }
+            }
+        },
         init_options = {
             preferences = {
                 includeInlayParameterNameHints = "all",
@@ -74,7 +85,14 @@ local servers = {
                 includeInlayPropertyDeclarationTypeHints = true,
                 includeInlayFunctionLikeReturnTypeHints = true,
                 includeInlayEnumMemberValueHints = true,
-                importModuleSpecifierPreference = 'non-relative'
+                importModuleSpecifierPreference = 'non-relative',
+                includeCompletionsForImportStatements = true,
+                includeCompletionsForModuleExports = true,
+                includeCompletionsWithClassMemberSnippets = true,
+                includeCompletionsWithObjectLiteralMethodSnippets = true,
+                includeCompletionsWithInsertText = true,
+                includeCompletionsWithSnippetText = true,
+                allowIncompleteCompletions = true,
             },
         },
         on_attach = function(client, bufnr)
@@ -101,7 +119,7 @@ local servers = {
         on_attach = on_attach,
         settings = {},
     },
-    emmet_language_server= {
+    emmet_language_server = {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {},

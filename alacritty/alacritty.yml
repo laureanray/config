@@ -26,7 +26,7 @@ font:
     # family: JetBrainsMonoo Nerd Font
     family: JetBrainsMono Nerd Font
     style: Bold Italic
-  size: 32
+  size: 28
 shell:
   program: /usr/bin/zsh
   args:
