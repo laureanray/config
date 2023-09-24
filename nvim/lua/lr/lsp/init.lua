@@ -70,16 +70,9 @@ local servers = {
         },
         capabilities = capabilities,
         settings = {
-            configuration = {
-                suggest = {
-                    completeFunctionCalls = true
-                },
+            completions = {
+                completeFunctionCalls = true
             },
-            javascript = {
-                suggest = {
-                    completeFunctionCalls = true
-                }
-            }
         },
         init_options = {
             preferences = {
@@ -132,6 +125,7 @@ local servers = {
         capabilities = capabilities,
         settings = {
             gopls = {
+                usePlaceholders = true,
                 hints = {
                     assignVariableTypes = true,
                     compositeLiteralFields = true,
