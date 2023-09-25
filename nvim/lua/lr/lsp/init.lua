@@ -1,5 +1,8 @@
 local lsp_zero = require('lsp-zero')
-require('mason').setup()
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({ buffer = bufnr })
+end)
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.foldingRange = {
     dynamicRegistration = false,
@@ -8,9 +11,9 @@ capabilities.textDocument.foldingRange = {
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 capabilities.offsetEncoding = { 'utf-8' }
 local mason_lspconfig = require 'mason-lspconfig'
-lsp_zero.on_attach(function(client, bufnr)
-    lsp_zero.default_keymaps({ buffer = bufnr })
-end)
+
+-- Language Servers Setup 
+require('mason').setup()
 local servers = {
     rust_analyzer = {
         capabilities = capabilities,
