@@ -10,13 +10,16 @@ vim.opt.list = true
 vim.opt.listchars:append "eol:↲"
 vim.opt.listchars:append "space:⋅"
 
-require("indent_blankline").setup {
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-    },
-}
+-- require("indent_blankline").setup {
+--     char_highlight_list = {
+--         "IndentBlanklineIndent1",
+--         "IndentBlanklineIndent2",
+--         "IndentBlanklineIndent3",
+--         "IndentBlanklineIndent4",
+--         "IndentBlanklineIndent5",
+--         "IndentBlanklineIndent6",
+--     },
+-- }
+
+
+require("ibl").setup()

@@ -2,12 +2,6 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local handlers = require('nvim-autopairs.completion.handlers')
 
-local has_words_before = function()
-    if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
-    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
-end
-
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#282C34", fg = "NONE" })
 vim.api.nvim_set_hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
@@ -81,22 +75,11 @@ require('lspkind').init({
         TypeParameter = "",
     },
 })
+
 cmp.setup({
-    window = {
-        completion = {
-            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-            col_offset = -3,
-            side_padding = 0,
-        },
-    },
-    formatting = {
-        fields = { "kind", "abbr", "menu" },
-        format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-            local strings = vim.split(kind.kind, "%s", { trimempty = true })
-            kind.kind = " " .. (strings[1] or "") .. " "
-            kind.menu = "    (" .. (strings[2] or "") .. ")"
-            return kind
+    snippet = {
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         end,
     },
     mapping = {
@@ -131,62 +114,74 @@ cmp.setup({
             end
         end, { "i", "s" }),
     },
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' }, -- For vsnip users.
+    }, {
+        { name = 'buffer' },
+    }),
+    formatting = {
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, vim_item)
+            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+            local strings = vim.split(kind.kind, "%s", { trimempty = true })
+            kind.kind = " " .. (strings[1] or "") .. " "
+            kind.menu = "    (" .. (strings[2] or "") .. ")"
+            return kind
+        end,
+    },
 })
 
+-- Use buffer source for `/`.
 cmp.setup.cmdline("/", {
     sources = {
         { name = "buffer" },
     },
 })
 
-cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
+-- Use cmdline & path source for ':'.
+cmp.setup.cmdline(":", {
     sources = cmp.config.sources({
-        { name = 'path' }
+        { name = "path" },
     }, {
-        {
-            name = 'cmdline',
-            option = {
-                ignore_cmds = { 'Man', '!' }
-            }
+        { name = "cmdline" },
+    }),
+})
+
+
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done({
+        filetypes = {
+            -- "*" is a alias to all filetypes
+            ["*"] = {
+                ["("] = {
+                    kind = {
+                        cmp.lsp.CompletionItemKind.Function,
+                        cmp.lsp.CompletionItemKind.Method,
+                    },
+                    handler = handlers["*"]
+                }
+            },
+            lua = {
+                ["("] = {
+                    kind = {
+                        cmp.lsp.CompletionItemKind.Function,
+                        cmp.lsp.CompletionItemKind.Method
+                    },
+                    ---@param char string
+                    ---@param item table item completion
+                    ---@param bufnr number buffer number
+                    ---@param rules table
+                    ---@param commit_character table<string>
+                    handler = function(char, item, bufnr, rules, commit_character)
+                        -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr, rules, commit_character})
+                    end
+                }
+            },
+            -- Disable for tex
+            tex = false
         }
     })
-})
---
---
--- cmp.event:on(
---     'confirm_done',
---     cmp_autopairs.on_confirm_done({
---         filetypes = {
---             -- "*" is a alias to all filetypes
---             ["*"] = {
---                 ["("] = {
---                     kind = {
---                         cmp.lsp.CompletionItemKind.Function,
---                         cmp.lsp.CompletionItemKind.Method,
---                     },
---                     handler = handlers["*"]
---                 }
---             },
---             lua = {
---                 ["("] = {
---                     kind = {
---                         cmp.lsp.CompletionItemKind.Function,
---                         cmp.lsp.CompletionItemKind.Method
---                     },
---                     ---@param char string
---                     ---@param item table item completion
---                     ---@param bufnr number buffer number
---                     ---@param rules table
---                     ---@param commit_character table<string>
---                     handler = function(char, item, bufnr, rules, commit_character)
---                         -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr, rules, commit_character})
---                     end
---                 }
---             },
---             -- Disable for tex
---             tex = false,
---             javascript = false
---         }
---     })
--- )
+)
+

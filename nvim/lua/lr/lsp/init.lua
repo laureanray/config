@@ -1,18 +1,63 @@
-local lsp_zero = require('lsp-zero')
-lsp_zero.on_attach(function(client, bufnr)
-    lsp_zero.default_keymaps({ buffer = bufnr })
-end)
+-- local lsp_zero = require('lsp-zero')
+--
+-- lsp_zero.on_attach(function(client, bufnr)
+--     lsp_zero.default_keymaps({ buffer = bufnr })
+-- end)
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+local on_attach = function(_, bufnr)
+    -- NOTE: Remember that lua is a real programming language, and as such it is possible
+    -- to define small helper and utility functions so you don't have to repeat yourself
+    -- many times.
+    --
+    -- In this case, we create a function that lets us more easily define mappings specific
+    -- for LSP related items. It sets the mode, buffer and description for us each time.
+    local nmap = function(keys, func, desc)
+        if desc then
+            desc = 'LSP: ' .. desc
+        end
+
+        vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+    end
+
+    nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+    nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+
+    nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+    nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+    nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+    nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
+    nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+    nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+
+    -- See `:help K` for why this keymap
+    nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+    nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+
+    -- Lesser used LSP functionality
+    nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+    nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
+    nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
+    nmap('<leader>wl', function()
+        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, '[W]orkspace [L]ist Folders')
+
+    -- Create a command `:Format` local to the LSP buffer
+    vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+        vim.lsp.buf.format()
+    end, { desc = 'Format current buffer with LSP' })
+end
+
 capabilities.textDocument.foldingRange = {
     dynamicRegistration = false,
     lineFoldingOnly = true
 }
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 capabilities.offsetEncoding = { 'utf-8' }
+
 local mason_lspconfig = require 'mason-lspconfig'
 
--- Language Servers Setup 
+-- Language Servers Setup
 require('mason').setup()
 local servers = {
     rust_analyzer = {
@@ -20,12 +65,14 @@ local servers = {
         settings = {
 
         },
+        on_attach = on_attach,
     },
     tailwindcss = {
         capabilities = capabilities,
         settings = {
 
         },
+        on_attach = on_attach,
     },
     tsserver = {
         inlay_hints = {
@@ -56,10 +103,7 @@ local servers = {
                 allowIncompleteCompletions = true,
             },
         },
-        on_attach = function(client, bufnr)
-            client.server_capabilities.document_formatting = false
-            client.server_capabilities.document_range_formatting = false
-        end,
+        on_attach = on_attach
     },
     lua_ls = {
         capabilities = capabilities,
@@ -71,15 +115,18 @@ local servers = {
                 workspace = { checkThirdParty = false },
                 telemetry = { enable = false },
             },
-        }
+        },
+        on_attach = on_attach
     },
     grammarly = {
         capabilities = capabilities,
         settings = {},
+        on_attach = on_attach
     },
     emmet_language_server = {
         capabilities = capabilities,
         settings = {},
+        on_attach = on_attach
     },
     gopls = {
         inlay_hints = {
@@ -99,28 +146,36 @@ local servers = {
                     rangeVariableTypes = true,
                 },
             }
-        }
+        },
+        on_attach = on_attach
     },
     astro = {
         capabilities = capabilities,
         settings = {},
+        on_attach = on_attach
     },
-    csharp_ls = {
-        capabilities = capabilities,
-        settings = {},
-    }
+    -- csharp_ls = {
+    --     capabilities = capabilities,
+    --     settings = {},
+    -- }
 }
 
 mason_lspconfig.setup {
-    handlers = {
-        lsp_zero.default_setup,
-    },
+    -- handlers = {
+    --     lsp_zero.default_setup,
+    -- },
+
     ensure_installed = vim.tbl_keys(servers),
 }
 
 mason_lspconfig.setup_handlers {
     function(server_name)
-        require('lspconfig')[server_name].setup(servers[server_name])
+        -- require('lspconfig')[server_name].setup(servers[server_name])
+        require('lspconfig')[server_name].setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = servers[server_name].settings,
+        }
     end,
 }
 
