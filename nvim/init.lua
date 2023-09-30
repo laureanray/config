@@ -1,12 +1,12 @@
 -- This should be prioritized
 require("lr.options")
+require("lr.color-scheme")
 require("lr.keymaps")
 require("lr.plugins")
 require("lr.autocmds")
 require("lr.dap")
 require("lr.statusline")
 require("lr.git")
-require("lr.color-scheme")
 require("lr.telescope")
 require("lr.treesitter")
 require("lr.transparent")

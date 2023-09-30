@@ -114,20 +114,10 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   fzf = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -148,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["lsp-zero.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -189,16 +174,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
-  },
-  neovim = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
-  },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -252,11 +227,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -313,11 +283,6 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
-  },
   ["promise-async"] = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/promise-async",
@@ -362,16 +327,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-moonfly-colors"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
-  },
-  ["vim-nightfly-colors"] = {
-    loaded = true,
-    path = "/home/lr/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
-    url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["vim-vsnip"] = {
     loaded = true,

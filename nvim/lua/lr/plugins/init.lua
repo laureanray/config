@@ -32,7 +32,7 @@ return require("packer").startup(function()
     -- })
 
     -- use("rktjmp/lush.nvim")
-    use("bluz71/vim-moonfly-colors")
+    -- use("bluz71/vim-moonfly-colors")
     use("folke/neodev.nvim")
     use("nvim-lua/plenary.nvim")
     use({
@@ -48,7 +48,8 @@ return require("packer").startup(function()
             require("nvim-autopairs").setup({})
         end,
     })
-    -- use("hrsh7th/cmp-nvim-lsp")
+    use({ 'neovim/nvim-lspconfig' })
+    use("hrsh7th/cmp-nvim-lsp")
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-cmdline")
@@ -125,16 +126,16 @@ return require("packer").startup(function()
             require('modes').setup()
         end
     })
+    use "folke/todo-comments.nvim"
 
     -- use "olivercederborg/poimandres.nvim"
     -- use "tjdevries/cyclist.vim"
-    use "folke/todo-comments.nvim"
-    use "rcarriga/nvim-notify"
-    use "bluz71/vim-nightfly-colors"
-    use 'andweeb/presence.nvim'
-    use 'Mofiqul/dracula.nvim'
-    use "rose-pine/neovim"
-    use "projekt0n/github-nvim-theme"
+    -- use "rcarriga/nvim-notify"
+    -- use "bluz71/vim-nightfly-colors"
+    -- use 'andweeb/presence.nvim'
+    -- use 'Mofiqul/dracula.nvim'
+    -- use "rose-pine/neovim"
+    -- use "projekt0n/github-nvim-theme"
     -- Lua
     -- use {
     --     "folke/which-key.nvim",
@@ -148,23 +149,23 @@ return require("packer").startup(function()
     --         }
     --     end
     -- }
-    use "shaunsingh/nord.nvim"
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
+    -- use "shaunsingh/nord.nvim"
+    -- use {
+    --     'VonHeikemen/lsp-zero.nvim',
+    --     branch = 'v3.x',
+    --     requires = {
+    --         --- Uncomment these if you want to manage LSP servers from neovim
+    --         -- {'williamboman/mason.nvim'},
+    --         -- {'williamboman/mason-lspconfig.nvim'},
 
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
-        }
-    }
+    --         -- LSP Support
+    --         { 'neovim/nvim-lspconfig' },
+    --         -- Autocompletion
+    --         { 'hrsh7th/nvim-cmp' },
+    --         { 'hrsh7th/cmp-nvim-lsp' },
+    --         { 'L3MON4D3/LuaSnip' },
+    --     }
+    -- }
 
     use "onsails/lspkind.nvim"
 end)

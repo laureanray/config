@@ -1,3 +1,8 @@
+-- This would by dynamically changed by a script
+vim.opt.background = "light"
+
+
+
 vim.cmd("filetype plugin indent on")
 -- general
 vim.opt.scrolloff = 8
@@ -8,9 +13,6 @@ vim.opt.updatetime = 50
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.o.inccommand = "nosplit"
-vim.g.gruvbox_constrast_dark = "soft"
-vim.g.gruvbox_material_foreground = "original"
-vim.g.gruvbox_material_background = "original"
 vim.o.timeout = false
 vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.hidden = true
