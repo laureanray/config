@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Set Variable if it's not already set
+# Set the theme
+# If dark
+if [ "$1" == "dark" ]; then
+    echo "Setting theme to dark"
+    sed -i 's/oxo-light/oxo-dark/g' ~/.config/alacritty/alacritty.yml
+    sed -i 's/light/dark/g' ~/.config/nvim/lua/lr/color-scheme/init.lua
+    sed -i 's/dawn/main/g' ~/.tmux.conf
+else
+    echo "Setting theme to light"
+    sed -i 's/oxo-dark/oxo-light/g' ~/.config/alacritty/alacritty.yml
+    sed -i 's/dark/light/g' ~/.config/nvim/lua/lr/color-scheme/init.lua
+    sed -i 's/main/dawn/g' ~/.tmux.conf
+fi
+
+tmux source-file ~/.tmux.conf
+# Try to always reload neovim
+for path in $(nvr --nostart --serverlist)
+do
+    echo "Reloading neovim for $path" 
+    nvr --nostart --servername $path -cc 'so ~/.config/nvim/lua/lr/color-scheme/init.lua'
+done
+
