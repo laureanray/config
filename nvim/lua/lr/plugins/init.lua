@@ -135,7 +135,7 @@ return require("packer").startup(function()
     -- use 'andweeb/presence.nvim'
     -- use 'Mofiqul/dracula.nvim'
     -- use "rose-pine/neovim"
-    -- use "projekt0n/github-nvim-theme"
+    use "projekt0n/github-nvim-theme"
     -- Lua
     -- use {
     --     "folke/which-key.nvim",

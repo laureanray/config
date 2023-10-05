@@ -120,8 +120,8 @@ local servers = {
     },
     grammarly = {
         capabilities = capabilities,
+        on_attach = on_attach,
         settings = {},
-        on_attach = on_attach
     },
     emmet_language_server = {
         capabilities = capabilities,
@@ -153,11 +153,7 @@ local servers = {
         capabilities = capabilities,
         settings = {},
         on_attach = on_attach
-    },
-    -- csharp_ls = {
-    --     capabilities = capabilities,
-    --     settings = {},
-    -- }
+    }
 }
 
 mason_lspconfig.setup {
@@ -171,11 +167,22 @@ mason_lspconfig.setup {
 mason_lspconfig.setup_handlers {
     function(server_name)
         -- require('lspconfig')[server_name].setup(servers[server_name])
-        require('lspconfig')[server_name].setup {
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = servers[server_name].settings,
-        }
+        if server_name == 'grammarly' then
+            require('lspconfig')[server_name].setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name].settings,
+                cmd = { "n", "run", "16",
+                    "/Users/laureanray.bahala/.local/share/nvim/mason/bin/grammarly-languageserver",
+                    "--stdio" },
+            }
+        else
+            require('lspconfig')[server_name].setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name].settings,
+            }
+        end
     end,
 }
 

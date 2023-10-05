@@ -1,8 +1,5 @@
 -- This would by dynamically changed by a script
-vim.opt.background = "light"
-
-
-
+vim.opt.background = "dark"
 vim.cmd("filetype plugin indent on")
 -- general
 vim.opt.scrolloff = 8

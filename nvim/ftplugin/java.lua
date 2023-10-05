@@ -144,3 +144,6 @@ nnoremap <leader>dn <Cmd>lua require'jdtls'.test_nearest_method()<CR>
 --     vim.bo[buf].filetype = 'java'
 --     vim.bo[buf].modifiable = false
 -- end
+vim.bo.autoindent = true
+vim.o.expandtab = true
+vim.bo.expandtab = true
