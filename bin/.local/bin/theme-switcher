@@ -5,14 +5,18 @@
 # If dark
 if [ "$1" == "dark" ]; then
     echo "Setting theme to dark"
-    sed -i 's/oxo-light/oxo-dark/g' ~/.config/alacritty/alacritty.yml
-    sed -i 's/light/dark/g' ~/.config/nvim/lua/lr/color-scheme/init.lua
-    sed -i 's/dawn/main/g' ~/.tmux.conf
+    # sed -i 's/oxo-light/oxo-dark/g' ~/.config/alacritty/alacritty.yml
+    sed -i.bak 's/light/dark/g' ~/.config/nvim/lua/lr/options/init.lua && rm ~/.config/nvim/lua/lr/options/init.lua.bak
+    sed -i.bak 's/github_light/oxocarbon/g' ~/.config/nvim/lua/lr/color-scheme/init.lua && rm ~/.config/nvim/lua/lr/color-scheme/init.lua.bak
+    sed -i.bak 's/dawn/main/g' ~/Projects/config/tmx/mac.tmux.conf && rm ~/Projects/config/tmx/mac.tmux.conf.bak
+    sed -i.bak 's/Github Dark/Github (Gogh)/g' ~/Projects/config/.wezterm.lua && rm ~/Projects/config/.wezterm.lua.bak
 else
     echo "Setting theme to light"
-    sed -i 's/oxo-dark/oxo-light/g' ~/.config/alacritty/alacritty.yml
-    sed -i 's/dark/light/g' ~/.config/nvim/lua/lr/color-scheme/init.lua
-    sed -i 's/main/dawn/g' ~/.tmux.conf
+    # sed -i 's/oxo-dark/oxo-light/g' ~/.config/alacritty/alacritty.yml
+    sed -i.bak 's/dark/light/g' ~/.config/nvim/lua/lr/options/init.lua && rm ~/.config/nvim/lua/lr/options/init.lua.bak
+    sed -i.bak 's/oxocarbon/github_light/g' ~/.config/nvim/lua/lr/color-scheme/init.lua && rm ~/.config/nvim/lua/lr/color-scheme/init.lua.bak
+    sed -i.bak 's/main/dawn/g' ~/Projects/config/tmx/mac.tmux.conf && rm ~/Projects/config/tmx/mac.tmux.conf.bak
+    sed -i.bak 's/Github (Gogh)/Github Dark/g' ~/Projects/config/.wezterm.lua && rm ~/Projects/config/.wezterm.lua.bak
 fi
 
 tmux source-file ~/.tmux.conf
@@ -21,5 +25,7 @@ for path in $(nvr --nostart --serverlist)
 do
     echo "Reloading neovim for $path" 
     nvr --nostart --servername $path -cc 'so ~/.config/nvim/lua/lr/color-scheme/init.lua'
+    nvr --nostart --servername $path -cc 'so ~/.config/nvim/lua/lr/options/init.lua'
+    nvr --nostart --servername $path -cc 'so ~/.config/nvim/init.lua'
 done
 

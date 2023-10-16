@@ -1,5 +1,6 @@
 -- This should be prioritized
 require("lr.options")
+
 require("lr.color-scheme")
 require("lr.keymaps")
 require("lr.plugins")
