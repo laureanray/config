@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: BerkeleyMono nerd Font Mono
     style: Bold Italic
-  size: 16
+  size: 20
 shell:
   program: /usr/local/bin/zsh
   args:
