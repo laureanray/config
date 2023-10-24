@@ -9,16 +9,17 @@ local config = {}
 if wezterm.config_builder then
     config = wezterm.config_builder()
     config.color_scheme_dirs = { '/home/lr/Downloads/wezterm' }
-    config.font_size = 13
+    config.font_size = 14
     config.enable_tab_bar = false
     config.cursor_blink_rate = 0
     config.color_scheme = "Seti"
     config.dpi = 144
     config.freetype_load_target = "Light"
-    config.line_height = 1.1
+    -- config.line_height = 1.1
     config.font = wezterm.font_with_fallback {
         'BerkeleyMono Nerd Font',
-        -- { family = "Symbols Nerd Font", scale = 1.5 },
+        -- 'FantasqueSansM Nerd Font Mono',
+        { family = "Symbols Nerd Font", scale = 1.5 },
         'nonicons',
     }
 end

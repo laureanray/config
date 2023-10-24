@@ -30,7 +30,7 @@ require('lualine').setup {
                 --   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
                 -- or a function that returns a table as such:
                 --   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
-                sources = { 'nvim_diagnostic', 'coc' },
+                sources = { 'nvim_diagnostic', },
 
                 -- Displays diagnostics for the defined severity types
                 sections = { 'error', 'warn', 'info', 'hint' },
@@ -42,7 +42,7 @@ require('lualine').setup {
                     info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
                     hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
                 },
-                symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
+                symbols = { error = '󰅚 ', warn = ' ', info = ' ', hint = '󱍅 '},
                 colored = true,          -- Displays diagnostics status in color if set to true.
                 update_in_insert = true, -- Update diagnostics in insert mode.
                 always_visible = false,  -- Show diagnostics even if there are none.
@@ -50,44 +50,8 @@ require('lualine').setup {
         },
         lualine_b = { 'searchcount', { 'filetype', icon_only = true }, 'filename', 'branch', },
         lualine_c = {},
-        lualine_x = { '%=', 'selectioncount', },
-        --             TODO: FIX THIS!
-        --        lualine_x = { {
-        --             [[
-        -- require("lsp-progress").progress({
-        --     format = function(messages)
-        --         local active_clients = vim.lsp.get_active_clients({buffer=0})
-        --         local client_count = #active_clients
-        --         if #messages > 0 then
-        --             return " LSP:"
-        --                 .. client_count
-        --                 .. " "
-        --                 .. table.concat(messages, " ")
-        --         end
-        --         if #active_clients <= 0 then
-        --             return " LSP:" .. client_count
-        --         else
-        --             local client_names = {}
-        --             for i, client in ipairs(active_clients) do
-        --                 if client and client.name ~= "" then
-        --                     table.insert(client_names, "[" .. client.name .. "]")
-        --                 end
-        --             end
-        --             return " LSP:"
-        --                 .. client_count
-        --                 .. " "
-        --                 .. table.concat(client_names, " ")
-        --         end
-        --     end,
-        -- })
-        --
-        --         ]],
-        --             colored = true,
-        --             color = { fg = '#cf87e8',},
-        --         }},
         lualine_y = { 'diff', 'encoding', 'progress' },
         lualine_z = { 'location' }
-        -- lualine_x = {'encoding', 'fileformat', 'filetype'},
     },
     inactive_sections = {
         lualine_a = {},

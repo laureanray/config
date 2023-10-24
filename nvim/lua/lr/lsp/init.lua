@@ -1,15 +1,8 @@
--- local lsp_zero = require('lsp-zero')
---
--- lsp_zero.on_attach(function(client, bufnr)
---     lsp_zero.default_keymaps({ buffer = bufnr })
--- end)
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local on_attach = function(_, bufnr)
     -- NOTE: Remember that lua is a real programming language, and as such it is possible
     -- to define small helper and utility functions so you don't have to repeat yourself
     -- many times.
-    --
     -- In this case, we create a function that lets us more easily define mappings specific
     -- for LSP related items. It sets the mode, buffer and description for us each time.
     local nmap = function(keys, func, desc)
@@ -31,7 +24,8 @@ local on_attach = function(_, bufnr)
     nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
     -- See `:help K` for why this keymap
-    nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+    -- nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+    nmap('K', '<cmd>Lspsaga hover_doc<CR>', 'Hover Documentation')
     nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
     -- Lesser used LSP functionality
@@ -153,6 +147,11 @@ local servers = {
         capabilities = capabilities,
         settings = {},
         on_attach = on_attach
+    },
+    clangd = {
+        capabilities = capabilities,
+        settings = {},
+        on_attach = on_attach
     }
 }
 
@@ -172,7 +171,7 @@ mason_lspconfig.setup_handlers {
                 capabilities = capabilities,
                 on_attach = on_attach,
                 settings = servers[server_name].settings,
-                cmd = { "n", "run", "16",
+                cmd = { "nvm", "run", "16",
                     "/Users/laureanray.bahala/.local/share/nvim/mason/bin/grammarly-languageserver",
                     "--stdio" },
             }
@@ -185,5 +184,9 @@ mason_lspconfig.setup_handlers {
         end
     end,
 }
-
-require("todo-comments").setup();
+require("todo-comments").setup()
+-- require('trouble').setup()
+--
+--
+--
+require('lspsaga').setup({})

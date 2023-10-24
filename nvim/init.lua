@@ -1,6 +1,5 @@
 -- This should be prioritized
 require("lr.options")
-
 require("lr.color-scheme")
 require("lr.keymaps")
 require("lr.plugins")
@@ -16,5 +15,4 @@ require("lr.ufo")
 require("lr.listchars")
 require("lr.lsp")
 require("lr.completion")
-require("lr.lspsaga")
 require("lr.copilot")

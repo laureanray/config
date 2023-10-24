@@ -2,12 +2,14 @@ return require("packer").startup(function()
     use({ "zbirenbaum/copilot.lua" })
     use("github/copilot.vim")
     use("wbthomason/packer.nvim")
-    use({
-        "kkharji/lspsaga.nvim",
-        branch = "main",
-    })
+    -- use({
+    --     "kkharji/lspsaga.nvim",
+    --     branch = "main",
+    -- })
     -- use { "catppuccin/nvim", as = "catppuccin" }
     -- use({ "rose-pine/neovim", as = "rose-pine" })
+    --
+    use "nvimdev/lspsaga.nvim"
     use({
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -22,14 +24,10 @@ return require("packer").startup(function()
     use "theHamsta/nvim-dap-virtual-text"
     use "nvim-telescope/telescope-dap.nvim"
     --
-    -- use({
-    --     "folke/trouble.nvim",
-    --     requires = "nvim-tree/nvim-web-devicons",
-    --     config = function()
-    --         require("trouble").setup({
-    --         })
-    --     end,
-    -- })
+    use({
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+    })
 
     -- use("rktjmp/lush.nvim")
     -- use("bluz71/vim-moonfly-colors")
@@ -57,6 +55,8 @@ return require("packer").startup(function()
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/vim-vsnip")
     use("L3MON4D3/LuaSnip")
+
+    use { "catppuccin/nvim", as = "catppuccin" }
     use("lukas-reineke/indent-blankline.nvim")
     -- use("lukas-reineke/lsp-format.nvim")
 
@@ -65,14 +65,11 @@ return require("packer").startup(function()
     use("mfussenegger/nvim-jdtls")
     --use("RRethy/vim-illuminate")
     -- use("kyazdani42/nvim-web-devicons")
+    use 'nvim-tree/nvim-web-devicons'
     use "olimorris/onedarkpro.nvim"
 
     use({
         "nvim-lualine/lualine.nvim",
-        -- requires = {
-        --     "kyazdani42/nvim-web-devicons",
-        --     opt = false,
-        -- },
     })
 
     -- use {
@@ -114,7 +111,7 @@ return require("packer").startup(function()
     use("junegunn/goyo.vim")
     -- Utils
     use("terrortylor/nvim-comment")
-    use "xiyaowong/transparent.nvim"
+    -- use "xiyaowong/transparent.nvim"
     -- Wakatime
     use "wakatime/vim-wakatime"
     -- use "~/Projects/tree-setter"
@@ -135,7 +132,7 @@ return require("packer").startup(function()
     -- use 'andweeb/presence.nvim'
     -- use 'Mofiqul/dracula.nvim'
     -- use "rose-pine/neovim"
-    use "projekt0n/github-nvim-theme"
+    -- use "projekt0n/github-nvim-theme"
     use "trusktr/seti.vim"
     -- Lua
     -- use {
