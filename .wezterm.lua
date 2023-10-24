@@ -8,13 +8,19 @@ local config = {}
 -- help provide clearer error messages
 if wezterm.config_builder then
     config = wezterm.config_builder()
-    config.font_size = 10
+    config.color_scheme_dirs = { '/home/lr/Downloads/wezterm' }
+    config.font_size = 13
     config.enable_tab_bar = false
     config.cursor_blink_rate = 0
-    config.color_scheme = "Github Dark"
+    config.color_scheme = "Seti"
     config.dpi = 144
     config.freetype_load_target = "Light"
-config.freetype_render_target = "Normal"
+    config.line_height = 1.1
+    config.font = wezterm.font_with_fallback {
+        'BerkeleyMono Nerd Font',
+        -- { family = "Symbols Nerd Font", scale = 1.5 },
+        'nonicons',
+    }
 end
 
 -- This is where you actually apply your config choices
@@ -26,11 +32,6 @@ end
 -- config.colors = {}
 -- config.colors.background = '#fafafa'
 
-config.font = wezterm.font_with_fallback {
-    'BerkeleyMono Nerd Font',
-    -- "Symbols Nerd Font",
-    -- 'nonicons',
-}
 
 -- config.font = wezterm.font('JetBrainsMono Nerd Font')
 

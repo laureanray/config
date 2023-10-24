@@ -64,15 +64,15 @@ return require("packer").startup(function()
     use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
     use("mfussenegger/nvim-jdtls")
     --use("RRethy/vim-illuminate")
-    use("kyazdani42/nvim-web-devicons")
+    -- use("kyazdani42/nvim-web-devicons")
     use "olimorris/onedarkpro.nvim"
 
     use({
         "nvim-lualine/lualine.nvim",
-        requires = {
-            "kyazdani42/nvim-web-devicons",
-            opt = true,
-        },
+        -- requires = {
+        --     "kyazdani42/nvim-web-devicons",
+        --     opt = false,
+        -- },
     })
 
     -- use {
@@ -136,6 +136,7 @@ return require("packer").startup(function()
     -- use 'Mofiqul/dracula.nvim'
     -- use "rose-pine/neovim"
     use "projekt0n/github-nvim-theme"
+    use "trusktr/seti.vim"
     -- Lua
     -- use {
     --     "folke/which-key.nvim",
