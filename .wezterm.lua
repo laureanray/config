@@ -27,9 +27,9 @@ end
 -- config.colors.background = '#fafafa'
 
 config.font = wezterm.font_with_fallback {
-    'Berkeley Mono',
-    "Symbols Nerd Font",
-    'nonicons',
+    'BerkeleyMono Nerd Font',
+    -- "Symbols Nerd Font",
+    -- 'nonicons',
 }
 
 -- config.font = wezterm.font('JetBrainsMono Nerd Font')
