@@ -1,6 +1,6 @@
 return require("packer").startup(function()
-    use({ "zbirenbaum/copilot.lua" })
-    use("github/copilot.vim")
+    -- use({ "zbirenbaum/copilot.lua" })
+    -- use("github/copilot.vim")
     use("wbthomason/packer.nvim")
     -- use({
     --     "kkharji/lspsaga.nvim",
@@ -111,7 +111,6 @@ return require("packer").startup(function()
     use("junegunn/goyo.vim")
     -- Utils
     use("terrortylor/nvim-comment")
-    -- use "xiyaowong/transparent.nvim"
     -- Wakatime
     use "wakatime/vim-wakatime"
     -- use "~/Projects/tree-setter"
@@ -131,7 +130,7 @@ return require("packer").startup(function()
     -- use "bluz71/vim-nightfly-colors"
     -- use 'andweeb/presence.nvim'
     -- use 'Mofiqul/dracula.nvim'
-    -- use "rose-pine/neovim"
+    use "rose-pine/neovim"
     -- use "projekt0n/github-nvim-theme"
     use "trusktr/seti.vim"
     -- Lua
@@ -166,4 +165,13 @@ return require("packer").startup(function()
     -- }
 
     use "onsails/lspkind.nvim"
+    use {
+        'j-hui/fidget.nvim',
+        tag = 'legacy',
+        config = function()
+            require("fidget").setup {
+                -- options
+            }
+        end,
+    }
 end)

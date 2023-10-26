@@ -4,15 +4,18 @@ local wezterm = require 'wezterm'
 -- This table will hold the configuration.
 local config = {}
 
+-- local colors = require('lua/rose-pine').colors()
+-- local window_frame = require('lua/rose-pine').window_frame()
+
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
     config = wezterm.config_builder()
-    config.color_scheme_dirs = { '/home/lr/Downloads/wezterm' }
+    -- config.color_scheme_dirs = { '~/.config/wezterm/lua' }
     config.font_size = 14
     config.enable_tab_bar = false
     config.cursor_blink_rate = 0
-    config.color_scheme = "Seti"
+    config.color_scheme = "rose-pine"
     config.dpi = 144
     config.freetype_load_target = "Light"
     -- config.line_height = 1.1
