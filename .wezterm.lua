@@ -12,7 +12,7 @@ local config = {}
 if wezterm.config_builder then
     config = wezterm.config_builder()
     -- config.color_scheme_dirs = { '~/.config/wezterm/lua' }
-    config.font_size = 14
+    config.font_size = 12
     config.enable_tab_bar = false
     config.cursor_blink_rate = 0
     config.color_scheme = "rose-pine"
