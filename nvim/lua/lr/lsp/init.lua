@@ -184,9 +184,7 @@ mason_lspconfig.setup_handlers {
         end
     end,
 }
--- require("todo-comments").setup()
--- require('trouble').setup()
---
---
---
--- require('lspsaga').setup({})
+
+require("todo-comments").setup()
+require('trouble').setup()
+require('lspsaga').setup({})
