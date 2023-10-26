@@ -16,7 +16,6 @@ local on_attach = function(_, bufnr)
     nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
     -- nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
     nmap('<leader>ca', '<cmd>Lspsaga code_action<CR>', '[C]ode [A]ction')
-
     nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
     nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
@@ -185,9 +184,9 @@ mason_lspconfig.setup_handlers {
         end
     end,
 }
-require("todo-comments").setup()
+-- require("todo-comments").setup()
 -- require('trouble').setup()
 --
 --
 --
-require('lspsaga').setup({})
+-- require('lspsaga').setup({})
