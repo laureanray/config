@@ -1,6 +1,6 @@
 return require("packer").startup(function()
-    use({ "zbirenbaum/copilot.lua" })
-    use("github/copilot.vim")
+    -- use({ "zbirenbaum/copilot.lua" })
+    -- use("github/copilot.vim")
     use("wbthomason/packer.nvim")
     -- use({
     --     "kkharji/lspsaga.nvim",

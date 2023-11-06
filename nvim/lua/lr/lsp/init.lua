@@ -152,6 +152,11 @@ local servers = {
         capabilities = capabilities,
         settings = {},
         on_attach = on_attach
+    },
+    volar = {
+        capabilities = capabilities,
+        settings = {},
+        on_attach = on_attach
     }
 }
 

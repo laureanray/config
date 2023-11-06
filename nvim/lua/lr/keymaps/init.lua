@@ -109,7 +109,7 @@ map("n", "<leader>gk", "<Cmd>diffget //3<cr>", opts)
 map("n", "<leader>q", "<Cmd>copen<cr>", opts)
 map("n", "<leader>Q", "<Cmd>close<cr>", opts)
 -- map("n", "gp", "<Cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
-map("x", "<C-/>", ":'<,'>CommentToggle<CR>gv", opts)
+map("x", "<C-_>", ":'<,'>CommentToggle<CR>gv", opts)
 
 map("n", "<leader>F", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 -- map("n", "<leader>F", "<Cmd>:NvimTreeFocus<CR>", opts)
