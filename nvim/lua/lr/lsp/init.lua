@@ -157,6 +157,19 @@ local servers = {
         capabilities = capabilities,
         settings = {},
         on_attach = on_attach
+    },
+    html = {
+        capabilities = capabilities,
+        settings = {
+            html = {
+                format = {
+                    templating = true,
+                    wrapLineLength = 120,
+                    wrapAttributes = 'auto',
+                },
+            }
+        },
+        on_attach = on_attach
     }
 }
 
