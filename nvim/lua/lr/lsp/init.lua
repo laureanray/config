@@ -189,8 +189,19 @@ mason_lspconfig.setup_handlers {
                 capabilities = capabilities,
                 on_attach = on_attach,
                 settings = servers[server_name].settings,
-                cmd = { "nvm", "run", "16",
-                    "/Users/laureanray.bahala/.local/share/nvim/mason/bin/grammarly-languageserver",
+                cmd = {
+                    "/home/lr/.nvm/versions/node/v20.9.0/bin/node",
+                    "/home/lr/.local/share/nvim/mason/bin/grammarly-languageserver",
+                    "--stdio" },
+            }
+        elseif server_name == "volar" then
+            require('lspconfig')[server_name].setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name].settings,
+                cmd = {
+                    "/home/lr/.nvm/versions/node/v20.9.0/bin/node",
+                    "/home/lr/.local/share/nvim/mason/bin/vue-language-server",
                     "--stdio" },
             }
         else

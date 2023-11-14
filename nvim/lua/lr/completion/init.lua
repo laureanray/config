@@ -2,6 +2,11 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
 local handlers = require('nvim-autopairs.completion.handlers')
 
+local has_words_before = function()
+  local cursor = vim.api.nvim_win_get_cursor(0)
+  return (vim.api.nvim_buf_get_lines(0, cursor[1] - 1, cursor[1], true)[1] or ''):sub(cursor[2], cursor[2]):match('%s')
+end
+
 require('lspkind').init({
     mode = 'symbol_text',
     preset = 'codicons',
