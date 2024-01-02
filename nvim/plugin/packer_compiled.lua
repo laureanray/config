@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["copilot.lua"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/copilot.lua",
+    url = "https://github.com/zbirenbaum/copilot.lua"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["fidget.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0" },
     loaded = true,
@@ -328,6 +338,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lr/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/lr/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/iyaowong/transparent.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,

@@ -3,25 +3,6 @@ vim.g.maplocalleader = ' '
 -- Window nav
 local opts = { noremap = true, silent = false }
 local map = vim.api.nvim_set_keymap
--- Move to previous/next
--- map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
--- map("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
--- map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
--- map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
--- map("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
--- map("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
--- map("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
--- map("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
--- map("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
--- map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
--- map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
--- map("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
--- map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
--- map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
--- -- Pin/unpin buffer
--- map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
--- -- Close buffer
--- map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
@@ -36,11 +17,9 @@ map("n", "<C-u>", "<C-u>zz", opts)
 
 -- Greatest REMAP ever, sabi ni Prime
 map("x", "<leader>p", '"_dp', opts)
--- map("i", "<C-c>", "<Esc>", opts)
 
 map("n", "Q", "<nop>", opts)
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", opts)
--- map("n", "<leader>f", vim.lsp.buf.format, opts)
 
 map("n", "<C-k>", "<cmd>cnext<CR>zz", opts)
 map("n", "<C-j>", "<cmd>cprev<CR>zz", opts)
@@ -63,14 +42,6 @@ map("i", "<C-J>", '<Cmd>require("copilot.panel", opts).accept()<CR>', { silent =
 
 -- Toggle Copilot Auto Trigger
 map("n", "<leader>cp", "<cmd>lua require'copilot.suggestion'.toggle_auto_trigger()<CR>", opts)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
 map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
 -- Sort automatically by...

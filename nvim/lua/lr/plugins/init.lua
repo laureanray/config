@@ -1,7 +1,8 @@
 return require("packer").startup(function()
-    -- use({ "zbirenbaum/copilot.lua" })
-    -- use("github/copilot.vim")
+    use({ "zbirenbaum/copilot.lua" })
+    use("github/copilot.vim")
     use("wbthomason/packer.nvim")
+    use({ 'kepano/flexoki-neovim', as = 'flexoki' })
     -- use({
     --     "kkharji/lspsaga.nvim",
     --     branch = "main",
@@ -131,7 +132,7 @@ return require("packer").startup(function()
     -- use 'andweeb/presence.nvim'
     -- use 'Mofiqul/dracula.nvim'
     use "rose-pine/neovim"
-    -- use "projekt0n/github-nvim-theme"
+    use "projekt0n/github-nvim-theme"
     use "trusktr/seti.vim"
     -- Lua
     -- use {
@@ -175,4 +176,5 @@ return require("packer").startup(function()
         end,
     }
     use "ThePrimeagen/vim-be-good"
+    use "xiyaowong/transparent.nvim"
 end)
