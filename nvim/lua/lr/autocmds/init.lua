@@ -7,6 +7,7 @@ local wrap = api.nvim_create_augroup("wrap", { clear = true })
 -- 	command = "setlocal wrap",
 -- 	group = wrap,
 -- })
+--
 
 -- Set 4 Spaces indent for Shell Scripts
 api.nvim_create_autocmd("FileType", {

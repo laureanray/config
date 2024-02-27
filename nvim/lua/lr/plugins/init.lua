@@ -18,6 +18,9 @@ return require("packer").startup(function()
     -- use("kartikp10/noctis.nvim")
     use { "nyoom-engineering/oxocarbon.nvim" }
 
+    use({ 'kepano/flexoki-neovim', as = 'flexoki' })
+
+
     -- Debugging
     use "mfussenegger/nvim-dap"
     use "leoluz/nvim-dap-go"
