@@ -1,5 +1,6 @@
 -- This would by dynamically changed by a script
 vim.opt.background = "dark"
+vim.g.gruvbox_material_background = 'hard'
 vim.cmd("filetype plugin indent on")
 -- general
 vim.opt.scrolloff = 8

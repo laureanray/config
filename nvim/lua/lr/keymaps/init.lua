@@ -57,7 +57,7 @@ map("n", "<leader>d", "<Cmd>lua require('telescope.builtin').find_files({ cwd = 
 map("n", "<leader>x", "<Cmd>bdelete<cr>", opts)
 map("n", "<leader>x", "<Cmd>lua vim.lsp.buf.format()<cr>", opts)
 map("n", "<leader>o",
-    "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}})<cr>",
+    "<Cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--hidden', '--files', '-g', '!.git'}})<cr>",
     opts)
 map("n", "<leader>p", "<Cmd>Telescope git_files<cr>", opts)
 map("n", "<leader>l", "<Cmd>Telescope live_grep<cr>", opts)

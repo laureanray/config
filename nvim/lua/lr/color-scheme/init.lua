@@ -1,4 +1,2 @@
-require('rose-pine').setup({
-	disable_italics = false,
-})
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme gruvbox-material')
+-- set hard colorscheme

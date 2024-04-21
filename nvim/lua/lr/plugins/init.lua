@@ -18,15 +18,14 @@ return require("packer").startup(function()
     -- use("kartikp10/noctis.nvim")
     use { "nyoom-engineering/oxocarbon.nvim" }
 
-    use({ 'kepano/flexoki-neovim', as = 'flexoki' })
 
 
     -- Debugging
-    use "mfussenegger/nvim-dap"
-    use "leoluz/nvim-dap-go"
-    use "rcarriga/nvim-dap-ui"
-    use "theHamsta/nvim-dap-virtual-text"
-    use "nvim-telescope/telescope-dap.nvim"
+    -- use "mfussenegger/nvim-dap"
+    -- use "leoluz/nvim-dap-go"
+    -- use "rcarriga/nvim-dap-ui"
+    -- use "theHamsta/nvim-dap-virtual-text"
+    -- use "nvim-telescope/telescope-dap.nvim"
     --
     use({
         "folke/trouble.nvim",
@@ -137,6 +136,7 @@ return require("packer").startup(function()
     use "rose-pine/neovim"
     use "projekt0n/github-nvim-theme"
     use "trusktr/seti.vim"
+    use "sainnhe/gruvbox-material"
     -- Lua
     -- use {
     --     "folke/which-key.nvim",

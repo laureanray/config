@@ -1,17 +1,31 @@
 local actions = require("telescope.actions")
 
 require("telescope").setup({
+  pickers = {
+    live_grep = {
+      additional_args = function(opts)
+        return {"--hidden"}
+      end
+    },
+  },
 	defaults = {
 		file_ignore_patterns = { "package-lock", "node_modules", "Cargo.lock", "target/" }, -- Bind to shortcut to change this dynamically?
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
 		prompt_prefix = " >",
 		color_devicons = true,
-		hidden = false,
+		hidden = true,
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
 		layout_defaults = {},
 		preview_cutoff = 1,
+    pickers = {
+      live_grep = {
+        additional_args = function(opts)
+          return {"--hidden"}
+        end
+      },
+    },
 
 		mappings = {
 			i = {
